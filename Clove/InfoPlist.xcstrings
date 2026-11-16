@@ -1,75 +1,75 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "NSDesktopFolderUsageDescription": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clove measures your Desktop to show what's using disk space in Storage."
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NSDesktopFolderUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove measures your Desktop to show what's using disk space in Storage."
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clove 会测量桌面文件夹，在“储存空间”中显示磁盘占用情况。"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 会测量桌面文件夹，在“储存空间”中显示磁盘占用情况。"
           }
         },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clove 會測量桌面檔案夾，在“儲存空間”中顯示磁碟佔用情況。"
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 會測量桌面檔案夾，在「儲存空間」中顯示磁碟佔用情況。"
           }
         }
       }
     },
-    "NSDocumentsFolderUsageDescription": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clove measures your Documents to show what's using disk space in Storage."
+    "NSDocumentsFolderUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove measures your Documents to show what's using disk space in Storage."
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clove 会测量文稿文件夹，在“储存空间”中显示磁盘占用情况。"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 会测量文稿文件夹，在“储存空间”中显示磁盘占用情况。"
           }
         },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clove 會測量檔案檔案夾，在“儲存空間”中顯示磁碟佔用情況。"
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 會測量檔案檔案夾，在「儲存空間」中顯示磁碟佔用情況。"
           }
         }
       }
     },
-    "NSDownloadsFolderUsageDescription": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clove measures your Downloads to show what's using disk space in Storage."
+    "NSDownloadsFolderUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove measures your Downloads to show what's using disk space in Storage."
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clove 会测量下载文件夹，在“储存空间”中显示磁盘占用情况。"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 会测量下载文件夹，在“储存空间”中显示磁盘占用情况。"
           }
         },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clove 會測量下載檔案夾，在“儲存空間”中顯示磁碟佔用情況。"
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 會測量下載檔案夾，在「儲存空間」中顯示磁碟佔用情況。"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

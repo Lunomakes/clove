@@ -2237,28 +2237,6 @@
         }
       }
     },
-    "Add a CLAUDE.md or AGENTS.md to a project or to ~/.claude." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add a CLAUDE.md or AGENTS.md to a project or to ~/.claude."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在项目中或 ~/.claude 中添加 CLAUDE.md 或 AGENTS.md。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在專案中或 ~/.claude 中新增 CLAUDE.md 或 AGENTS.md。"
-          }
-        }
-      }
-    },
     "Add a description. Agents read it to decide when to load the skill." : {
       "localizations" : {
         "en" : {
@@ -2299,28 +2277,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新增名稱，代理會將其用作 Skill 的引用。"
-          }
-        }
-      }
-    },
-    "Add one with claude mcp add, or in Cursor's MCP settings." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add one with claude mcp add, or in Cursor's MCP settings."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用 claude mcp add 添加，或在 Cursor 的 MCP 设置中添加。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用 claude mcp add 新增，或在 Cursor 的 MCP 設定中新增。"
           }
         }
       }
@@ -3909,94 +3865,6 @@
         }
       }
     },
-    "Claude Code reads them from settings.json, Cursor from hooks.json." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code reads them from settings.json, Cursor from hooks.json."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code 从 settings.json 读取，Cursor 从 hooks.json 读取。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code 從 settings.json 讀取，Cursor 從 hooks.json 讀取。"
-          }
-        }
-      }
-    },
-    "Claude Code reads them from ~/.claude/agents." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code reads them from ~/.claude/agents."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code 从 ~/.claude/agents 读取。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code 從 ~/.claude/agents 讀取。"
-          }
-        }
-      }
-    },
-    "Claude Code reads them from ~/.claude/commands, Cursor from ~/.cursor/commands." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code reads them from ~/.claude/commands, Cursor from ~/.cursor/commands."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code 从 ~/.claude/commands 读取，Cursor 从 ~/.cursor/commands 读取。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code 從 ~/.claude/commands 讀取，Cursor 從 ~/.cursor/commands 讀取。"
-          }
-        }
-      }
-    },
-    "Claude Code saves them when you approve a command with “always allow.”" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude Code saves them when you approve a command with “always allow.”"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你选择“始终允许”来批准命令时，Claude Code 会保存这些权限。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你選擇「始終允許」來批准命令時，Claude Code 會儲存這些權限。"
-          }
-        }
-      }
-    },
     "Claude Code, Codex, and Cursor keep %@ of session history on this Mac. %@ of it is from sessions older than %@." : {
       "localizations" : {
         "en" : {
@@ -4723,46 +4591,46 @@
         }
       }
     },
-    "Commands and tools an agent may run without stopping to ask you first." : {
+    "Commands and tools an agent may run without stopping to ask you first. Claude Code saves them when you approve a command with “always allow.”" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Commands and tools an agent may run without stopping to ask you first."
+            "value" : "Commands and tools an agent may run without stopping to ask you first. Claude Code saves them when you approve a command with “always allow.”"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理可以直接运行、无需先询问你的命令和工具。"
+            "value" : "代理可以直接运行、无需先询问你的命令和工具。你选择“始终允许”来批准命令时，Claude Code 会保存这些权限。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理可以直接執行、無需先詢問你的命令和工具。"
+            "value" : "代理可以直接執行、無需先詢問你的命令和工具。你選擇「始終允許」來批准命令時，Claude Code 會儲存這些權限。"
           }
         }
       }
     },
-    "Commands that run on their own before or after an agent acts, like formatting a file after every edit." : {
+    "Commands that run on their own before or after an agent acts, like formatting a file after every edit. Claude Code reads them from settings.json, Cursor from hooks.json." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Commands that run on their own before or after an agent acts, like formatting a file after every edit."
+            "value" : "Commands that run on their own before or after an agent acts, like formatting a file after every edit. Claude Code reads them from settings.json, Cursor from hooks.json."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理操作前后自动运行的命令，例如每次编辑后格式化文件。"
+            "value" : "代理操作前后自动运行的命令，例如每次编辑后格式化文件。Claude Code 从 settings.json 读取，Cursor 从 hooks.json 读取。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理操作前後自動執行的命令，例如每次編輯後格式化檔案。"
+            "value" : "代理操作前後自動執行的命令，例如每次編輯後格式化檔案。Claude Code 從 settings.json 讀取，Cursor 從 hooks.json 讀取。"
           }
         }
       }
@@ -6127,28 +5995,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cursor 外掛"
-          }
-        }
-      }
-    },
-    "Cursor reads them from .cursor/rules in each project." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cursor reads them from .cursor/rules in each project."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cursor 从各项目的 .cursor/rules 中读取。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cursor 從各專案的 .cursor/rules 中讀取。"
           }
         }
       }
@@ -7759,24 +7605,24 @@
         }
       }
     },
-    "Focused agents the main agent can hand a task to, like a code reviewer or a test writer." : {
+    "Focused agents the main agent can hand a task to, like a code reviewer or a test writer. Claude Code reads them from ~/.claude/agents." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Focused agents the main agent can hand a task to, like a code reviewer or a test writer."
+            "value" : "Focused agents the main agent can hand a task to, like a code reviewer or a test writer. Claude Code reads them from ~/.claude/agents."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "主代理可以分派任务的专业代理，例如代码审查或测试编写代理。"
+            "value" : "主代理可以分派任务的专业代理，例如代码审查或测试编写代理。Claude Code 从 ~/.claude/agents 读取。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "主代理可以分派任務的專業代理，例如程式碼審查或測試編寫代理。"
+            "value" : "主代理可以分派任務的專業代理，例如程式碼審查或測試編寫代理。Claude Code 從 ~/.claude/agents 讀取。"
           }
         }
       }
@@ -8397,24 +8243,24 @@
         }
       }
     },
-    "Guidance an agent follows always, for certain files, or when it decides the rule is relevant." : {
+    "Guidance an agent follows always, for certain files, or when it decides the rule is relevant. Cursor reads them from .cursor/rules in each project." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Guidance an agent follows always, for certain files, or when it decides the rule is relevant."
+            "value" : "Guidance an agent follows always, for certain files, or when it decides the rule is relevant. Cursor reads them from .cursor/rules in each project."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理始终遵循、针对特定文件遵循，或在判断相关时遵循的指导规则。"
+            "value" : "代理始终遵循、针对特定文件遵循，或在判断相关时遵循的指导规则。Cursor 从各项目的 .cursor/rules 中读取。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理始終遵循、針對特定檔案遵循，或在判斷相關時遵循的指導規則。"
+            "value" : "代理始終遵循、針對特定檔案遵循，或在判斷相關時遵循的指導規則。Cursor 從各專案的 .cursor/rules 中讀取。"
           }
         }
       }
@@ -9662,13 +9508,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "上次运行 %@"
+            "value" : "%@运行过"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "上次執行 %@"
+            "value" : "%@執行過"
           }
         }
       }
@@ -9684,13 +9530,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "上次使用 %@"
+            "value" : "%@使用过"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "上次使用 %@"
+            "value" : "%@使用過"
           }
         }
       }
@@ -11697,24 +11543,24 @@
         }
       }
     },
-    "Notes your agents read at the start of every session, like how to run tests or which patterns to follow." : {
+    "Notes your agents read at the start of every session, like how to run tests or which patterns to follow. Add a CLAUDE.md or AGENTS.md to a project or to ~/.claude." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Notes your agents read at the start of every session, like how to run tests or which patterns to follow."
+            "value" : "Notes your agents read at the start of every session, like how to run tests or which patterns to follow. Add a CLAUDE.md or AGENTS.md to a project or to ~/.claude."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理在每次会话开始时读取的说明，例如如何运行测试或应遵循哪些模式。"
+            "value" : "代理在每次会话开始时读取的说明，例如如何运行测试或应遵循哪些模式。在项目中或 ~/.claude 中添加 CLAUDE.md 或 AGENTS.md。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理在每次會話開始時讀取的說明，例如如何執行測試或應遵循哪些模式。"
+            "value" : "代理在每次會話開始時讀取的說明，例如如何執行測試或應遵循哪些模式。在專案中或 ~/.claude 中新增 CLAUDE.md 或 AGENTS.md。"
           }
         }
       }
@@ -13677,24 +13523,24 @@
         }
       }
     },
-    "Prompts you save once and run with a slash, like /review or /release-notes." : {
+    "Prompts you save once and run with a slash, like /review or /release-notes. Claude Code reads them from ~/.claude/commands, Cursor from ~/.cursor/commands." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prompts you save once and run with a slash, like /review or /release-notes."
+            "value" : "Prompts you save once and run with a slash, like /review or /release-notes. Claude Code reads them from ~/.claude/commands, Cursor from ~/.cursor/commands."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "保存一次，用斜杠运行的提示词，例如 /review 或 /release-notes。"
+            "value" : "保存一次，用斜杠运行的提示词，例如 /review 或 /release-notes。Claude Code 从 ~/.claude/commands 读取，Cursor 从 ~/.cursor/commands 读取。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "儲存一次，用斜槓執行的提示詞，例如 /review 或 /release-notes。"
+            "value" : "儲存一次，用斜槓執行的提示詞，例如 /review 或 /release-notes。Claude Code 從 ~/.claude/commands 讀取，Cursor 從 ~/.cursor/commands 讀取。"
           }
         }
       }
@@ -15261,24 +15107,68 @@
         }
       }
     },
-    "Search %@" : {
+    "Search hooks" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search %@"
+            "value" : "Search hooks"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "搜索%@"
+            "value" : "搜索 Hook"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "搜尋%@"
+            "value" : "搜尋 Hook"
+          }
+        }
+      }
+    },
+    "Search instructions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search instructions"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索指令"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜尋指令"
+          }
+        }
+      }
+    },
+    "Search mcp servers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search mcp servers"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索 MCP 服务器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜尋 MCP 伺服器"
           }
         }
       }
@@ -15301,6 +15191,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "搜尋名稱、描述、群組"
+          }
+        }
+      }
+    },
+    "Search permissions" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search permissions"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索权限"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜尋權限"
+          }
+        }
+      }
+    },
+    "Search rules" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search rules"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索规则"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜尋規則"
           }
         }
       }
@@ -15345,6 +15279,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "搜尋 skills.sh"
+          }
+        }
+      }
+    },
+    "Search slash commands" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search slash commands"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索斜杠命令"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜尋斜線命令"
+          }
+        }
+      }
+    },
+    "Search subagents" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search subagents"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索子代理"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜尋子代理程式"
           }
         }
       }
@@ -15525,24 +15503,24 @@
         }
       }
     },
-    "Servers that give agents extra tools, like a browser, Figma, GitHub, or your database." : {
+    "Servers that give agents extra tools, like a browser, Figma, GitHub, or your database. Add one with claude mcp add, or in Cursor's MCP settings." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Servers that give agents extra tools, like a browser, Figma, GitHub, or your database."
+            "value" : "Servers that give agents extra tools, like a browser, Figma, GitHub, or your database. Add one with claude mcp add, or in Cursor's MCP settings."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "为代理提供额外工具的服务器，例如浏览器、Figma、GitHub 或数据库。"
+            "value" : "为代理提供额外工具的服务器，例如浏览器、Figma、GitHub 或数据库。使用 claude mcp add 添加，或在 Cursor 的 MCP 设置中添加。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "為代理提供額外工具的伺服器，例如瀏覽器、Figma、GitHub 或資料庫。"
+            "value" : "為代理提供額外工具的伺服器，例如瀏覽器、Figma、GitHub 或資料庫。使用 claude mcp add 新增，或在 Cursor 的 MCP 設定中新增。"
           }
         }
       }
@@ -18331,13 +18309,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "使用于 %@"
+            "value" : "%@使用过"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "使用於 %@"
+            "value" : "%@使用過"
           }
         }
       }
@@ -20157,13 +20135,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "个 Token 被每次会话用于加载闲置的 Skill 和命令，闲置时间为"
+            "value" : "个 Token 被每次会话用于加载以下时长内未使用的 Skill 和命令："
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "個 Token 被每次會話用於載入閒置的 Skill 和命令，閒置時間為"
+            "value" : "個 Token 被每次會話用於載入以下時長內未使用的 Skill 和命令："
           }
         }
       }

@@ -36,7 +36,7 @@ struct ResourceList: View {
             }
         }
         .navigationTitle(kind.title)
-        .searchable(text: $model.resourceQuery, prompt: "Search \(kind.title.lowercased())")
+        .searchable(text: $model.resourceQuery, prompt: kind.searchPrompt)
         .overlay {
             if resources.isEmpty {
                 ResourceEmptyView(kind: kind, query: model.resourceQuery, isScanning: model.isScanning)

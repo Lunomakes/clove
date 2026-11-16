@@ -77,23 +77,28 @@ enum ResourceKind: String, CaseIterable, Identifiable, Hashable, Sendable, Codab
         }
     }
 
-    /// What this is and an example, for empty states.
-    var explanation: String {
+    /// Whole messages let each language choose sentence spacing and punctuation.
+    var emptyMessage: LocalizedStringResource {
         switch self {
-        case .instructions:
-            String(localized: "Notes your agents read at the start of every session, like how to run tests or which patterns to follow.")
-        case .rules:
-            String(localized: "Guidance an agent follows always, for certain files, or when it decides the rule is relevant.")
-        case .commands:
-            String(localized: "Prompts you save once and run with a slash, like /review or /release-notes.")
-        case .subagents:
-            String(localized: "Focused agents the main agent can hand a task to, like a code reviewer or a test writer.")
-        case .mcpServers:
-            String(localized: "Servers that give agents extra tools, like a browser, Figma, GitHub, or your database.")
-        case .hooks:
-            String(localized: "Commands that run on their own before or after an agent acts, like formatting a file after every edit.")
-        case .permissions:
-            String(localized: "Commands and tools an agent may run without stopping to ask you first.")
+        case .instructions: "Notes your agents read at the start of every session, like how to run tests or which patterns to follow. Add a CLAUDE.md or AGENTS.md to a project or to ~/.claude."
+        case .rules: "Guidance an agent follows always, for certain files, or when it decides the rule is relevant. Cursor reads them from .cursor/rules in each project."
+        case .commands: "Prompts you save once and run with a slash, like /review or /release-notes. Claude Code reads them from ~/.claude/commands, Cursor from ~/.cursor/commands."
+        case .subagents: "Focused agents the main agent can hand a task to, like a code reviewer or a test writer. Claude Code reads them from ~/.claude/agents."
+        case .mcpServers: "Servers that give agents extra tools, like a browser, Figma, GitHub, or your database. Add one with claude mcp add, or in Cursor's MCP settings."
+        case .hooks: "Commands that run on their own before or after an agent acts, like formatting a file after every edit. Claude Code reads them from settings.json, Cursor from hooks.json."
+        case .permissions: "Commands and tools an agent may run without stopping to ask you first. Claude Code saves them when you approve a command with “always allow.”"
+        }
+    }
+
+    var searchPrompt: LocalizedStringResource {
+        switch self {
+        case .instructions: "Search instructions"
+        case .rules: "Search rules"
+        case .commands: "Search slash commands"
+        case .subagents: "Search subagents"
+        case .mcpServers: "Search mcp servers"
+        case .hooks: "Search hooks"
+        case .permissions: "Search permissions"
         }
     }
 
