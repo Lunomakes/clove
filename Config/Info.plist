@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<!-- Updates, through Sparkle. Clove installs only what the matching private key signed;
-	     that key lives in the release Mac's keychain (generate_keys --account clove). -->
+	     that key lives in the release Mac's keychain (generate_keys --account clove-zh). -->
 	<key>SUPublicEDKey</key>
-	<string>oZ/p6ZBV2yswk2F1f6F4XNV110G+FHL/NOvt+tWUmTw=</string>
+	<string>Np9sWCE346a3UhIRG4W0pmI8zAA2Bmz+efKXOEVUqCM=</string>
+	<key>SUFeedURL</key>
+	<string>https://github.com/Lunomakes/clove/releases/latest/download/appcast.xml</string>
 	<!-- Check once a day, download in the background, install when Clove quits. -->
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
