@@ -13,11 +13,11 @@ enum SettingsPane: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .general: "General"
-        case .sources: "Folders"
-        case .shortcuts: "Shortcuts"
-        case .privacy: "Privacy"
-        case .about: "About"
+        case .general: String(localized: "General")
+        case .sources: String(localized: "Folders")
+        case .shortcuts: String(localized: "Shortcuts")
+        case .privacy: String(localized: "Privacy")
+        case .about: String(localized: "About")
         }
     }
 

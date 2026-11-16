@@ -9,7 +9,7 @@ struct RunningRow: View {
             Circle()
                 .fill(isStopping ? Color.orange : Palette.mint)
                 .frame(width: 7, height: 7)
-                .accessibilityLabel(isStopping ? "Stopping" : "Running")
+                .accessibilityLabel(isStopping ? String(localized: "Stopping") : String(localized: "Running"))
 
             VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: Metrics.spacingXS) {
@@ -39,7 +39,7 @@ struct RunningRow: View {
             parts.append(folder.lastPathComponent)
         }
         if let startedBy = process.startedBy, startedBy != process.name {
-            parts.append("from \(startedBy)")
+            parts.append(String(localized: "from \(startedBy)"))
         }
         parts.append(process.startedAt.formatted(.relative(presentation: .numeric, unitsStyle: .abbreviated)))
         parts.append(process.memoryBytes.formatted(.byteCount(style: .memory)))

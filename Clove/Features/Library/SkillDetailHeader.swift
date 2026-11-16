@@ -23,7 +23,7 @@ struct SkillDetailHeader: View {
                     .foregroundStyle(.secondary)
             }
 
-            Text(entry.summary.isEmpty ? "This skill has no description." : entry.summary)
+            Text(entry.summary.isEmpty ? String(localized: "This skill has no description.") : entry.summary)
                 .font(.body)
                 .foregroundStyle(entry.summary.isEmpty ? .tertiary : .secondary)
                 .textSelection(.enabled)

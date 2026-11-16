@@ -35,7 +35,7 @@ struct CleanupLeftoversCard: View {
             await cleanup.scanLeftovers()
         }
         .confirmationDialog(
-            "Move \(cleanup.selectedLeftovers.count) items to the Trash?",
+            String(localized: "Move \(cleanup.selectedLeftovers.count) items to the Trash?"),
             isPresented: $isConfirming,
             titleVisibility: .visible
         ) {

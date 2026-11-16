@@ -15,7 +15,7 @@ struct RunningList: View {
             ForEach(kinds, id: \.self) { kind in
                 let items = running.items(of: kind)
                 if !items.isEmpty {
-                    ListSection(title: kind.title, note: items.count.formatted()) {
+                    ListSection(title: "\(kind.title)", note: "\(items.count.formatted())") {
                         ForEach(items) { process in
                             SelectableRow(id: process.id, selection: $running.selection) {
                                 RunningRow(process: process, isStopping: running.stopping.contains(process.pid))

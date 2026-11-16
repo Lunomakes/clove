@@ -36,7 +36,7 @@ final class KeyRecorderButton: NSButton {
         setButtonType(.momentaryPushIn)
         target = self
         action = #selector(toggleRecording)
-        toolTip = "Click, then press the new shortcut. Delete clears it, Esc keeps it."
+        toolTip = String(localized: "Click, then press the new shortcut. Delete clears it, Esc keeps it.")
         refreshTitle()
     }
 
@@ -45,12 +45,12 @@ final class KeyRecorderButton: NSButton {
 
     private func refreshTitle() {
         if isRecording {
-            title = "Press shortcut"
+            title = String(localized: "Press shortcut")
         } else {
-            title = chord?.displayString ?? "Record Shortcut"
+            title = chord?.displayString ?? String(localized: "Record Shortcut")
         }
-        setAccessibilityLabel("Shortcut")
-        setAccessibilityValue(chord?.displayString ?? "None")
+        setAccessibilityLabel(String(localized: "Shortcut"))
+        setAccessibilityValue(chord?.displayString ?? String(localized: "None"))
     }
 
     @objc private func toggleRecording() {

@@ -27,7 +27,7 @@ struct MarketplaceSkillBody: View {
         }
 
         if let document = detail.document, !document.isEmpty {
-            SkillDetailSection(title: detail.file?.path ?? "SKILL.md") {
+            SkillDetailSection(title: "\(detail.file?.path ?? "SKILL.md")") {
                 MarkdownView(document: document)
                     .padding(Metrics.spacingL)
                     .frame(maxWidth: .infinity, alignment: .leading)

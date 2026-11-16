@@ -81,7 +81,7 @@ struct LibraryRootView: View {
             Text(failure.message)
         }
         .confirmationDialog(
-            "Replace the existing skill?",
+            String(localized: "Replace the existing skill?"),
             isPresented: isShowingConflict,
             titleVisibility: .visible,
             presenting: model.manager.pendingConflict

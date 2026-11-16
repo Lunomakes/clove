@@ -4,10 +4,10 @@ import SwiftUI
 /// and a few rows that each open something more specific.
 struct HomeCard<Rows: View>: View {
     @Environment(AppModel.self) private var model
-    let title: String
+    let title: LocalizedStringResource
     let symbolName: String
     let value: String
-    let caption: String
+    let caption: LocalizedStringResource
     let destination: SidebarItem
     @ViewBuilder let rows: Rows
 
@@ -22,7 +22,7 @@ struct HomeCard<Rows: View>: View {
                 .contentShape(.rect)
             }
             .buttonStyle(.plain)
-            .help("Open \(title)")
+            .help("Open \(String(localized: title))")
         } content: {
             VStack(alignment: .leading, spacing: 14) {
                 VStack(alignment: .leading, spacing: 2) {

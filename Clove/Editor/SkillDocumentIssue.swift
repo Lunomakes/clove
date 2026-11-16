@@ -9,9 +9,15 @@ struct SkillDocumentIssue: Identifiable, Hashable, Sendable {
         case warning
     }
 
-    var id: String { message }
+    let id: String
     let severity: Severity
     let message: String
+
+    init(severity: Severity, message: LocalizedStringResource) {
+        id = message.key
+        self.severity = severity
+        self.message = String(localized: message)
+    }
 
     static let nameLimit = 64
     static let descriptionLimit = 1024

@@ -39,17 +39,17 @@ struct PanelShortcutHints: View {
     }
 
     private var accessibilitySummary: String {
-        var parts = ["Arrow keys move", "Return inserts", "Option Return copies"]
+        var parts = [String(localized: "Arrow keys move"), String(localized: "Return inserts"), String(localized: "Option Return copies")]
         if !model.pinnedGroups.isEmpty {
-            parts.append("Tab cycles pinned groups")
+            parts.append(String(localized: "Tab cycles pinned groups"))
         }
         if model.selectedSkill.map({ !model.tags(for: $0).isEmpty }) == true || model.activeTag != nil {
-            parts.append("Command Shift C copies the group")
+            parts.append(String(localized: "Command Shift C copies the group"))
         }
         return parts.joined(separator: ", ")
     }
 
-    private func hint(keys: [String], label: String) -> some View {
+    private func hint(keys: [String], label: LocalizedStringResource) -> some View {
         HStack(spacing: 3) {
             ForEach(keys, id: \.self) { key in
                 Text(key)

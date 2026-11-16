@@ -15,21 +15,21 @@ enum PanelBlock: String, CaseIterable, Identifiable, Sendable {
 
     var title: String {
         switch self {
-        case .skills: "Skills"
-        case .storage: "Storage"
-        case .running: "Running"
-        case .cleanup: "Cleanup"
-        case .trending: "Trending"
+        case .skills: String(localized: "Skills")
+        case .storage: String(localized: "Storage")
+        case .running: String(localized: "Running")
+        case .cleanup: String(localized: "Cleanup")
+        case .trending: String(localized: "Trending")
         }
     }
 
     var detail: String {
         switch self {
-        case .skills: "Search, copy, and insert skills"
-        case .storage: "The disk, live, and what to clear"
-        case .running: "Agent sessions and servers"
-        case .cleanup: "Context spent on unused skills"
-        case .trending: "What's climbing on skills.sh"
+        case .skills: String(localized: "Search, copy, and insert skills")
+        case .storage: String(localized: "The disk, live, and what to clear")
+        case .running: String(localized: "Agent sessions and servers")
+        case .cleanup: String(localized: "Context spent on unused skills")
+        case .trending: String(localized: "What's climbing on skills.sh")
         }
     }
 

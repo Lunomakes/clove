@@ -27,7 +27,7 @@ struct SecretDetailView: View {
                             .lineLimit(1)
                             .truncationMode(.middle)
                         Spacer(minLength: Metrics.spacingM)
-                        Button(revealed == nil ? "Show" : "Hide", action: toggleReveal)
+                        Button(revealed == nil ? String(localized: "Show") : String(localized: "Hide"), action: toggleReveal)
                             .controlSize(.small)
                         Button("Copy", action: copyValue)
                             .controlSize(.small)
@@ -64,7 +64,7 @@ struct SecretDetailView: View {
                     .help("Delete this key from the Keychain")
             }
         }
-        .confirmationDialog("Delete \(name)?", isPresented: $isConfirmingDelete, titleVisibility: .visible) {
+        .confirmationDialog(String(localized: "Delete \(name)?"), isPresented: $isConfirmingDelete, titleVisibility: .visible) {
             Button("Delete Key", role: .destructive) { model.secrets.delete(name) }
             Button("Cancel", role: .cancel) {}
         } message: {

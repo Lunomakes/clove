@@ -56,7 +56,7 @@ struct CleanupCallout: View {
                 HStack(spacing: Metrics.spacingM) {
                     Button(action: remove) {
                         Label(
-                            selected.isEmpty ? "Nothing Selected" : "Move \(selected.count) to Trash",
+                            selected.isEmpty ? String(localized: "Nothing Selected") : String(localized: "Move \(selected.count) to Trash"),
                             systemImage: "trash"
                         )
                     }
@@ -91,7 +91,7 @@ struct CleanupCallout: View {
         .fixedSize(horizontal: false, vertical: true)
     }
 
-    private func stat(_ title: String, _ value: Int) -> some View {
+    private func stat(_ title: LocalizedStringResource, _ value: Int) -> some View {
         VStack(alignment: .trailing, spacing: 1) {
             Text(value, format: .number)
                 .font(.system(size: 15, weight: .semibold).monospacedDigit())

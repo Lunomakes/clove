@@ -13,6 +13,22 @@ struct GeneralSettingsPane: View {
                 footer: "Closing the library keeps Clove in the menu bar. The Dock icon hides only while the library is closed, so Settings and shortcuts stay reachable when it's open."
             ) {
                 VStack(alignment: .leading, spacing: 0) {
+                    HStack {
+                        Picker("Language", selection: $settings.language) {
+                            ForEach(AppLanguage.allCases) { language in
+                                Text(verbatim: language.title).tag(language)
+                            }
+                        }
+                        .pickerStyle(.menu)
+                        .fixedSize()
+                        .padding(.vertical, 4)
+                        if settings.language != settings.languageAtLaunch {
+                            Button("Relaunch") {
+                                model.relaunch()
+                            }
+                            .disabled(model.isRelaunching)
+                        }
+                    }
                     SettingsCheckboxRow(title: "Launch at login", isOn: $launch.isEnabled)
                     SettingsCheckboxRow(title: "Show menu bar icon", isOn: $settings.showMenuBarIcon)
                     Picker("Beside the icon", selection: $settings.menuBarStat) {
@@ -52,7 +68,7 @@ struct GeneralSettingsPane: View {
                         isOn: Binding { model.storage.trashFirst } set: { model.storage.trashFirst = $0 }
                     )
                     if !model.storage.kept.isEmpty {
-                        Text(model.storage.kept.count == 1 ? "1 folder always kept" : "\(model.storage.kept.count) folders always kept, listed in Storage")
+                        Text("\(model.storage.kept.count) folders always kept, listed in Storage")
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .padding(.top, 4)

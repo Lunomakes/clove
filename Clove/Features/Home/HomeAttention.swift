@@ -3,8 +3,8 @@ import SwiftUI
 /// Something on this Mac that's worth a look, and where to deal with it.
 struct HomeAttention: Identifiable {
     let id: String
-    let title: String
-    let detail: String
+    let title: LocalizedStringResource
+    let detail: LocalizedStringResource
     let symbolName: String
     let destination: SidebarItem
     /// Some items are fixed in System Settings, not in Clove.
@@ -18,7 +18,7 @@ struct HomeAttention: Identifiable {
 
         var title: String {
             switch self {
-            case .fullDiskAccess, .accessibility: "Allow…"
+            case .fullDiskAccess, .accessibility: String(localized: "Allow…")
             }
         }
 
@@ -42,8 +42,8 @@ struct HomeAttention: Identifiable {
             if fullness >= 0.9 || volume.available < 20_000_000_000 {
                 items.append(HomeAttention(
                     id: "low-space",
-                    title: "Your Mac is \(Int((fullness * 100).rounded()))% full",
-                    detail: "\(StorageFormat.gb(volume.available)) left. See what's taking up the space.",
+                    title: LocalizedStringResource("Your Mac is \(Int((fullness * 100).rounded()))% full"),
+                    detail: LocalizedStringResource("\(StorageFormat.gb(volume.available)) left. See what's taking up the space."),
                     symbolName: "internaldrive.badge.exclamationmark",
                     destination: .storage,
                     isWarning: true
@@ -53,8 +53,8 @@ struct HomeAttention: Identifiable {
         if let clean = storage.recommendation, clean == .caches {
             items.append(HomeAttention(
                 id: "caches",
-                title: "\(StorageFormat.gb(storage.clearableBytes(for: .caches))) of caches to clear",
-                detail: storage.trashFirst ? "Safe to clear. They go to the Trash first." : "Safe to clear. Apps rebuild them as needed.",
+                title: LocalizedStringResource("\(StorageFormat.gb(storage.clearableBytes(for: .caches))) of caches to clear"),
+                detail: storage.trashFirst ? LocalizedStringResource("Safe to clear. They go to the Trash first.") : LocalizedStringResource("Safe to clear. Apps rebuild them as needed."),
                 symbolName: "square.stack.3d.up",
                 destination: .storage
             ))
@@ -64,8 +64,8 @@ struct HomeAttention: Identifiable {
         if storage.reports[.trash]?.isRestricted == true {
             items.append(HomeAttention(
                 id: "full-disk-access",
-                title: "See what's in your Trash",
-                detail: "Clove needs Full Disk Access to measure and empty it.",
+                title: LocalizedStringResource("See what's in your Trash"),
+                detail: LocalizedStringResource("Clove needs Full Disk Access to measure and empty it."),
                 symbolName: "lock.shield",
                 destination: .storage,
                 action: .fullDiskAccess
@@ -74,8 +74,8 @@ struct HomeAttention: Identifiable {
         if !AccessibilityAccess.isGranted {
             items.append(HomeAttention(
                 id: "accessibility",
-                title: "Insert skills into any app",
-                detail: "Clove needs Accessibility access to type into your editor.",
+                title: LocalizedStringResource("Insert skills into any app"),
+                detail: LocalizedStringResource("Clove needs Accessibility access to type into your editor."),
                 symbolName: "hand.raised",
                 destination: .home,
                 action: .accessibility
@@ -86,8 +86,8 @@ struct HomeAttention: Identifiable {
         if updates > 0 {
             items.append(HomeAttention(
                 id: "updates",
-                title: updates == 1 ? "1 skill has an update" : "\(updates) skills have updates",
-                detail: "Newer versions are on skills.sh.",
+                title: LocalizedStringResource("\(updates) skills have updates"),
+                detail: LocalizedStringResource("Newer versions are on skills.sh."),
                 symbolName: "arrow.down.circle",
                 destination: .library(.all)
             ))
@@ -98,8 +98,8 @@ struct HomeAttention: Identifiable {
             let tokens = candidates.reduce(0) { $0 + $1.tokens }
             items.append(HomeAttention(
                 id: "unused",
-                title: candidates.count == 1 ? "1 skill you don't use" : "\(candidates.count) skills you don't use",
-                detail: "They take up \(tokens.formatted()) tokens in every agent session.",
+                title: LocalizedStringResource("\(candidates.count) skills you don't use"),
+                detail: LocalizedStringResource("They take up \(tokens.formatted()) tokens in every agent session."),
                 symbolName: "leaf",
                 destination: .cleanup
             ))
@@ -109,8 +109,8 @@ struct HomeAttention: Identifiable {
         if leftoverBytes > 0 {
             items.append(HomeAttention(
                 id: "leftovers",
-                title: "Old agent downloads",
-                detail: "\(leftoverBytes.formatted(.byteCount(style: .file))) of browsers and packages agents left behind.",
+                title: LocalizedStringResource("Old agent downloads"),
+                detail: LocalizedStringResource("\(leftoverBytes.formatted(.byteCount(style: .file))) of browsers and packages agents left behind."),
                 symbolName: "shippingbox",
                 destination: .cleanup
             ))
@@ -120,8 +120,8 @@ struct HomeAttention: Identifiable {
         if history > 0 {
             items.append(HomeAttention(
                 id: "history",
-                title: "Old conversations",
-                detail: "\(history.formatted(.byteCount(style: .file))) of saved agent transcripts.",
+                title: LocalizedStringResource("Old conversations"),
+                detail: LocalizedStringResource("\(history.formatted(.byteCount(style: .file))) of saved agent transcripts."),
                 symbolName: "clock.arrow.circlepath",
                 destination: .cleanup
             ))
@@ -131,8 +131,8 @@ struct HomeAttention: Identifiable {
         if findings > 0 {
             items.append(HomeAttention(
                 id: "secrets",
-                title: findings == 1 ? "1 API key in plain text" : "\(findings) API keys in plain text",
-                detail: "They're in your shell profile. Move them to the Keychain.",
+                title: LocalizedStringResource("\(findings) API keys in plain text"),
+                detail: LocalizedStringResource("They're in your shell profile. Move them to the Keychain."),
                 symbolName: "key",
                 destination: .secrets
             ))
@@ -142,8 +142,8 @@ struct HomeAttention: Identifiable {
         if devServers > 0 {
             items.append(HomeAttention(
                 id: "servers",
-                title: devServers == 1 ? "1 dev server still running" : "\(devServers) dev servers still running",
-                detail: "Stop the ones you're done with.",
+                title: LocalizedStringResource("\(devServers) dev servers still running"),
+                detail: LocalizedStringResource("Stop the ones you're done with."),
                 symbolName: "server.rack",
                 destination: .running
             ))

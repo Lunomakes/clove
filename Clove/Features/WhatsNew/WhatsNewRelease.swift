@@ -7,6 +7,15 @@ struct WhatsNewRelease: Identifiable, Hashable, Sendable {
     let subtitle: String
     let symbolName: String
     let features: [FeatureHighlight]
+
+    init(version: String, title: LocalizedStringResource, subtitle: LocalizedStringResource, symbolName: String, features: [FeatureHighlight]) {
+        self.version = version
+        self.title = String(localized: title)
+        self.subtitle = String(localized: subtitle)
+        self.symbolName = symbolName
+        self.features = features
+    }
+
 }
 
 enum WhatsNewCatalog {

@@ -4,7 +4,7 @@ import SwiftUI
 /// the value so problems stand out without shouting.
 struct HomeRow: View {
     @Environment(AppModel.self) private var model
-    let label: String
+    let label: LocalizedStringResource
     let value: String
     var destination: SidebarItem?
     var isWarning = false

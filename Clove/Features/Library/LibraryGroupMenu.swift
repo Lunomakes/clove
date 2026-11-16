@@ -7,7 +7,7 @@ struct LibraryGroupMenu: View {
     var body: some View {
         Button("Copy Group", systemImage: "doc.on.doc", action: copy)
         Button(
-            model.isGroupPinned(group) ? "Unpin from Panel" : "Pin to Panel",
+            model.isGroupPinned(group) ? String(localized: "Unpin from Panel") : String(localized: "Pin to Panel"),
             systemImage: "pin",
             action: togglePin
         )

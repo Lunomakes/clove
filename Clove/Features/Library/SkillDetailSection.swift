@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SkillDetailSection<Content: View>: View {
-    let title: String
+    let title: LocalizedStringResource
     @ViewBuilder let content: Content
 
     var body: some View {

@@ -39,7 +39,7 @@ struct ResourceDetailGrid: View {
     private func contextLine(_ tokens: Int) -> String {
         let amount = tokens.formatted()
         return resource.kind == .instructions
-            ? "About \(amount) tokens, loaded into every session"
-            : "About \(amount) tokens listed in every session"
+            ? String(localized: "About \(amount) tokens, loaded into every session")
+            : String(localized: "About \(amount) tokens listed in every session")
     }
 }

@@ -50,7 +50,7 @@ final class SecretsStore {
     func reveal(_ name: String) async -> String? {
         let context = LAContext()
         do {
-            guard try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "show \(name)") else { return nil }
+            guard try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: String(localized: "show \(name)")) else { return nil }
             return try SecretVault.value(named: name)
         } catch let error as LAError where error.code == .userCancel || error.code == .appCancel {
             return nil

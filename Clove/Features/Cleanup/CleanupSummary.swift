@@ -31,7 +31,7 @@ struct CleanupSummary: View {
                         )
 
                         Tile {
-                            TileHeader(title: "Unused", note: candidates.count.formatted()) {
+                            TileHeader(title: "Unused", note: "\(candidates.count.formatted())") {
                                 if !cleanup.alwaysKept.isEmpty {
                                     Button("\(cleanup.alwaysKept.count) always kept") {
                                         isShowingKept = true

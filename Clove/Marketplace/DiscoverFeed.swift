@@ -10,17 +10,17 @@ enum DiscoverFeed: String, CaseIterable, Identifiable, Hashable, Sendable {
 
     var title: String {
         switch self {
-        case .top: "Top"
-        case .trending: "Trending"
-        case .hot: "Hot"
+        case .top: String(localized: "Top")
+        case .trending: String(localized: "Trending")
+        case .hot: String(localized: "Hot")
         }
     }
 
     var subtitle: String {
         switch self {
-        case .top: "Most installed of all time"
-        case .trending: "Fastest growing in the last day"
-        case .hot: "This hour against the same hour yesterday"
+        case .top: String(localized: "Most installed of all time")
+        case .trending: String(localized: "Fastest growing in the last day")
+        case .hot: String(localized: "This hour against the same hour yesterday")
         }
     }
 

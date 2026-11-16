@@ -17,9 +17,9 @@ enum SecretVault {
         var errorDescription: String? {
             switch self {
             case .keychain(let status):
-                (SecCopyErrorMessageString(status, nil) as String?) ?? "Keychain error \(status)."
+                (SecCopyErrorMessageString(status, nil) as String?) ?? String(localized: "Keychain error \(status).")
             case .invalidName(let name):
-                "“\(name)” isn't a valid variable name. Use letters, digits, and underscores, like OPENAI_API_KEY."
+                String(localized: "“\(name)” isn't a valid variable name. Use letters, digits, and underscores, like OPENAI_API_KEY.")
             }
         }
     }
@@ -55,7 +55,7 @@ enum SecretVault {
         let status = SecItemAdd(item.merging([
             kSecValueData as String: data,
             kSecAttrLabel as String: "Clove: \(name)",
-            kSecAttrDescription as String: "API key saved by Clove",
+            kSecAttrDescription as String: String(localized: "API key saved by Clove"),
         ]) { $1 } as CFDictionary, nil)
 
         if status == errSecDuplicateItem {

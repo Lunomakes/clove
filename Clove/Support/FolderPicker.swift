@@ -8,8 +8,8 @@ enum FolderPicker {
         panel.canChooseDirectories = true
         panel.canChooseFiles = false
         panel.allowsMultipleSelection = false
-        panel.prompt = "Choose Project"
-        panel.message = "Clove puts the skill in this project's .agents/skills folder and links it for each agent."
+        panel.prompt = String(localized: "Choose Project")
+        panel.message = String(localized: "Clove puts the skill in this project's .agents/skills folder and links it for each agent.")
         panel.directoryURL = URL.homeDirectory.appending(path: "Developer")
         guard panel.runModal() == .OK else { return nil }
         return panel.url
@@ -23,8 +23,8 @@ enum FolderPicker {
         panel.canChooseFiles = false
         panel.allowsMultipleSelection = false
         panel.canCreateDirectories = false
-        panel.prompt = "Add Folder"
-        panel.message = "Pick a folder that holds your projects. Clove only reads SKILL.md files inside it."
+        panel.prompt = String(localized: "Add Folder")
+        panel.message = String(localized: "Pick a folder that holds your projects. Clove only reads SKILL.md files inside it.")
         panel.directoryURL = URL.homeDirectory
         guard panel.runModal() == .OK else { return nil }
         return panel.url

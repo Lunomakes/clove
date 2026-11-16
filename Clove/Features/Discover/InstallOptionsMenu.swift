@@ -35,14 +35,14 @@ struct InstallOptionsMenu: View {
     }
 
     private var label: String {
-        let scope = project?.lastPathComponent ?? "Everywhere"
+        let scope = project?.lastPathComponent ?? String(localized: "Everywhere")
         let chosen = AgentTarget.allCases.filter(targets.contains)
         let agents: String = switch chosen.count {
-        case 0: "No Agents"
-        case AgentTarget.allCases.count: "All Agents"
+        case 0: String(localized: "No Agents")
+        case AgentTarget.allCases.count: String(localized: "All Agents")
         default: chosen.map(\.title).formatted(.list(type: .and))
         }
-        return "\(scope) · \(agents)"
+        return String(localized: "\(scope) · \(agents)")
     }
 
     private var everywhere: Binding<Bool> {

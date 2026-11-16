@@ -3,7 +3,7 @@ import SwiftUI
 /// Keycaps for a shortcut, the way they'd look on the keyboard.
 struct MockShortcutCard: View {
     let keys: [String]
-    let caption: String
+    let caption: LocalizedStringResource
 
     var body: some View {
         MockCard(width: 220) {

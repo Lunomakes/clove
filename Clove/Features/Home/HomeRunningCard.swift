@@ -13,7 +13,7 @@ struct HomeRunningCard: View {
             destination: .running
         ) {
             ForEach(RunningProcess.Kind.allCases, id: \.self) { kind in
-                HomeRow(label: kind.title, value: running.items(of: kind).count.formatted(), destination: .running)
+                HomeRow(label: "\(kind.title)", value: running.items(of: kind).count.formatted(), destination: .running)
             }
         }
     }

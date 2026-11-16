@@ -47,7 +47,7 @@ struct PrivacySettingsPane: View {
             }
         }
         .confirmationDialog(
-            "Delete all local groups?",
+            String(localized: "Delete all local groups?"),
             isPresented: $isConfirmingReset,
             titleVisibility: .visible
         ) {

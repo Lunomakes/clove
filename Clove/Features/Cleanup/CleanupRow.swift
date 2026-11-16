@@ -40,7 +40,7 @@ struct CleanupRow: View {
         .buttonStyle(.plain)
         .opacity(isSelected ? 1 : 0.6)
         .accessibilityLabel("\(candidate.kindTitle) \(candidate.displayName)")
-        .accessibilityValue(isSelected ? "Will be removed" : "Kept")
+        .accessibilityValue(isSelected ? String(localized: "Will be removed") : String(localized: "Kept"))
         .accessibilityHint("Toggles whether this skill is removed")
     }
 }

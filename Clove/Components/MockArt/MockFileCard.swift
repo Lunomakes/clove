@@ -4,7 +4,7 @@ import SwiftUI
 /// content where headings stand out and body lines are soft bars.
 struct MockFileCard: View {
     let fileName: String
-    var agent: (String, Color) = ("Any Agent", .secondary)
+    var agent: (String, Color) = (String(localized: "Any Agent"), .secondary)
     var lines: [String] = ["## Commands", "", "", "## Conventions", ""]
 
     var body: some View {

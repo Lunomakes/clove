@@ -14,9 +14,9 @@ final class SkillEditorModel {
 
         var title: String {
             switch self {
-            case .write: "Write"
-            case .split: "Split"
-            case .preview: "Preview"
+            case .write: String(localized: "Write")
+            case .split: String(localized: "Split")
+            case .preview: String(localized: "Preview")
             }
         }
 

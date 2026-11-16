@@ -3,8 +3,8 @@ import SwiftUI
 /// An empty state that shows what will fill the space: mockups of the real
 /// thing, a plain title, and two sentences. No button, no apology.
 struct CalmEmptyState<Art: View>: View {
-    let title: String
-    let message: String
+    let title: LocalizedStringResource
+    let message: LocalizedStringResource
     @ViewBuilder let art: Art
 
     var body: some View {

@@ -13,11 +13,11 @@ enum MenuBarStat: String, CaseIterable, Identifiable, Sendable {
 
     var title: String {
         switch self {
-        case .none: "Just the icon"
-        case .freeSpace: "Free space"
-        case .devServers: "Dev servers running"
-        case .servers: "All servers running"
-        case .containers: "Containers running"
+        case .none: String(localized: "Just the icon")
+        case .freeSpace: String(localized: "Free space")
+        case .devServers: String(localized: "Dev servers running")
+        case .servers: String(localized: "All servers running")
+        case .containers: String(localized: "Containers running")
         }
     }
 
@@ -39,17 +39,21 @@ enum MenuBarStat: String, CaseIterable, Identifiable, Sendable {
         case .freeSpace:
             guard let volume = StorageVolume.current() else { return nil }
             let free = StorageFormat.capacity(volume.available)
-            return (free, "\(free) free")
+            return (free, String(localized: "\(free) free"))
         case .devServers, .servers:
             let kinds = await RunningScanner.kinds(known: known)
             let count = kinds.filter { self == .devServers ? $0 == .devServer : $0 != .agent }.count
-            let noun = self == .devServers ? "dev server" : "server"
-            // Zero shows the icon alone, the way badges disappear at zero.
-            return count == 0 ? ("", "no \(noun)s running") : ("\(count)", "\(count) \(noun)\(count == 1 ? "" : "s") running")
+            let spoken: String
+            if self == .devServers {
+                spoken = count == 0 ? String(localized: "no dev servers running") : String(localized: "\(count) dev servers running")
+            } else {
+                spoken = count == 0 ? String(localized: "no servers running") : String(localized: "\(count) servers running")
+            }
+            return (count == 0 ? "" : count.formatted(), spoken)
         case .containers:
             guard case .success(let containers) = await ContainerScanner.list() else { return nil }
             let count = containers.filter(\.state.isRunning).count
-            return count == 0 ? ("", "no containers running") : ("\(count)", "\(count) container\(count == 1 ? "" : "s") running")
+            return count == 0 ? ("", String(localized: "no containers running")) : (count.formatted(), String(localized: "\(count) containers running"))
         }
     }
 }

@@ -108,9 +108,10 @@ struct PanelSelectionTests {
             ),
         ]
     ) -> AppModel {
-        let defaults = UserDefaults(suiteName: "clove.panel-selection.\(UUID().uuidString)")!
+        let domainName = "clove.panel-selection.\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: domainName)!
         let model = AppModel(
-            settings: SettingsStore(defaults: defaults),
+            settings: SettingsStore(defaults: defaults, domainName: domainName),
             persistence: TagPersistence(
                 fileURL: URL.temporaryDirectory.appending(path: "clove-panel-selection-\(UUID().uuidString).json")
             )

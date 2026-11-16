@@ -29,14 +29,14 @@ struct MarketplaceInstallBar: View {
                         Button(installTitle, systemImage: "arrow.down", action: install)
                             .buttonStyle(.glassProminent)
                             .disabled(!skill.isGitHub || manager.defaultTargets.isEmpty)
-                            .help(skill.isGitHub ? "Install for \(targetSummary)" : "Only skills hosted on GitHub install from Clove")
+                            .help(skill.isGitHub ? String(localized: "Install for \(targetSummary)") : String(localized: "Only skills hosted on GitHub install from Clove"))
                     }
 
                     InstallOptionsMenu(targets: targetsBinding, project: $project)
                 }
 
                 Button(
-                    didCopyCommand ? "Copied" : "Copy Command",
+                    didCopyCommand ? String(localized: "Copied") : String(localized: "Copy Command"),
                     systemImage: didCopyCommand ? "checkmark" : "terminal",
                     action: copyCommand
                 )
@@ -79,7 +79,7 @@ struct MarketplaceInstallBar: View {
     }
 
     private var installTitle: String {
-        project.map { "Install in \($0.lastPathComponent)" } ?? "Install"
+        project.map { String(localized: "Install in \($0.lastPathComponent)") } ?? String(localized: "Install")
     }
 
     private func install() {

@@ -8,6 +8,9 @@ import Sparkle
 @MainActor
 @Observable
 final class UpdateService {
+    let isAvailable = !(Bundle.main.object(forInfoDictionaryKey: "SUFeedURL") as? String ?? "")
+        .trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+
     @ObservationIgnored private let controller = SPUStandardUpdaterController(
         startingUpdater: false, updaterDelegate: nil, userDriverDelegate: nil
     )
@@ -23,6 +26,7 @@ final class UpdateService {
         #if DEBUG
         return
         #else
+        guard isAvailable else { return }
         do {
             try updater.start()
         } catch {

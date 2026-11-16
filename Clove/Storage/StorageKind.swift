@@ -18,15 +18,15 @@ enum StorageKind: Int, CaseIterable, Identifiable, Sendable, Codable {
 
     var title: String {
         switch self {
-        case .apps: "Apps"
-        case .developer: "Developer"
-        case .photos: "Photos"
-        case .movies: "Movies"
-        case .documents: "Documents"
-        case .music: "Music"
-        case .system: "System data"
-        case .caches: "Caches"
-        case .trash: "Trash"
+        case .apps: String(localized: "Apps")
+        case .developer: String(localized: "Developer")
+        case .photos: String(localized: "Photos")
+        case .movies: String(localized: "Movies")
+        case .documents: String(localized: "Documents")
+        case .music: String(localized: "Music")
+        case .system: String(localized: "System data")
+        case .caches: String(localized: "Caches")
+        case .trash: String(localized: "Trash")
         }
     }
 
@@ -186,19 +186,26 @@ enum StorageFormat {
 
     static func gb(_ gigabytes: Double) -> String {
         let value = max(0, gigabytes)
-        if value >= 1000 {
-            return String(format: "%.1f TB", value / 1000)
-        }
-        return String(format: "%.1f GB", value)
+        let formatter = MeasurementFormatter()
+        formatter.locale = .current
+        formatter.unitOptions = .providedUnit
+        formatter.unitStyle = .medium
+        formatter.numberFormatter.minimumFractionDigits = 1
+        formatter.numberFormatter.maximumFractionDigits = 1
+        return formatter.string(from: Measurement(value: value >= 1000 ? value / 1000 : value,
+                                                   unit: value >= 1000 ? UnitInformationStorage.terabytes : .gigabytes))
     }
 
-    /// The disk's size reads as a round number: 494 GB, not 494.4 GB.
+    /// The disk's size reads as a round number, using the current locale's units.
     static func capacity(_ bytes: Int64) -> String {
         let value = Double(bytes) / 1e9
-        if value >= 1000 {
-            return String(format: "%.0f TB", (value / 1000).rounded())
-        }
-        return String(format: "%.0f GB", value.rounded())
+        let formatter = MeasurementFormatter()
+        formatter.locale = .current
+        formatter.unitOptions = .providedUnit
+        formatter.unitStyle = .medium
+        formatter.numberFormatter.maximumFractionDigits = 0
+        return formatter.string(from: Measurement(value: value >= 1000 ? (value / 1000).rounded() : value.rounded(),
+                                                   unit: value >= 1000 ? UnitInformationStorage.terabytes : .gigabytes))
     }
 
     static func path(_ url: URL) -> String {

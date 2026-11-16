@@ -52,8 +52,8 @@ struct ListPage<ID: Hashable, Content: View>: View {
 
 /// One group of rows: a tile whose panel holds them, edge to edge.
 struct ListSection<Trailing: View, Content: View>: View {
-    let title: String
-    var note: String?
+    let title: LocalizedStringResource
+    var note: LocalizedStringResource?
     @ViewBuilder var trailing: Trailing
     @ViewBuilder let content: Content
 
@@ -81,7 +81,7 @@ struct ListSection<Trailing: View, Content: View>: View {
 }
 
 extension ListSection where Trailing == EmptyView {
-    init(title: String, note: String? = nil, @ViewBuilder content: () -> Content) {
+    init(title: LocalizedStringResource, note: LocalizedStringResource? = nil, @ViewBuilder content: () -> Content) {
         self.title = title
         self.note = note
         trailing = EmptyView()

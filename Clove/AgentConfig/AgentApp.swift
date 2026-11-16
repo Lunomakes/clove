@@ -23,7 +23,7 @@ enum AgentApp: String, CaseIterable, Identifiable, Hashable, Sendable, Codable, 
         case .gemini: "Gemini"
         case .copilot: "Copilot"
         case .windsurf: "Windsurf"
-        case .shared: "Any Agent"
+        case .shared: String(localized: "Any Agent")
         }
     }
 

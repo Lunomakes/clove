@@ -11,13 +11,13 @@ struct Container: Identifiable, Hashable, Sendable {
 
         var title: String {
             switch self {
-            case .running: "Running"
-            case .paused: "Paused"
-            case .restarting: "Restarting"
-            case .exited: "Stopped"
-            case .created: "Not started"
-            case .dead: "Failed"
-            case .removing: "Removing"
+            case .running: String(localized: "Running")
+            case .paused: String(localized: "Paused")
+            case .restarting: String(localized: "Restarting")
+            case .exited: String(localized: "Stopped")
+            case .created: String(localized: "Not started")
+            case .dead: String(localized: "Failed")
+            case .removing: String(localized: "Removing")
             }
         }
     }
@@ -159,7 +159,7 @@ enum ContainerScanner {
         let output = String(data: await outReader.value, encoding: .utf8) ?? ""
         let error = String(data: await errReader.value, encoding: .utf8) ?? ""
         if timedOut {
-            return Output(status: -1, output: "", error: "Docker didn't answer in time.")
+            return Output(status: -1, output: "", error: String(localized: "Docker didn't answer in time."))
         }
         return Output(status: process.terminationStatus, output: output, error: error)
     }
@@ -197,7 +197,7 @@ final class ContainerStore {
             availability = .notRunning
         case .failure(.failed(let message)):
             availability = .ready
-            failure = ManagerFailure(title: "Couldn't list containers", message: message)
+            failure = ManagerFailure(title: "Couldn't list containers", message: "\(message)")
         }
     }
 
@@ -219,7 +219,12 @@ final class ContainerStore {
         busy.insert(container.id)
         defer { busy.remove(container.id) }
         if case .failed(let message) = await ContainerScanner.perform(verb, on: container.id) {
-            failure = ManagerFailure(title: "Couldn't \(verb) \(container.name)", message: message)
+            let title: LocalizedStringResource = switch verb {
+            case "start": "Couldn't start \(container.name)"
+            case "restart": "Couldn't restart \(container.name)"
+            default: "Couldn't stop \(container.name)"
+            }
+            failure = ManagerFailure(title: title, message: "\(message)")
         }
         await refresh()
     }

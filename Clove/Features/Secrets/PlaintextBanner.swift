@@ -10,7 +10,7 @@ struct PlaintextBanner: View {
             HStack(spacing: Metrics.spacingS) {
                 Image(systemName: "exclamationmark.triangle.fill")
                     .foregroundStyle(.orange)
-                Text("\(count) \(count == 1 ? "key is" : "keys are") in plain text in your shell profile")
+                Text("\(count) keys are in plain text in your shell profile")
                     .frame(maxWidth: .infinity, alignment: .leading)
                 Text("Review")
                     .foregroundStyle(.tint)

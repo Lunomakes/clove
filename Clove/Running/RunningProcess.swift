@@ -9,9 +9,9 @@ struct RunningProcess: Identifiable, Hashable, Sendable {
 
         var title: String {
             switch self {
-            case .agent: "Agent Sessions"
-            case .mcpServer: "MCP Servers"
-            case .devServer: "Dev Servers"
+            case .agent: String(localized: "Agent Sessions")
+            case .mcpServer: String(localized: "MCP Servers")
+            case .devServer: String(localized: "Dev Servers")
             }
         }
 

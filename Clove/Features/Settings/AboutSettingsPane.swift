@@ -30,14 +30,16 @@ struct AboutSettingsPane: View {
                     }
                 }
 
-                SettingsFieldRow(label: "Updates") {
-                    VStack(alignment: .leading, spacing: Metrics.spacingS) {
-                        Toggle("Install updates automatically", isOn: Binding(
-                            get: { updates.isAutomatic },
-                            set: { updates.isAutomatic = $0 }
-                        ))
-                        Button("Check for Updates…") { updates.checkNow() }
-                            .disabled(!updates.canCheck)
+                if updates.isAvailable {
+                    SettingsFieldRow(label: "Updates") {
+                        VStack(alignment: .leading, spacing: Metrics.spacingS) {
+                            Toggle("Install updates automatically", isOn: Binding(
+                                get: { updates.isAutomatic },
+                                set: { updates.isAutomatic = $0 }
+                            ))
+                            Button("Check for Updates…") { updates.checkNow() }
+                                .disabled(!updates.canCheck)
+                        }
                     }
                 }
 
@@ -62,7 +64,7 @@ struct AboutSettingsPane: View {
                 }
             }
         }
-        .confirmationDialog("Deactivate Clove on this Mac?", isPresented: $isConfirmingDeactivate, titleVisibility: .visible) {
+        .confirmationDialog(String(localized: "Deactivate Clove on this Mac?"), isPresented: $isConfirmingDeactivate, titleVisibility: .visible) {
             Button("Deactivate", role: .destructive) {
                 Task { await model.license.deactivate() }
             }

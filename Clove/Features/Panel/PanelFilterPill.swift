@@ -28,7 +28,7 @@ struct PanelFilterPill: View {
                 .labelStyle(.iconOnly)
                 .buttonStyle(.plain)
                 .foregroundStyle(model.isGroupPinned(tag) ? AnyShapeStyle(.tint) : AnyShapeStyle(.tertiary))
-                .help(model.isGroupPinned(tag) ? "Remove from pinned groups" : "Pin to quick access panel")
+                .help(model.isGroupPinned(tag) ? String(localized: "Remove from pinned groups") : String(localized: "Pin to quick access panel"))
             }
         }
         .padding(.horizontal, Metrics.spacingM)

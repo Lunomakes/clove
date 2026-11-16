@@ -19,8 +19,8 @@ struct PanelPinButton: View {
         }
         .buttonStyle(.plain)
         .foregroundStyle(isPinned ? Color.accentColor : .secondary)
-        .help(isPinned ? "Unpin. The panel hides when you switch apps." : "Pin beside your editor")
-        .accessibilityLabel(isPinned ? "Unpin panel" : "Pin panel")
+        .help(isPinned ? String(localized: "Unpin. The panel hides when you switch apps.") : String(localized: "Pin beside your editor"))
+        .accessibilityLabel(isPinned ? String(localized: "Unpin panel") : String(localized: "Pin panel"))
         .accessibilityAddTraits(isPinned ? .isSelected : [])
     }
 }

@@ -10,9 +10,9 @@ enum LeftoverKind: String, CaseIterable, Identifiable, Sendable {
 
     var title: String {
         switch self {
-        case .testBrowsers: "Test browsers"
-        case .npxPackages: "npx packages"
-        case .claudeVersions: "Old Claude Code versions"
+        case .testBrowsers: String(localized: "Test browsers")
+        case .npxPackages: String(localized: "npx packages")
+        case .claudeVersions: String(localized: "Old Claude Code versions")
         }
     }
 
@@ -20,11 +20,11 @@ enum LeftoverKind: String, CaseIterable, Identifiable, Sendable {
     var explanation: String {
         switch self {
         case .testBrowsers:
-            "Playwright, Puppeteer, and Selenium download a fresh “Chrome for Testing” for browser tools, and macOS lists each as an app. Older builds are never used again."
+            String(localized: "Playwright, Puppeteer, and Selenium download a fresh “Chrome for Testing” for browser tools, and macOS lists each as an app. Older builds are never used again.")
         case .npxPackages:
-            "MCP servers and tools started with npx keep a full install each. npx downloads them again the next time they run."
+            String(localized: "MCP servers and tools started with npx keep a full install each. npx downloads them again the next time they run.")
         case .claudeVersions:
-            "Claude Code keeps every version it updates to. Only the one the claude command points at runs."
+            String(localized: "Claude Code keeps every version it updates to. Only the one the claude command points at runs.")
         }
     }
 }

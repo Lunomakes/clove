@@ -28,8 +28,8 @@ struct CleanupCandidate: Identifiable, Hashable, Sendable {
 
     var kindTitle: String {
         switch item {
-        case .skill: "Skill"
-        case .resource(let resource): resource.kind == .commands ? "Command" : "Subagent"
+        case .skill: String(localized: "Skill")
+        case .resource(let resource): resource.kind == .commands ? String(localized: "Command") : String(localized: "Subagent")
         }
     }
 

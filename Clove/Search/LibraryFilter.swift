@@ -7,7 +7,7 @@ enum LibraryFilter: Hashable, Sendable {
 
     var title: String {
         switch self {
-        case .all: "All Skills"
+        case .all: String(localized: "All Skills")
         case .source(let source): source.sectionTitle
         case .tag(let tag): tag
         }

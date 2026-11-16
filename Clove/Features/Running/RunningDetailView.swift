@@ -31,7 +31,7 @@ struct RunningDetailView: View {
                         if !process.ports.isEmpty {
                             row("Listening on", process.ports.map { "localhost:\($0)" }.joined(separator: ", "), code: true)
                         }
-                        row("Running for", process.startedAt.formatted(.relative(presentation: .numeric)).replacing(" ago", with: ""))
+                        row("Running for", Duration.seconds(max(0, Date.now.timeIntervalSince(process.startedAt))).formatted(.units(allowed: [.days, .hours, .minutes, .seconds], width: .wide, maximumUnitCount: 1)))
                         row("Memory", process.memoryBytes.formatted(.byteCount(style: .memory)))
                         row("Process ID", String(process.pid), code: true)
                     }
@@ -66,10 +66,10 @@ struct RunningDetailView: View {
                         isConfirmingStop = true
                     }
                 }
-                .help(isStopping ? "Stop it now, without letting it clean up" : "Ask it to quit")
+                .help(isStopping ? String(localized: "Stop it now, without letting it clean up") : String(localized: "Ask it to quit"))
             }
         }
-        .confirmationDialog("Stop \(process.name)?", isPresented: $isConfirmingStop, titleVisibility: .visible) {
+        .confirmationDialog(String(localized: "Stop \(process.name)?"), isPresented: $isConfirmingStop, titleVisibility: .visible) {
             Button("Stop", role: .destructive) { model.running.stop(process) }
             Button("Cancel", role: .cancel) {}
         } message: {
@@ -79,13 +79,13 @@ struct RunningDetailView: View {
 
     private var stopMessage: String {
         switch process.kind {
-        case .agent: "The agent session ends. Unsaved work in it is lost."
-        case .mcpServer: "Its agent loses these tools until it restarts the server."
-        case .devServer: "The server stops listening on \(process.ports.map { ":\($0)" }.joined(separator: ", "))."
+        case .agent: String(localized: "The agent session ends. Unsaved work in it is lost.")
+        case .mcpServer: String(localized: "Its agent loses these tools until it restarts the server.")
+        case .devServer: String(localized: "The server stops listening on \(process.ports.map { ":\($0)" }.joined(separator: ", ")).")
         }
     }
 
-    private func row(_ label: String, _ value: String, code: Bool = false) -> some View {
+    private func row(_ label: LocalizedStringResource, _ value: String, code: Bool = false) -> some View {
         GridRow {
             Text(label)
                 .foregroundStyle(.secondary)

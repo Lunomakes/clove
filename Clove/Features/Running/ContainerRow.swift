@@ -97,7 +97,7 @@ struct ContainersSection: View {
                 ListSection(
                     title: "Containers",
                     note: store.running.count == store.containers.count
-                        ? store.containers.count.formatted()
+                        ? "\(store.containers.count.formatted())"
                         : "\(store.running.count) of \(store.containers.count) running"
                 ) {
                     DividedRows {

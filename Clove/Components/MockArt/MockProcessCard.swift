@@ -3,7 +3,7 @@ import SwiftUI
 /// A running process as the Running list shows it.
 struct MockProcessCard: View {
     let name: String
-    let detail: String
+    let detail: LocalizedStringResource
     var port: String?
 
     var body: some View {

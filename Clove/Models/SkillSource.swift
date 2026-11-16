@@ -13,13 +13,13 @@ enum SkillSource: String, CaseIterable, Sendable, Comparable {
     var sectionTitle: String {
         switch self {
         case .cursor: "Cursor"
-        case .cursorBuiltin: "Cursor (built-in)"
+        case .cursorBuiltin: String(localized: "Cursor (built-in)")
         case .claude: "Claude Code"
-        case .agents: "Shared"
+        case .agents: String(localized: "Shared")
         case .codex: "Codex"
-        case .plugin: "Plugins"
-        case .project: "Projects"
-        case .other: "Other"
+        case .plugin: String(localized: "Plugins")
+        case .project: String(localized: "Projects")
+        case .other: String(localized: "Other")
         }
     }
 

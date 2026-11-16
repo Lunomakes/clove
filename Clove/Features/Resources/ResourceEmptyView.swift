@@ -13,7 +13,7 @@ struct ResourceEmptyView: View {
         } else if !query.isEmpty {
             ContentUnavailableView.search(text: query)
         } else {
-            CalmEmptyState(title: "No \(kind.title.lowercased()) yet", message: kind.explanation + " " + whereToFind) {
+            CalmEmptyState(title: kind.emptyTitle, message: "\(kind.explanation) \(whereToFind)") {
                 ResourceArt(kind: kind)
             }
         }
@@ -21,13 +21,13 @@ struct ResourceEmptyView: View {
 
     private var whereToFind: String {
         switch kind {
-        case .instructions: "Add a CLAUDE.md or AGENTS.md to a project or to ~/.claude."
-        case .rules: "Cursor reads them from .cursor/rules in each project."
-        case .commands: "Claude Code reads them from ~/.claude/commands, Cursor from ~/.cursor/commands."
-        case .subagents: "Claude Code reads them from ~/.claude/agents."
-        case .mcpServers: "Add one with claude mcp add, or in Cursor's MCP settings."
-        case .hooks: "Claude Code reads them from settings.json, Cursor from hooks.json."
-        case .permissions: "Claude Code saves them when you approve a command with “always allow.”"
+        case .instructions: String(localized: "Add a CLAUDE.md or AGENTS.md to a project or to ~/.claude.")
+        case .rules: String(localized: "Cursor reads them from .cursor/rules in each project.")
+        case .commands: String(localized: "Claude Code reads them from ~/.claude/commands, Cursor from ~/.cursor/commands.")
+        case .subagents: String(localized: "Claude Code reads them from ~/.claude/agents.")
+        case .mcpServers: String(localized: "Add one with claude mcp add, or in Cursor's MCP settings.")
+        case .hooks: String(localized: "Claude Code reads them from settings.json, Cursor from hooks.json.")
+        case .permissions: String(localized: "Claude Code saves them when you approve a command with “always allow.”")
         }
     }
 }

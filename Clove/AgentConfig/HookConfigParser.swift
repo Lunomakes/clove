@@ -148,7 +148,7 @@ enum HookConfigParser {
         } else {
             path = first
         }
-        return FileManager.default.fileExists(atPath: path) ? nil : "The script \(first) doesn't exist, so this hook fails every time it runs."
+        return FileManager.default.fileExists(atPath: path) ? nil : String(localized: "The script \(first) doesn't exist, so this hook fails every time it runs.")
     }
 
     private static func multilineArray(after line: Substring, in text: String) -> [String] {

@@ -45,7 +45,7 @@ final class RunningStore {
         guard kill(process.pid, force ? SIGKILL : SIGTERM) == 0 else {
             failure = ManagerFailure(
                 title: "Couldn't stop \(process.name)",
-                message: String(cString: strerror(errno))
+                message: "\(String(cString: strerror(errno)))"
             )
             return
         }

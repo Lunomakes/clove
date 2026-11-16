@@ -140,9 +140,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             item.onSettings = {
                 WindowBridge.shared.showSettings()
             }
-            item.onCheckForUpdates = { [weak self] in
-                guard let self else { return }
-                self.updates.checkNow()
+            if updates.isAvailable {
+                item.onCheckForUpdates = { [weak self] in
+                    guard let self else { return }
+                    self.updates.checkNow()
+                }
             }
             item.panelShortcut = { [weak self] in
                 guard let settings = self?.model.settings, settings.hotKeyEnabled else { return nil }

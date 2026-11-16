@@ -16,30 +16,30 @@ enum StorageClean: Sendable, Equatable, CaseIterable {
 
     var verb: String {
         switch self {
-        case .caches: "Clear Caches"
-        case .trash: "Empty Trash"
+        case .caches: String(localized: "Clear Caches")
+        case .trash: String(localized: "Empty Trash")
         }
     }
 
     var doing: String {
         switch self {
-        case .caches: "Clearing caches"
-        case .trash: "Emptying the Trash"
+        case .caches: String(localized: "Clearing caches")
+        case .trash: String(localized: "Emptying the Trash")
         }
     }
 
     func line(_ size: String) -> String {
         switch self {
-        case .caches: "\(size) of caches you can clear. Apps rebuild them as needed."
-        case .trash: "The Trash is holding \(size) of things you've already deleted."
+        case .caches: String(localized: "\(size) of caches you can clear. Apps rebuild them as needed.")
+        case .trash: String(localized: "The Trash is holding \(size) of things you've already deleted.")
         }
     }
 
     /// The same, at panel width.
     func shortLine(_ size: String) -> String {
         switch self {
-        case .caches: "\(size) of caches"
-        case .trash: "\(size) in the Trash"
+        case .caches: String(localized: "\(size) of caches")
+        case .trash: String(localized: "\(size) in the Trash")
         }
     }
 
@@ -136,7 +136,7 @@ final class StorageStore {
     private static var snapshotURL: URL? {
         guard let caches = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return nil }
         return caches
-            .appending(path: Bundle.main.bundleIdentifier ?? "com.kshvbgde.clove", directoryHint: .isDirectory)
+            .appending(path: Bundle.main.bundleIdentifier ?? String(localized: "com.kshvbgde.clove"), directoryHint: .isDirectory)
             .appending(path: "storage-scan.json", directoryHint: .notDirectory)
     }
 
@@ -245,68 +245,68 @@ final class StorageStore {
     func note(for kind: StorageKind) -> String {
         guard let report = reports[kind] else {
             return kind == .system
-                ? "macOS itself, and app data that isn't sorted anywhere else."
-                : "Rescan to measure."
+                ? String(localized: "macOS itself, and app data that isn't sorted anywhere else.")
+                : String(localized: "Rescan to measure.")
         }
         if report.isRestricted, report.bytes == 0 {
             return kind == .trash
-                ? "Clove needs Full Disk Access to see inside the Trash."
-                : "macOS didn't let Clove read this folder."
+                ? String(localized: "Clove needs Full Disk Access to see inside the Trash.")
+                : String(localized: "macOS didn't let Clove read this folder.")
         }
         let largest = report.items.first
         switch kind {
         case .apps:
-            let count = report.appCount == 1 ? "1 app" : "\(report.appCount) apps"
+            let count = report.appCount
             let app = report.items.first { $0.url.pathExtension == "app" }
-            guard let app else { return "\(count)." }
-            return "\(count). \(app.name) is the largest at \(StorageFormat.gb(app.bytes))."
+            guard let app else { return String(localized: "\(count) apps.") }
+            return String(localized: "\(count) apps. \(app.name) is the largest at \(StorageFormat.gb(app.bytes)).")
         case .developer:
             let top = report.buckets.filter { $0.value >= 500_000_000 }.sorted { $0.value > $1.value }.prefix(2)
             if !top.isEmpty {
-                return top.map { "\(Self.phrase(for: $0.key)) \(StorageFormat.gb($0.value))." }.joined(separator: " ")
+                return top.map { Self.phrase(for: $0.key, size: StorageFormat.gb($0.value)) }.joined(separator: " ")
             }
         case .photos:
             if let library = report.buckets[.photosLibrary], library > 0 {
-                return "Your Photos library takes \(StorageFormat.gb(library)), all kept on this Mac."
+                return String(localized: "Your Photos library takes \(StorageFormat.gb(library)), all kept on this Mac.")
             }
         case .movies:
             if let file = report.largestFile {
-                return "Your largest is \(file.name) at \(StorageFormat.gb(file.bytes))."
+                return String(localized: "Your largest is \(file.name) at \(StorageFormat.gb(file.bytes)).")
             }
         case .documents:
             if let file = report.largestFile {
-                return "Your largest file is \(file.name) at \(StorageFormat.gb(file.bytes))."
+                return String(localized: "Your largest file is \(file.name) at \(StorageFormat.gb(file.bytes)).")
             }
         case .music:
             if report.audioFiles > 0 {
-                let count = report.audioFiles.formatted(.number)
-                return "\(count) songs and recordings kept on this Mac."
+                let count = report.audioFiles
+                return String(localized: "\(count) songs and recordings kept on this Mac.")
             }
         case .system:
-            return "macOS itself, and app data that isn't sorted anywhere else."
+            return String(localized: "macOS itself, and app data that isn't sorted anywhere else.")
         case .caches:
             if let largest {
-                return "Apps rebuild these when they need them. \(Self.owner(of: largest.url)) keeps the most, at \(StorageFormat.gb(largest.bytes))."
+                return String(localized: "Apps rebuild these when they need them. \(Self.owner(of: largest.url)) keeps the most, at \(StorageFormat.gb(largest.bytes)).")
             }
-            return "Apps rebuild these when they need them again."
+            return String(localized: "Apps rebuild these when they need them again.")
         case .trash:
             let count = report.items.count
-            if count == 0 { return "The Trash is empty." }
-            return "\(count == 1 ? "1 item" : "\(count.formatted(.number)) items") you've already deleted."
+            if count == 0 { return String(localized: "The Trash is empty.") }
+            return String(localized: "\(count) items you've already deleted.")
         }
-        guard let largest else { return "Nothing here yet." }
-        return "\(largest.name) is the largest at \(StorageFormat.gb(largest.bytes))."
+        guard let largest else { return String(localized: "Nothing here yet.") }
+        return String(localized: "\(largest.name) is the largest at \(StorageFormat.gb(largest.bytes)).")
     }
 
-    private static func phrase(for bucket: StorageBucket) -> String {
+    private static func phrase(for bucket: StorageBucket, size: String) -> String {
         switch bucket {
-        case .simulators: "Old simulators take"
-        case .buildOutput: "Build output takes"
-        case .nodeModules: "node_modules take"
-        case .agentHistory: "Agent history takes"
-        case .models: "Downloaded models take"
-        case .docker: "Docker takes"
-        case .photosLibrary: "Your Photos library takes"
+        case .simulators: String(localized: "Old simulators take \(size).")
+        case .buildOutput: String(localized: "Build output takes \(size).")
+        case .nodeModules: String(localized: "node_modules take \(size).")
+        case .agentHistory: String(localized: "Agent history takes \(size).")
+        case .models: String(localized: "Downloaded models take \(size).")
+        case .docker: String(localized: "Docker takes \(size).")
+        case .photosLibrary: String(localized: "Your Photos library takes \(size).")
         }
     }
 
@@ -523,9 +523,7 @@ final class StorageStore {
         cleanStarted = nil
         phase = .idle
         if failures > 0 {
-            failure = failures == 1
-                ? "One item couldn't be removed. It may be in use."
-                : "\(failures) items couldn't be removed. They may be in use."
+            failure = String(localized: "\(failures) items couldn't be removed. They may be in use.")
         }
         saveSnapshot()
     }
@@ -544,8 +542,8 @@ final class StorageStore {
         if freed?.record == record.id { freed = nil }
         if result.missing > 0 {
             failure = result.restored == 0
-                ? "Nothing could go back: it's no longer in the Trash, or something new is in its place."
-                : "\(result.restored) went back. \(result.missing) couldn't: no longer in the Trash, or something new is in its place."
+                ? String(localized: "Nothing could go back: it's no longer in the Trash, or something new is in its place.")
+                : String(localized: "\(result.restored) went back. \(result.missing) couldn't: no longer in the Trash, or something new is in its place.")
         }
         let touched = Set(moves.compactMap { kind(containing: $0.original) })
         await remeasure(touched.union([.trash]))
@@ -613,14 +611,14 @@ final class StorageStore {
         // The row may be from a saved scan: make sure it's still there, still
         // inside its kind's folder, and still the size the dialog said.
         guard FileManager.default.fileExists(atPath: item.url.path(percentEncoded: false)), StorageSafety.isInside(item.url, roots: item.kind.roots.map(\.url)) else {
-            failure = "“\(item.name)” isn't where the last scan found it. Rescan to see what's there now."
+            failure = String(localized: "“\(item.name)” isn't where the last scan found it. Rescan to see what's there now.")
             return
         }
         var trashed: NSURL?
         do {
             try FileManager.default.trashItem(at: item.url, resultingItemURL: &trashed)
         } catch {
-            failure = "Couldn't move “\(item.name)” to the Trash. \(error.localizedDescription)"
+            failure = String(localized: "Couldn't move “\(item.name)” to the Trash. \(error.localizedDescription)")
             return
         }
         var recordID: ClearRecord.ID?

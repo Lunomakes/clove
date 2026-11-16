@@ -144,7 +144,7 @@ struct GroupPickerField: View {
 
     private var emptyCopy: String {
         let query = draft.trimmingCharacters(in: .whitespacesAndNewlines)
-        return query.isEmpty ? "No other groups yet." : "Already in this group."
+        return query.isEmpty ? String(localized: "No other groups yet.") : String(localized: "Already in this group.")
     }
 
     private var menuFill: Color {

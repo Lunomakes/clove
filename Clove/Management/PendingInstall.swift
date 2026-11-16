@@ -10,8 +10,8 @@ struct PendingInstall: Identifiable, Hashable, Sendable {
     /// A project folder to install into, or nil for everywhere.
     var project: URL?
 
-    /// "Everywhere", or the project's folder name.
+    /// String(localized: "Everywhere"), or the project's folder name.
     var scopeTitle: String {
-        project?.lastPathComponent ?? "Everywhere"
+        project?.lastPathComponent ?? String(localized: "Everywhere")
     }
 }

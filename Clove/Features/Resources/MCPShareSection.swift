@@ -49,15 +49,15 @@ struct MCPShareSection: View {
     }
 
     private func actionTitle(for agent: AgentApp) -> String {
-        if copied == agent { return "Copied" }
-        return agent == .cursor ? "Add" : "Copy Command"
+        if copied == agent { return String(localized: "Copied") }
+        return agent == .cursor ? String(localized: "Add") : String(localized: "Copy Command")
     }
 
     private func help(for agent: AgentApp) -> String {
         switch agent {
-        case .cursor: "Add to ~/.cursor/mcp.json"
-        case .claudeCode: "Copy a claude mcp add-json command"
-        default: "Copy a block for ~/.codex/config.toml"
+        case .cursor: String(localized: "Add to ~/.cursor/mcp.json")
+        case .claudeCode: String(localized: "Copy a claude mcp add-json command")
+        default: String(localized: "Copy a block for ~/.codex/config.toml")
         }
     }
 

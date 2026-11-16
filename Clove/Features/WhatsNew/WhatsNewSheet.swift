@@ -9,8 +9,8 @@ struct WhatsNewSheet: View {
     var body: some View {
         FeatureSheet(
             symbolName: release.symbolName,
-            title: release.title,
-            subtitle: release.subtitle,
+            title: "\(release.title)",
+            subtitle: "\(release.subtitle)",
             continueTitle: "Continue",
             onContinue: finish
         ) {

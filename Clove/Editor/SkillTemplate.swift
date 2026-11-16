@@ -12,19 +12,19 @@ enum SkillTemplate: String, CaseIterable, Identifiable, Sendable {
 
     var title: String {
         switch self {
-        case .blank: "Blank"
-        case .guide: "Guide"
-        case .workflow: "Workflow"
-        case .review: "Review"
+        case .blank: String(localized: "Blank")
+        case .guide: String(localized: "Guide")
+        case .workflow: String(localized: "Workflow")
+        case .review: String(localized: "Review")
         }
     }
 
     var summary: String {
         switch self {
-        case .blank: "Just the frontmatter."
-        case .guide: "Rules and conventions for a tool, codebase, or style."
-        case .workflow: "Numbered steps for a repeatable task."
-        case .review: "A checklist to audit work against."
+        case .blank: String(localized: "Just the frontmatter.")
+        case .guide: String(localized: "Rules and conventions for a tool, codebase, or style.")
+        case .workflow: String(localized: "Numbered steps for a repeatable task.")
+        case .review: String(localized: "A checklist to audit work against.")
         }
     }
 

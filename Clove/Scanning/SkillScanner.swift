@@ -163,7 +163,7 @@ actor SkillScanner {
 
         return Skill(
             name: matter.name ?? directoryName,
-            summary: matter.summary ?? "No description in this skill.",
+            summary: matter.summary ?? String(localized: "No description in this skill."),
             originalURL: url,
             fileURL: resolved,
             resolvedPath: path,

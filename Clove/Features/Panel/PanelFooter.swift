@@ -81,7 +81,7 @@ struct PanelFooter: View {
         .labelStyle(.iconOnly)
         .buttonStyle(.plain)
         .foregroundStyle(model.isGroupPinned(group) ? AnyShapeStyle(.tint) : AnyShapeStyle(.tertiary))
-        .help(model.isGroupPinned(group) ? "Remove from pinned groups" : "Pin to quick access panel")
+        .help(model.isGroupPinned(group) ? String(localized: "Remove from pinned groups") : String(localized: "Pin to quick access panel"))
     }
 
     private func copyButton(for group: String) -> some View {

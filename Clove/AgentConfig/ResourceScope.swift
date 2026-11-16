@@ -7,7 +7,7 @@ enum ResourceScope: Hashable, Sendable, Comparable {
 
     var title: String {
         switch self {
-        case .global: "Everywhere"
+        case .global: String(localized: "Everywhere")
         case .project(let name): name
         }
     }

@@ -18,7 +18,7 @@ struct SecretsList: View {
             }
 
             if !secrets.items.isEmpty {
-                ListSection(title: "Keys", note: secrets.items.count.formatted()) {
+                ListSection(title: "Keys", note: "\(secrets.items.count.formatted())") {
                     ForEach(secrets.items) { item in
                         SelectableRow(id: item.id, selection: $secrets.selection) {
                             HStack(spacing: Metrics.spacingM) {
@@ -48,7 +48,7 @@ struct SecretsList: View {
             if secrets.items.isEmpty {
                 CalmEmptyState(
                     title: "No keys yet",
-                    message: secrets.loadError ?? "Keys you save here live in your Keychain, not a dotfile, and macOS asks before anything reads one. The plus button adds the first."
+                    message: "\(secrets.loadError ?? String(localized: "Keys you save here live in your Keychain, not a dotfile, and macOS asks before anything reads one. The plus button adds the first."))"
                 ) {
                     SecretsArt()
                 }

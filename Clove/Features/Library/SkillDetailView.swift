@@ -85,7 +85,7 @@ struct SkillDetailView: View {
             }
         }
         .confirmationDialog(
-            "Move “\(entry.displayName)” to the Trash?",
+            String(localized: "Move “\(entry.displayName)” to the Trash?"),
             isPresented: $isConfirmingRemoval,
             titleVisibility: .visible
         ) {

@@ -9,10 +9,10 @@ struct LibraryList: View {
         let results = model.libraryResults
 
         ListPage(selection: $model.librarySelection, order: results.map(\.id)) {
-            PageHeader(title: model.libraryFilter.title, summary: summary)
+            PageHeader(title: "\(model.libraryFilter.title)", summary: "\(summary)")
 
             if !results.isEmpty {
-                ListSection(title: model.libraryQuery.isEmpty ? "Skills" : "Matches", note: results.count.formatted()) {
+                ListSection(title: model.libraryQuery.isEmpty ? "Skills" : "Matches", note: "\(results.count.formatted())") {
                     ForEach(results) { entry in
                         SelectableRow(id: entry.id, selection: $model.librarySelection) {
                             LibraryRow(entry: entry)
@@ -76,11 +76,11 @@ struct LibraryList: View {
     private var summary: String {
         switch model.libraryFilter {
         case .all:
-            return "Every SKILL.md on this Mac, from every agent. Return copies a reference, or drag one into a prompt."
+            return String(localized: "Every SKILL.md on this Mac, from every agent. Return copies a reference, or drag one into a prompt.")
         case .source(let source):
-            return "Skills Clove found in \(source.sectionTitle)."
+            return String(localized: "Skills Clove found in \(source.sectionTitle).")
         case .tag:
-            return "A group you made. Copy Group copies every reference in it at once."
+            return String(localized: "A group you made. Copy Group copies every reference in it at once.")
         }
     }
 

@@ -7,7 +7,7 @@ struct CleanupMethodList: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: Metrics.spacingS) {
-            CleanupMethodRow(symbolName: "clock.arrow.circlepath", text: historyLine)
+            CleanupMethodRow(symbolName: "clock.arrow.circlepath", text: "\(historyLine)")
             CleanupMethodRow(
                 symbolName: "calendar",
                 text: "Lists skills, commands, and subagents no session used in the last \(window.phrase). Anything added or edited since then is left alone."
@@ -26,9 +26,9 @@ struct CleanupMethodList: View {
     private var historyLine: String {
         let sessions = report.transcriptCount.formatted()
         guard let start = report.historyStart else {
-            return "Reads \(sessions) Claude Code, Codex, and Cursor sessions on this Mac."
+            return String(localized: "Reads \(sessions) Claude Code, Codex, and Cursor sessions on this Mac.")
         }
         let since = start.formatted(.dateTime.month(.abbreviated).day().year())
-        return "Reads \(sessions) Claude Code, Codex, and Cursor sessions on this Mac, back to \(since). Nothing leaves your Mac."
+        return String(localized: "Reads \(sessions) Claude Code, Codex, and Cursor sessions on this Mac, back to \(since). Nothing leaves your Mac.")
     }
 }

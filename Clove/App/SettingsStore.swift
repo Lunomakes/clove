@@ -4,6 +4,18 @@ import Observation
 @MainActor
 @Observable
 final class SettingsStore {
+    var language: AppLanguage {
+        didSet {
+            if language == .system {
+                defaults.removeObject(forKey: Keys.language)
+            } else {
+                defaults.set([language.rawValue], forKey: Keys.language)
+            }
+        }
+    }
+
+    let languageAtLaunch: AppLanguage
+
     var hasCompletedOnboarding: Bool {
         didSet { defaults.set(hasCompletedOnboarding, forKey: Keys.onboarded) }
     }
@@ -94,8 +106,16 @@ final class SettingsStore {
 
     private let defaults: UserDefaults
 
-    init(defaults: UserDefaults = .standard) {
+    // Injected suites must supply their own domain name for the persistent-only read.
+    init(
+        defaults: UserDefaults = .standard,
+        domainName: String = Bundle.main.bundleIdentifier ?? "com.kshvbgde.clove"
+    ) {
         self.defaults = defaults
+        let languages = defaults.persistentDomain(forName: domainName)?[Keys.language] as? [String]
+        let language = AppLanguage(languageCode: languages?.first)
+        self.language = language
+        languageAtLaunch = language
         hasCompletedOnboarding = defaults.bool(forKey: Keys.onboarded)
         showMenuBarIcon = defaults.flag(Keys.showMenuBarIcon, default: true)
         hideDockIcon = defaults.flag(Keys.hideDockIcon, default: true)
@@ -170,6 +190,7 @@ final class SettingsStore {
     }
 
     private enum Keys {
+        static let language = "AppleLanguages"
         static let onboarded = "hasCompletedOnboarding"
         static let showMenuBarIcon = "showMenuBarIcon"
         static let hideDockIcon = "hideDockIcon"

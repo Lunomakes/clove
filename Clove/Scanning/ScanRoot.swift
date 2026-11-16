@@ -14,10 +14,10 @@ struct ScanRoot: Identifiable, Hashable, Sendable {
     static func agentRoots(home: URL = URL.homeDirectory) -> [ScanRoot] {
         let items: [(String, String)] = [
             ("Cursor", ".cursor/skills"),
-            ("Cursor built-in", ".cursor/skills-cursor"),
-            ("Cursor plugins", ".cursor/plugins/cache"),
+            (String(localized: "Cursor built-in"), ".cursor/skills-cursor"),
+            (String(localized: "Cursor plugins"), ".cursor/plugins/cache"),
             ("Claude Code", ".claude/skills"),
-            ("Agents", ".agents/skills"),
+            (String(localized: "Agents"), ".agents/skills"),
             ("Codex", ".codex/skills"),
         ]
         return items.map { title, relative in

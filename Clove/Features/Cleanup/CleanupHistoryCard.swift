@@ -46,7 +46,7 @@ struct CleanupHistoryCard: View {
             .font(.callout)
         }
         .confirmationDialog(
-            "Move \(old.count.formatted()) sessions to the Trash?",
+            String(localized: "Move \(old.count.formatted()) sessions to the Trash?"),
             isPresented: $isConfirming,
             titleVisibility: .visible
         ) {
@@ -59,9 +59,10 @@ struct CleanupHistoryCard: View {
 
     private func summary(all: [TranscriptFile], old: [TranscriptFile], oldBytes: Int) -> String {
         let total = all.reduce(0) { $0 + $1.size }
-        let base = "Claude Code, Codex, and Cursor keep \(Self.bytes(total)) of session history on this Mac."
-        guard !old.isEmpty else { return base + " None of it is older than \(cleanup.window.phrase)." }
-        return base + " \(Self.bytes(oldBytes)) of it is from sessions older than \(cleanup.window.phrase)."
+        if old.isEmpty {
+            return String(localized: "Claude Code, Codex, and Cursor keep \(Self.bytes(total)) of session history on this Mac. None of it is older than \(cleanup.window.phrase).")
+        }
+        return String(localized: "Claude Code, Codex, and Cursor keep \(Self.bytes(total)) of session history on this Mac. \(Self.bytes(oldBytes)) of it is from sessions older than \(cleanup.window.phrase).")
     }
 
     private static func bytes(_ count: Int) -> String {

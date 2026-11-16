@@ -46,7 +46,7 @@ enum LeftoverScanner {
             return LeftoverItem(
                 kind: .testBrowsers,
                 title: "\(build.tool) \(readableBrowser(build.name))",
-                detail: isNewest ? "\(build.label), the newest" : build.label,
+                detail: isNewest ? String(localized: "\(build.label), the newest") : build.label,
                 url: build.url,
                 bytes: size(of: build.url, fileManager: fileManager),
                 isOutdated: !isNewest
@@ -77,8 +77,8 @@ enum LeftoverScanner {
             let modified = (try? folder.resourceValues(forKeys: [.contentModificationDateKey]))?.contentModificationDate ?? now
             return LeftoverItem(
                 kind: .npxPackages,
-                title: packages.isEmpty ? "Unfinished download" : packages.joined(separator: ", "),
-                detail: "Last run " + modified.formatted(.relative(presentation: .named)),
+                title: packages.isEmpty ? String(localized: "Unfinished download") : packages.joined(separator: ", "),
+                detail: String(localized: "Last run \(modified.formatted(.relative(presentation: .named)))"),
                 url: folder,
                 bytes: size(of: folder, fileManager: fileManager),
                 isOutdated: packages.isEmpty || modified < idle
@@ -110,7 +110,7 @@ enum LeftoverScanner {
             return LeftoverItem(
                 kind: .claudeVersions,
                 title: "Claude Code \(version)",
-                detail: isActive ? "The version you run" : "Not in use",
+                detail: isActive ? String(localized: "The version you run") : String(localized: "Not in use"),
                 url: file,
                 bytes: size(of: file, fileManager: fileManager),
                 // Without a link to compare against, keep everything.

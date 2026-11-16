@@ -13,7 +13,7 @@ struct SkillSection: Identifiable, Hashable, Sendable {
 
     var title: String {
         if let detail, source == .plugin || source == .project {
-            "\(source.sectionTitle) · \(detail)"
+            String(localized: "\(source.sectionTitle) · \(detail)")
         } else {
             source.sectionTitle
         }

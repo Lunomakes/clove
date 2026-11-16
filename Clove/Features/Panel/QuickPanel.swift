@@ -247,7 +247,7 @@ struct StorageBlock: View {
         let storage = model.storage
 
         VStack(spacing: 0) {
-            PanelBlockHeader(block: .storage, note: storage.volume.map { "\(StorageFormat.gb($0.available)) free" })
+            PanelBlockHeader(block: .storage, note: storage.volume.map { String(localized: "\(StorageFormat.gb($0.available)) free") })
 
             StorageCard(store: storage, pinned: nil, isCompact: true, openClear: { clean in
                 openInClove(model, .storage, closePanel: closePanel) {
@@ -357,13 +357,13 @@ struct CleanupBlock: View {
         let leftovers = (model.cleanup.leftovers.value ?? []).filter(\.isOutdated).reduce(Int64(0)) { $0 + $1.bytes }
 
         VStack(alignment: .leading, spacing: 0) {
-            PanelBlockHeader(block: .cleanup, note: candidates.isEmpty ? nil : "\(candidates.count) unused")
+            PanelBlockHeader(block: .cleanup, note: candidates.isEmpty ? nil : String(localized: "\(candidates.count) unused"))
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(tokens, format: .number)
                     .font(.system(size: 40, weight: .semibold).monospacedDigit())
                     .contentTransition(.numericText(value: Double(tokens)))
-                Text(candidates.isEmpty ? "Every skill and command was used recently." : "tokens every session spends listing skills and commands nobody has called lately")
+                Text(candidates.isEmpty ? String(localized: "Every skill and command was used recently.") : String(localized: "tokens every session spends listing skills and commands nobody has called lately"))
                     .font(.system(size: 12))
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -471,7 +471,7 @@ struct TrendingBlock: View {
 /// An empty block: what will show up here, sized to fill it.
 struct PanelBlockEmpty: View {
     let symbol: String
-    let text: String
+    let text: LocalizedStringResource
 
     var body: some View {
         VStack(spacing: 10) {

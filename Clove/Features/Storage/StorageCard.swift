@@ -122,7 +122,7 @@ struct StorageCard: View {
                     .font(.system(size: isCompact ? 20 : 24, weight: .medium).monospacedDigit())
                     .tracking(-0.4)
                     .contentTransition(.identity)
-                Text(isCompact ? "of \(StorageFormat.capacity(store.capacity))" : "of \(StorageFormat.capacity(store.capacity)) used")
+                Text(isCompact ? String(localized: "of \(StorageFormat.capacity(store.capacity))") : String(localized: "of \(StorageFormat.capacity(store.capacity)) used"))
                     .prose(14, .medium)
                     .foregroundStyle(Palette.inkSecondary)
             }
@@ -224,7 +224,7 @@ struct StorageCard: View {
 
     private var busyTitle: String {
         if case .cleaning(let clean) = store.phase { return clean.doing }
-        return "Calculating"
+        return String(localized: "Calculating")
     }
 
     // MARK: - Bar
@@ -380,7 +380,7 @@ struct StorageCard: View {
                 HStack(spacing: 8) {
                     ProgressView()
                         .controlSize(.small)
-                    Text(isCompact ? "Looking for what to clear" : "Looking for things you can clear")
+                    Text(isCompact ? String(localized: "Looking for what to clear") : String(localized: "Looking for things you can clear"))
                 }
                 .foregroundStyle(Color.primary.opacity(0.5))
                 .id("look")
@@ -412,20 +412,20 @@ struct StorageCard: View {
                 HStack(spacing: 8) {
                     StorageGlyph(symbol: "trash.fill", size: 16)
                         .foregroundStyle(Palette.Vivid.red)
-                    Text(isCompact ? "Trash needs access" : "Give Clove Full Disk Access to see what's in the Trash.")
+                    Text(isCompact ? String(localized: "Trash needs access") : String(localized: "Give Clove Full Disk Access to see what's in the Trash."))
                         .foregroundStyle(Color.primary.opacity(0.88))
                         .lineLimit(1)
                 }
                 .id("access")
                 Spacer(minLength: 12)
-                Button(isCompact ? "Allow…" : "Open Settings…", action: StorageStore.openFullDiskAccessSettings)
+                Button(isCompact ? String(localized: "Allow…") : String(localized: "Open Settings…"), action: StorageStore.openFullDiskAccessSettings)
                     .buttonStyle(StorageFilledButtonStyle())
                     .padding(.trailing, -4)
             } else if store.hasScanned {
                 HStack(spacing: 8) {
                     StorageGlyph(symbol: "checkmark.circle.fill", size: 16)
                         .foregroundStyle(Palette.mint)
-                    Text(isCompact ? "Nothing worth clearing." : "Nothing else is worth clearing right now.")
+                    Text(isCompact ? String(localized: "Nothing worth clearing.") : String(localized: "Nothing else is worth clearing right now."))
                         .foregroundStyle(Color.primary.opacity(0.88))
                 }
                 .id("none")
@@ -465,9 +465,9 @@ struct StorageCard: View {
     private var confirmTitle: String {
         switch store.pendingClean {
         case .caches: store.trashFirst
-            ? "Move \(StorageFormat.gb(store.clearableBytes(for: .caches))) of caches to the Trash?"
-            : "Delete \(StorageFormat.gb(store.clearableBytes(for: .caches))) of caches?"
-        case .trash: "Empty the Trash?"
+            ? String(localized: "Move \(StorageFormat.gb(store.clearableBytes(for: .caches))) of caches to the Trash?")
+            : String(localized: "Delete \(StorageFormat.gb(store.clearableBytes(for: .caches))) of caches?")
+        case .trash: String(localized: "Empty the Trash?")
         case nil: ""
         }
     }
@@ -476,10 +476,10 @@ struct StorageCard: View {
         switch clean {
         case .caches:
             store.trashFirst
-                ? "They go to the Trash first, so you can put them back from here until you empty it. Caches for open apps, for macOS, and folders you keep are left alone."
-                : "They're deleted straight away. Apps rebuild them when they need them. Caches for open apps, for macOS, and folders you keep are left alone."
+                ? String(localized: "They go to the Trash first, so you can put them back from here until you empty it. Caches for open apps, for macOS, and folders you keep are left alone.")
+                : String(localized: "They're deleted straight away. Apps rebuild them when they need them. Caches for open apps, for macOS, and folders you keep are left alone.")
         case .trash:
-            "\(StorageFormat.gb(store.bytes(of: .trash))) will be erased for good. You can't undo this."
+            String(localized: "\(StorageFormat.gb(store.bytes(of: .trash))) will be erased for good. You can't undo this.")
         }
     }
 }

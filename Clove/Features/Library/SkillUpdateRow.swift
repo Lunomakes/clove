@@ -11,7 +11,7 @@ struct SkillUpdateRow: View {
             if let phase = manager.phase(for: name) {
                 ProgressView()
                     .controlSize(.small)
-                Text(phase == .removing ? "Removing…" : "Updating…")
+                Text(phase == .removing ? String(localized: "Removing…") : String(localized: "Updating…"))
                     .foregroundStyle(.secondary)
             } else if manager.hasUpdate(name) {
                 Button("Update", systemImage: "arrow.down.circle", action: update)

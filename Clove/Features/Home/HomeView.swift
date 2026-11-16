@@ -8,7 +8,7 @@ struct HomeView: View {
         let attention = HomeAttention.items(in: model)
 
         OverviewPage {
-            PageHeader(title: "Home", summary: summary)
+            PageHeader(title: "Home", summary: "\(summary)")
 
             // The Mac first: the live instrument, the same one Storage opens with.
             StorageCard(store: model.storage, pinned: nil) { kind in
@@ -18,7 +18,7 @@ struct HomeView: View {
 
             if !attention.isEmpty {
                 Tile {
-                    TileHeader(title: "Needs a look", note: attention.count.formatted())
+                    TileHeader(title: "Needs a look", note: "\(attention.count.formatted())")
                 } content: {
                     DividedRows {
                         ForEach(attention) { item in
@@ -61,8 +61,15 @@ struct HomeView: View {
             .prefix(3)
             .map(\.title)
             .formatted(.list(type: .and))
-        let disk = model.storage.volume.map { "\(StorageFormat.gb($0.available)) free. " } ?? ""
-        return disk + "\(skills.formatted()) skills" + (agents.isEmpty ? " on this Mac." : " across \(agents).")
+        if let volume = model.storage.volume {
+            let free = StorageFormat.gb(volume.available)
+            return agents.isEmpty
+                ? String(localized: "\(free) free. \(skills) skills on this Mac.")
+                : String(localized: "\(free) free. \(skills) skills across \(agents).")
+        }
+        return agents.isEmpty
+            ? String(localized: "\(skills) skills on this Mac.")
+            : String(localized: "\(skills) skills across \(agents).")
     }
 }
 

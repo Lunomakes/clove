@@ -82,7 +82,7 @@ struct MCPServerConfig: Sendable, Equatable {
 
         var errorDescription: String? {
             switch self {
-            case .alreadyThere(let name): "A server named “\(name)” is already set up there."
+            case .alreadyThere(let name): String(localized: "A server named “\(name)” is already set up there.")
             }
         }
     }

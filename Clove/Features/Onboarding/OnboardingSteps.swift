@@ -16,10 +16,10 @@ struct WelcomeStep: View {
                 message: "Your Mac, from the disk down to the skills your agents use, in one calm place."
             )
             VStack(alignment: .leading, spacing: 14) {
-                FeatureLine("internaldrive", "Storage", "shows what's filling your disk, and clears it safely.")
-                FeatureLine("waveform.path.ecg", "Running", "lists agents, dev servers, and containers.")
-                FeatureLine("square.stack.3d.up", "Skills", "from every agent, one shortcut away.")
-                FeatureLine("lock", "Everything", "stays on this Mac. Nothing is uploaded.")
+                FeatureLine("internaldrive", "\(Text("Storage").fontWeight(.semibold).foregroundStyle(Palette.ink)) shows what's filling your disk, and clears it safely.")
+                FeatureLine("waveform.path.ecg", "\(Text("Running").fontWeight(.semibold).foregroundStyle(Palette.ink)) lists agents, dev servers, and containers.")
+                FeatureLine("square.stack.3d.up", "\(Text("Skills").fontWeight(.semibold).foregroundStyle(Palette.ink)) from every agent, one shortcut away.")
+                FeatureLine("lock", "\(Text("Everything").fontWeight(.semibold).foregroundStyle(Palette.ink)) stays on this Mac. Nothing is uploaded.")
             }
         }
     }
@@ -27,13 +27,11 @@ struct WelcomeStep: View {
 
 private struct FeatureLine: View {
     let symbol: String
-    let lead: String
-    let rest: String
+    let text: LocalizedStringKey
 
-    init(_ symbol: String, _ lead: String, _ rest: String) {
+    init(_ symbol: String, _ text: LocalizedStringKey) {
         self.symbol = symbol
-        self.lead = lead
-        self.rest = rest
+        self.text = text
     }
 
     var body: some View {
@@ -44,7 +42,8 @@ private struct FeatureLine: View {
                 .frame(width: 28, height: 28)
                 .background(Palette.accent.opacity(0.1), in: .rect(cornerRadius: 8, style: .continuous))
                 .accessibilityHidden(true)
-            Text("\(Text(lead).fontWeight(.semibold).foregroundStyle(Palette.ink)) \(Text(rest).foregroundStyle(Palette.inkSecondary))")
+            Text(text)
+                .foregroundStyle(Palette.inkSecondary)
                 .font(.system(size: 13))
         }
     }
@@ -108,7 +107,7 @@ struct LicenseStep: View {
 
                 Button(action: activate) {
                     ZStack {
-                        Text("Activate").opacity(license.isWorking ? 0 : 1)
+                        Text(String(localized: "Activate")).opacity(license.isWorking ? 0 : 1)
                         if license.isWorking { ProgressView().controlSize(.small) }
                     }
                 }
@@ -169,7 +168,7 @@ struct PermissionsStep: View {
                     if access.folders || access.fullDisk {
                         StatusPill(text: "Allowed").arrives()
                     } else {
-                        Button(askedFolders ? "Ask Again" : "Allow…") {
+                        Button(askedFolders ? String(localized: "Ask Again") : String(localized: "Allow…")) {
                             askedFolders = true
                             MacAccess.askForFolders()
                             access = MacAccess.current()
@@ -312,13 +311,15 @@ struct ReadyStep: View {
                         .labelsHidden()
                         .toggleStyle(.switch)
                 }
-                SettingCard(symbol: "arrow.down.circle", title: "Install updates automatically", detail: "Downloads in the background, installs when Clove quits.") {
-                    Toggle("Install updates automatically", isOn: Binding(
-                        get: { updates.isAutomatic },
-                        set: { updates.isAutomatic = $0 }
-                    ))
-                    .labelsHidden()
-                    .toggleStyle(.switch)
+                if updates.isAvailable {
+                    SettingCard(symbol: "arrow.down.circle", title: "Install updates automatically", detail: "Downloads in the background, installs when Clove quits.") {
+                        Toggle("Install updates automatically", isOn: Binding(
+                            get: { updates.isAutomatic },
+                            set: { updates.isAutomatic = $0 }
+                        ))
+                        .labelsHidden()
+                        .toggleStyle(.switch)
+                    }
                 }
             }
         }

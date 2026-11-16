@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MarketplaceStat<Value: View>: View {
-    let title: String
+    let title: LocalizedStringResource
     @ViewBuilder let value: Value
 
     var body: some View {

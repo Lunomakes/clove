@@ -12,7 +12,7 @@ struct HomeSkillsCard: View {
             destination: .library(.all)
         ) {
             ForEach(model.availableSources.prefix(4), id: \.self) { source in
-                HomeRow(label: source.sectionTitle, value: model.count(of: .source(source)).formatted(), destination: .library(.source(source)))
+                HomeRow(label: "\(source.sectionTitle)", value: model.count(of: .source(source)).formatted(), destination: .library(.source(source)))
             }
         }
     }

@@ -9,9 +9,9 @@ struct SkillsDirectoryClient: Sendable {
         var errorDescription: String? {
             switch self {
             case .unavailable(let status):
-                "skills.sh returned an error (\(status))."
+                String(localized: "skills.sh returned an error (\(status)).")
             case .skillFileNotFound:
-                "Couldn't find this skill's SKILL.md in its repository."
+                String(localized: "Couldn't find this skill's SKILL.md in its repository.")
             }
         }
     }

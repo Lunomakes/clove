@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CleanupMethodRow: View {
     let symbolName: String
-    let text: String
+    let text: LocalizedStringResource
 
     var body: some View {
         Label {

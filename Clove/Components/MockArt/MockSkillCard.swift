@@ -3,7 +3,7 @@ import SwiftUI
 /// A skill as the library lists it: reference, a line of description, where it's installed.
 struct MockSkillCard: View {
     let reference: String
-    let summary: String
+    let summary: LocalizedStringResource
     var badges: [(String, Color)] = [("Claude Code", .orange)]
 
     var body: some View {

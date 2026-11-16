@@ -66,7 +66,7 @@ struct ResourceDetailView: View {
             }
         }
         .confirmationDialog(
-            "Move “\(resource.fileURL.lastPathComponent)” to the Trash?",
+            String(localized: "Move “\(resource.fileURL.lastPathComponent)” to the Trash?"),
             isPresented: $isConfirmingTrash,
             titleVisibility: .visible
         ) {
@@ -84,9 +84,9 @@ struct ResourceDetailView: View {
     private var usage: String? {
         guard resource.hasObservableUsage, let report = model.cleanup.usage.value else { return nil }
         if let date = report.lastUsed[resource.usageKey] {
-            return "Last used " + date.formatted(.relative(presentation: .named))
+            return String(localized: "Last used \(date.formatted(.relative(presentation: .named)))")
         }
-        return "No use in your agent history"
+        return String(localized: "No use in your agent history")
     }
 
     private func edit() {

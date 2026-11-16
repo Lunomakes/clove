@@ -10,7 +10,7 @@ struct SkillsArt: View {
             MockSkillCard(
                 reference: "/swiftui-pro",
                 summary: "Reviews SwiftUI for modern APIs and accessibility.",
-                badges: [("Claude Code", .orange), ("Shared", .purple)]
+                badges: [("Claude Code", .orange), (String(localized: "Shared"), .purple)]
             )
         }
     }

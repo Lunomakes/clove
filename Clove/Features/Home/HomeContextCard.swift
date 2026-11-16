@@ -13,7 +13,7 @@ struct HomeContextCard: View {
             destination: .resources(.instructions)
         ) {
             ForEach(ResourceKind.contextKinds) { kind in
-                HomeRow(label: kind.title, value: model.resources(of: kind).count.formatted(), destination: .resources(kind))
+                HomeRow(label: "\(kind.title)", value: model.resources(of: kind).count.formatted(), destination: .resources(kind))
             }
             HomeRow(label: "Instruction tokens", value: tokens.formatted(), destination: .resources(.instructions))
         }

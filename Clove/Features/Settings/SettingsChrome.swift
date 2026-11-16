@@ -63,8 +63,8 @@ private struct SettingsTabButton: View {
 // MARK: - Sections
 
 struct SettingsSection<Content: View>: View {
-    var title: String?
-    var footer: String?
+    var title: LocalizedStringResource?
+    var footer: LocalizedStringResource?
     @ViewBuilder let content: () -> Content
 
     var body: some View {
@@ -84,6 +84,8 @@ struct SettingsSection<Content: View>: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
+        // Without this, a section narrower than the pane centers itself (short translations).
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
@@ -108,7 +110,7 @@ struct SettingsPaneDivider: View {
 // MARK: - Rows
 
 struct SettingsCheckboxRow: View {
-    let title: String
+    let title: LocalizedStringResource
     @Binding var isOn: Bool
     var isDisabled = false
 
@@ -124,7 +126,7 @@ struct SettingsCheckboxRow: View {
 }
 
 struct SettingsFieldRow<Value: View>: View {
-    let label: String
+    let label: LocalizedStringResource
     @ViewBuilder let value: () -> Value
 
     var body: some View {
@@ -143,7 +145,7 @@ struct SettingsFieldRow<Value: View>: View {
 }
 
 struct SettingsShortcutRow: View {
-    let action: String
+    let action: LocalizedStringResource
     let keys: String
 
     var body: some View {

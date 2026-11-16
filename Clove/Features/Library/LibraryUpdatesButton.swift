@@ -12,13 +12,13 @@ struct LibraryUpdatesButton: View {
             if manager.updatesAvailable.isEmpty {
                 Button(action: check) {
                     Label(
-                        isShowingUpToDate ? "Up to Date" : "Check for Updates",
+                        isShowingUpToDate ? String(localized: "Up to Date") : String(localized: "Check for Updates"),
                         systemImage: isShowingUpToDate ? "checkmark.circle" : "arrow.down.circle"
                     )
                     .contentTransition(.symbolEffect(.replace))
                 }
                 .disabled(manager.isCheckingUpdates)
-                .help(isShowingUpToDate ? "Every skill from skills.sh is up to date" : "Check skills from skills.sh for newer versions")
+                .help(isShowingUpToDate ? String(localized: "Every skill from skills.sh is up to date") : String(localized: "Check skills from skills.sh for newer versions"))
             } else {
                 Button("Update All", systemImage: "arrow.down.circle.fill", action: updateAll)
                     .help("Update \(manager.updatesAvailable.count) skills from GitHub")

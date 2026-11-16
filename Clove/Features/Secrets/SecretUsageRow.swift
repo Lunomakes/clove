@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct SecretUsageRow: View {
-    let title: String
-    let detail: String
+    let title: LocalizedStringResource
+    let detail: LocalizedStringResource
     let snippet: String
 
     @State private var didCopy = false

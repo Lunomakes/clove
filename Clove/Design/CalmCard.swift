@@ -56,8 +56,8 @@ extension Tile where Header == EmptyView {
 /// The header that sits on a tile's card: a title, a mono count or note, and
 /// an optional trailing control.
 struct TileHeader<Trailing: View>: View {
-    let title: String
-    var note: String?
+    let title: LocalizedStringResource
+    var note: LocalizedStringResource?
     var symbol: String?
     @ViewBuilder var trailing: Trailing
 
@@ -86,7 +86,7 @@ struct TileHeader<Trailing: View>: View {
 }
 
 extension TileHeader where Trailing == EmptyView {
-    init(title: String, note: String? = nil, symbol: String? = nil) {
+    init(title: LocalizedStringResource, note: LocalizedStringResource? = nil, symbol: String? = nil) {
         self.title = title
         self.note = note
         self.symbol = symbol
@@ -96,8 +96,8 @@ extension TileHeader where Trailing == EmptyView {
 
 /// A page's title block: a display headline, with a line of secondary copy.
 struct PageHeader: View {
-    let title: String
-    var summary: String?
+    let title: LocalizedStringResource
+    var summary: LocalizedStringResource?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {

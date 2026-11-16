@@ -74,7 +74,7 @@ struct KeyChord: Equatable, Codable, Hashable, Sendable {
         if let letter = translatedCharacter(for: keyCode) {
             return letter
         }
-        return "Key \(keyCode)"
+        return String(localized: "Key \(keyCode)")
     }
 
     private static let specialNames: [UInt32: String] = [

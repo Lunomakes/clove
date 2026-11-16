@@ -15,14 +15,14 @@ struct HomeToolsCard: View {
         ) {
             HomeRow(
                 label: "Hooks",
-                value: brokenHooks > 0 ? "\(brokenHooks) broken" : model.resources(of: .hooks).count.formatted(),
+                value: brokenHooks > 0 ? String(localized: "\(brokenHooks) broken") : model.resources(of: .hooks).count.formatted(),
                 destination: .resources(.hooks),
                 isWarning: brokenHooks > 0
             )
             HomeRow(label: "Permission rules", value: model.resources(of: .permissions).count.formatted(), destination: .resources(.permissions))
             HomeRow(
                 label: "Secrets",
-                value: exposed > 0 ? "\(exposed) in plain text" : model.secrets.items.count.formatted(),
+                value: exposed > 0 ? String(localized: "\(exposed) in plain text") : model.secrets.items.count.formatted(),
                 destination: .secrets,
                 isWarning: exposed > 0
             )

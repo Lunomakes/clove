@@ -36,17 +36,17 @@ struct OnboardingStage: View {
             }
         case .permissions:
             MockStack {
-                MockFileCard(fileName: "~/Downloads", agent: ("Storage", .orange), lines: ["Xcode.xip", "node_modules/"])
+                MockFileCard(fileName: "~/Downloads", agent: (String(localized: "Storage"), .orange), lines: ["Xcode.xip", "node_modules/"])
             } middle: {
-                MockSkillCard(reference: "/nextjs", summary: "Dragged into a prompt.", badges: [("Drag", .gray)])
+                MockSkillCard(reference: "/nextjs", summary: "Dragged into a prompt.", badges: [(String(localized: "Drag"), .gray)])
             } front: {
-                MockSkillCard(reference: "/swiftui-pro", summary: "Typed into your prompt when you press Return.", badges: [("Insert", Palette.accent)])
+                MockSkillCard(reference: "/swiftui-pro", summary: "Typed into your prompt when you press Return.", badges: [(String(localized: "Insert"), Palette.accent)])
             }
         case .shortcut:
             MockStack {
-                MockSkillCard(reference: "/review", summary: "Pinned beside your editor.", badges: [("Panel", .gray)])
+                MockSkillCard(reference: "/review", summary: "Pinned beside your editor.", badges: [(String(localized: "Panel"), .gray)])
             } middle: {
-                MockSkillCard(reference: "/animations", summary: "Return types it into your prompt.", badges: [("Panel", .gray)])
+                MockSkillCard(reference: "/animations", summary: "Return types it into your prompt.", badges: [(String(localized: "Panel"), .gray)])
             } front: {
                 MockShortcutCard(keys: ["⌃", "⌥", "Space"], caption: "Opens the panel from any app")
             }

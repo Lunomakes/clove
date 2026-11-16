@@ -773,6 +773,30 @@ final class AppModel {
 
     // MARK: - App
 
+    private(set) var isRelaunching = false
+
+    func relaunch() {
+        guard !isRelaunching else { return }
+        isRelaunching = true
+        // Release the shortcut before the new instance tries to register it.
+        WindowBridge.shared.setHotKeySuspended(true)
+        let configuration = NSWorkspace.OpenConfiguration()
+        configuration.createsNewApplicationInstance = true
+        Task {
+            do {
+                _ = try await NSWorkspace.shared.openApplication(
+                    at: Bundle.main.bundleURL,
+                    configuration: configuration
+                )
+                quit()
+            } catch {
+                isRelaunching = false
+                WindowBridge.shared.setHotKeySuspended(false)
+                NSApplication.shared.presentError(error)
+            }
+        }
+    }
+
     func quit() {
         NSApplication.shared.terminate(nil)
     }

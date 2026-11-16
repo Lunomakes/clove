@@ -111,7 +111,7 @@ final class MarketplaceStore {
         let (pageResult, fileResult) = await (page, file)
 
         guard pageResult != nil || fileResult != nil else {
-            details[skill.id] = .failed("Couldn't load this skill. Check your connection and try again.")
+            details[skill.id] = .failed(String(localized: "Couldn't load this skill. Check your connection and try again."))
             return
         }
         details[skill.id] = .loaded(await Self.makeDetail(page: pageResult, file: fileResult))
@@ -131,11 +131,11 @@ final class MarketplaceStore {
 
     private static func message(for error: any Error) -> String {
         if let urlError = error as? URLError, urlError.code == .notConnectedToInternet {
-            return "You're offline. Discover needs a connection to skills.sh."
+            return String(localized: "You're offline. Discover needs a connection to skills.sh.")
         }
         if let described = (error as? LocalizedError)?.errorDescription {
             return described
         }
-        return "skills.sh couldn't be reached. Try again in a moment."
+        return String(localized: "skills.sh couldn't be reached. Try again in a moment.")
     }
 }

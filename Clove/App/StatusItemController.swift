@@ -7,7 +7,7 @@ final class StatusItemController: NSObject, NSMenuDelegate {
     var onToggle: () -> Void = {}
     var onShow: (SidebarItem) -> Void = { _ in }
     var onSettings: () -> Void = {}
-    var onCheckForUpdates: () -> Void = {}
+    var onCheckForUpdates: (() -> Void)?
     var onQuit: () -> Void = {}
     /// Read when the menu opens, so the shortcut shown is always the current one.
     var panelShortcut: () -> KeyChord? = { nil }
@@ -53,7 +53,7 @@ final class StatusItemController: NSObject, NSMenuDelegate {
         image.size = NSSize(width: 18, height: 18)
         button.image = image
         button.imagePosition = .imageOnly
-        button.toolTip = "Clove: click for quick access, right-click for everything else"
+        button.toolTip = String(localized: "Clove: click for quick access, right-click for everything else")
         button.setAccessibilityLabel("Clove")
         button.target = self
         button.action = #selector(handleClick(_:))
@@ -70,11 +70,11 @@ final class StatusItemController: NSObject, NSMenuDelegate {
                 attributes: [.font: NSFont.monospacedDigitSystemFont(ofSize: NSFont.systemFontSize, weight: .regular)]
             )
             button.imagePosition = .imageLeading
-            button.setAccessibilityLabel("Clove, \(reading.spoken)")
+            button.setAccessibilityLabel(String(localized: "Clove, \(reading.spoken)"))
         } else {
             button.title = ""
             button.imagePosition = .imageOnly
-            button.setAccessibilityLabel(reading.map { "Clove, \($0.spoken)" } ?? "Clove")
+            button.setAccessibilityLabel(reading.map { String(localized: "Clove, \($0.spoken)") } ?? "Clove")
         }
     }
 
@@ -90,7 +90,7 @@ final class StatusItemController: NSObject, NSMenuDelegate {
     func menuNeedsUpdate(_ menu: NSMenu) {
         menu.removeAllItems()
 
-        let panel = add("Quick Access Panel", symbol: "magnifyingglass", to: menu, action: #selector(togglePanel))
+        let panel = add(String(localized: "Quick Access Panel"), symbol: "magnifyingglass", to: menu, action: #selector(togglePanel))
         // The global shortcut, drawn by AppKit on the right like any menu shortcut.
         if let chord = panelShortcut(), let key = chord.menuKeyEquivalent {
             panel.keyEquivalent = key
@@ -103,30 +103,32 @@ final class StatusItemController: NSObject, NSMenuDelegate {
         }
 
         menu.addItem(.separator())
-        menu.addItem(submenu("Context", symbol: "text.document", kinds: ResourceKind.contextKinds))
-        let tools = submenu("Tools & Access", symbol: "wrench.and.screwdriver", kinds: ResourceKind.toolKinds)
+        menu.addItem(submenu(String(localized: "Context"), symbol: "text.document", kinds: ResourceKind.contextKinds))
+        let tools = submenu(String(localized: "Tools & Access"), symbol: "wrench.and.screwdriver", kinds: ResourceKind.toolKinds)
         tools.submenu?.addItem(.separator())
         if let submenu = tools.submenu {
-            show("Secrets", symbol: "key", destination: .secrets, in: submenu)
+            show(String(localized: "Secrets"), symbol: "key", destination: .secrets, in: submenu)
         }
         menu.addItem(tools)
 
         menu.addItem(.separator())
-        let settings = add("Settings…", symbol: "gearshape", to: menu, action: #selector(openSettings))
+        let settings = add(String(localized: "Settings…"), symbol: "gearshape", to: menu, action: #selector(openSettings))
         settings.keyEquivalent = ","
-        add("Check for Updates…", symbol: "arrow.down.circle", to: menu, action: #selector(checkForUpdates))
+        if onCheckForUpdates != nil {
+            add(String(localized: "Check for Updates…"), symbol: "arrow.down.circle", to: menu, action: #selector(checkForUpdates))
+        }
         menu.addItem(.separator())
-        let quit = add("Quit Clove", symbol: nil, to: menu, action: #selector(quit))
+        let quit = add(String(localized: "Quit Clove"), symbol: nil, to: menu, action: #selector(quit))
         quit.keyEquivalent = "q"
     }
 
     private static let places: [(String, String, SidebarItem)] = [
-        ("Home", "house", .home),
-        ("Storage", "internaldrive", .storage),
-        ("Cleanup", "leaf", .cleanup),
-        ("Running", "waveform.path.ecg", .running),
-        ("Skills", "square.stack.3d.up", .library(.all)),
-        ("Discover", "safari", .discover),
+        (String(localized: "Home"), "house", .home),
+        (String(localized: "Storage"), "internaldrive", .storage),
+        (String(localized: "Cleanup"), "leaf", .cleanup),
+        (String(localized: "Running"), "waveform.path.ecg", .running),
+        (String(localized: "Skills"), "square.stack.3d.up", .library(.all)),
+        (String(localized: "Discover"), "safari", .discover),
     ]
 
     private func submenu(_ title: String, symbol: String, kinds: [ResourceKind]) -> NSMenuItem {
@@ -179,7 +181,7 @@ final class StatusItemController: NSObject, NSMenuDelegate {
 
     @objc
     private func checkForUpdates() {
-        onCheckForUpdates()
+        onCheckForUpdates?()
     }
 
     @objc

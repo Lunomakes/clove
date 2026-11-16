@@ -1,7 +1,7 @@
 import Foundation
 
 struct PrivacyPromise: Identifiable, Hashable {
-    var id: String { title }
+    let id: String
     let symbolName: String
     let title: String
     let detail: String
@@ -28,4 +28,12 @@ struct PrivacyPromise: Identifiable, Hashable {
             detail: "Discover talks to skills.sh and GitHub only while you browse or install. No telemetry, no skill uploads."
         ),
     ]
+
+    init(symbolName: String, title: LocalizedStringResource, detail: LocalizedStringResource) {
+        self.id = title.key
+        self.symbolName = symbolName
+        self.title = String(localized: title)
+        self.detail = String(localized: detail)
+    }
+
 }

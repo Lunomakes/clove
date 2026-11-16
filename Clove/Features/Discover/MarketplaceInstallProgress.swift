@@ -17,9 +17,9 @@ struct MarketplaceInstallProgress: View {
 
     private var title: String {
         switch phase {
-        case .installing: "Installing…"
-        case .updating: "Updating…"
-        case .removing: "Removing…"
+        case .installing: String(localized: "Installing…")
+        case .updating: String(localized: "Updating…")
+        case .removing: String(localized: "Removing…")
         }
     }
 }

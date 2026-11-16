@@ -10,7 +10,7 @@ struct StoragePage: View {
         let rows = storage.largest()
 
         OverviewPage {
-            PageHeader(title: "Storage", summary: summary)
+            PageHeader(title: "Storage", summary: "\(summary)")
 
             StorageCard(store: storage, pinned: storage.pinned) { kind in
                 withAnimation(.easeOut(duration: 0.2)) {
@@ -20,8 +20,8 @@ struct StoragePage: View {
 
             Tile {
                 TileHeader(
-                    title: storage.pinned.map { "Largest in \($0.title)" } ?? "Largest on this Mac",
-                    note: storage.hasScanned ? rows.count.formatted() : nil
+                    title: storage.pinned.map { LocalizedStringResource("Largest in \($0.title)") } ?? "Largest on this Mac",
+                    note: storage.hasScanned ? "\(rows.count.formatted())" : nil
                 ) {
                     if storage.pinned != nil {
                         Button("Show All") {
@@ -85,7 +85,7 @@ struct StoragePage: View {
             Text(failure)
         }
         .confirmationDialog(
-            storage.pendingTrash.map { "Move “\($0.name)” to the Trash?" } ?? "",
+            storage.pendingTrash.map { String(localized: "Move “\($0.name)” to the Trash?") } ?? "",
             isPresented: Binding { storage.pendingTrash != nil } set: { if !$0 { storage.pendingTrash = nil } },
             titleVisibility: .visible,
             presenting: storage.pendingTrash
@@ -105,15 +105,15 @@ struct StoragePage: View {
 
     private var summary: String {
         let storage = model.storage
-        guard let volume = storage.volume else { return "What's filling this Mac, and what's safe to clear." }
-        return "\(StorageFormat.gb(volume.available)) free of \(StorageFormat.capacity(volume.capacity)). Clears go to the Trash first, so you can always put things back."
+        guard let volume = storage.volume else { return String(localized: "What's filling this Mac, and what's safe to clear.") }
+        return String(localized: "\(StorageFormat.gb(volume.available)) free of \(StorageFormat.capacity(volume.capacity)). Clears go to the Trash first, so you can always put things back.")
     }
 
     private var emptyLine: String {
         let storage = model.storage
-        if storage.phase == .scanning { return "Measuring…" }
-        if let kind = storage.pinned { return "Nothing in \(kind.title.lowercased()) is over 50 MB." }
-        return "Rescan to measure."
+        if storage.phase == .scanning { return String(localized: "Measuring…") }
+        if let kind = storage.pinned { return String(localized: "Nothing in \(kind.title.lowercased()) is over 50 MB.") }
+        return String(localized: "Rescan to measure.")
     }
 }
 
@@ -209,7 +209,7 @@ private struct HistoryRow: View {
                     .prose(13, .medium)
                     .foregroundStyle(Palette.ink)
                     .lineLimit(1)
-                Text("\(record.moves.count == 1 ? "1 item" : "\(record.moves.count.formatted()) items") · \(record.date.formatted(.relative(presentation: .named)))")
+                Text("\(record.moves.count) items · \(record.date.formatted(.relative(presentation: .named)))")
                     .prose(11)
                     .foregroundStyle(Palette.inkSecondary)
             }

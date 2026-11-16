@@ -6,11 +6,11 @@ import SwiftUI
 struct FeatureSheet<Content: View, Hero: View>: View {
     var useAppIcon = false
     var symbolName: String?
-    let title: String
-    let subtitle: String
+    let title: LocalizedStringResource
+    let subtitle: LocalizedStringResource
     var pageIndex: Int?
     var pageCount: Int?
-    var continueTitle = "Continue"
+    var continueTitle: LocalizedStringResource = "Continue"
     var showsBack = false
     var onBack: () -> Void = {}
     let onContinue: () -> Void
@@ -114,11 +114,11 @@ extension FeatureSheet where Hero == EmptyView {
     init(
         useAppIcon: Bool = false,
         symbolName: String? = nil,
-        title: String,
-        subtitle: String,
+        title: LocalizedStringResource,
+        subtitle: LocalizedStringResource,
         pageIndex: Int? = nil,
         pageCount: Int? = nil,
-        continueTitle: String = "Continue",
+        continueTitle: LocalizedStringResource = "Continue",
         showsBack: Bool = false,
         onBack: @escaping () -> Void = {},
         onContinue: @escaping () -> Void,

@@ -15,15 +15,15 @@ actor SkillInstaller {
         var errorDescription: String? {
             switch self {
             case .unsupportedSource:
-                "Only skills hosted on GitHub can be installed from Clove. Copy the install command instead."
+                String(localized: "Only skills hosted on GitHub can be installed from Clove. Copy the install command instead.")
             case .invalidName(let name):
-                "“\(name)” isn't a valid skill folder name."
+                String(localized: "“\(name)” isn't a valid skill folder name.")
             case .skillNotFound(let name):
-                "Couldn't find “\(name)” in its repository."
+                String(localized: "Couldn't find “\(name)” in its repository.")
             case .extractionFailed:
-                "The download couldn't be unpacked."
+                String(localized: "The download couldn't be unpacked.")
             case .conflict(let name):
-                "A different skill named “\(name)” is already installed."
+                String(localized: "A different skill named “\(name)” is already installed.")
             }
         }
     }

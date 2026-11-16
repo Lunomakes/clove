@@ -44,7 +44,7 @@ struct GroupSuggestionRow: View {
         case .existing(let name):
             name
         case .create(let name):
-            "Create \(name)"
+            String(localized: "Create \(name)")
         }
     }
 }

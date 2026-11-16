@@ -28,9 +28,9 @@ struct GitHubClient: Sendable {
         var errorDescription: String? {
             switch self {
             case .rateLimited:
-                "GitHub's hourly limit for anonymous requests was reached. Try again later."
+                String(localized: "GitHub's hourly limit for anonymous requests was reached. Try again later.")
             case .unavailable(let status):
-                "GitHub returned an error (\(status))."
+                String(localized: "GitHub returned an error (\(status)).")
             }
         }
     }

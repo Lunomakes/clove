@@ -14,10 +14,10 @@ struct ResourceList: View {
         // Two groups, not one per project: a section per repo made a dozen
         // one-row headers that buried the names people scan for.
         ListPage(selection: $model.resourceSelection, order: (global + inProjects).map(\.id)) {
-            PageHeader(title: kind.title, summary: kind.subtitle)
+            PageHeader(title: "\(kind.title)", summary: "\(kind.subtitle)")
 
             if !global.isEmpty {
-                ListSection(title: "Everywhere", note: global.count.formatted()) {
+                ListSection(title: "Everywhere", note: "\(global.count.formatted())") {
                     ForEach(global) { resource in
                         SelectableRow(id: resource.id, selection: $model.resourceSelection) {
                             ResourceRow(resource: resource)
@@ -26,7 +26,7 @@ struct ResourceList: View {
                 }
             }
             if !inProjects.isEmpty {
-                ListSection(title: "In Projects", note: inProjects.count.formatted()) {
+                ListSection(title: "In Projects", note: "\(inProjects.count.formatted())") {
                     ForEach(inProjects) { resource in
                         SelectableRow(id: resource.id, selection: $model.resourceSelection) {
                             ResourceRow(resource: resource)

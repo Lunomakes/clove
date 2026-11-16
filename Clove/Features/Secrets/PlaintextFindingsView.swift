@@ -55,7 +55,7 @@ struct PlaintextFindingsView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .navigationTitle("Secrets")
-        .confirmationDialog("Move \(chosen.count) keys to the Keychain?", isPresented: $isConfirming, titleVisibility: .visible) {
+        .confirmationDialog(String(localized: "Move \(chosen.count) keys to the Keychain?"), isPresented: $isConfirming, titleVisibility: .visible) {
             Button("Move to Keychain") { model.secrets.moveToKeychain(chosen) }
             Button("Cancel", role: .cancel) {}
         } message: {

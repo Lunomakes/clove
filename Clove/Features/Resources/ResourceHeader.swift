@@ -11,7 +11,7 @@ struct ResourceHeader: View {
 
             HStack(spacing: Metrics.spacingS) {
                 AgentBadge(agent: resource.agent)
-                Label(resource.scope.isGlobal ? "Every project" : resource.scope.title,
+                Label(resource.scope.isGlobal ? String(localized: "Every project") : resource.scope.title,
                       systemImage: resource.scope.isGlobal ? "globe" : "folder")
                     .foregroundStyle(.secondary)
             }

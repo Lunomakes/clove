@@ -107,9 +107,9 @@ struct OnboardingView: View {
 
     private var nextTitle: String {
         switch step {
-        case .welcome: "Get Started"
-        case .ready: "Start Clove"
-        default: "Next"
+        case .welcome: String(localized: "Get Started")
+        case .ready: String(localized: "Start Clove")
+        default: String(localized: "Next")
         }
     }
 
@@ -174,8 +174,8 @@ extension View {
 }
 
 struct StepHeader: View {
-    let title: String
-    let message: String
+    let title: LocalizedStringResource
+    let message: LocalizedStringResource
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -198,8 +198,8 @@ struct StepHeader: View {
 /// One setting as a raised row: a symbol, what it is, and its control.
 struct SettingCard<Control: View>: View {
     let symbol: String
-    let title: String
-    let detail: String
+    let title: LocalizedStringResource
+    let detail: LocalizedStringResource
     @ViewBuilder let control: Control
 
     var body: some View {
@@ -228,7 +228,7 @@ struct SettingCard<Control: View>: View {
 }
 
 struct StatusPill: View {
-    let text: String
+    let text: LocalizedStringResource
 
     var body: some View {
         Label(text, systemImage: "checkmark")
@@ -243,9 +243,9 @@ struct StatusPill: View {
 
 struct NumberedRow: View {
     let number: Int
-    let text: String
+    let text: LocalizedStringResource
 
-    init(_ number: Int, _ text: String) {
+    init(_ number: Int, _ text: LocalizedStringResource) {
         self.number = number
         self.text = text
     }

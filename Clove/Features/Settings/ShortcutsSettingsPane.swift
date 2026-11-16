@@ -32,7 +32,7 @@ struct ShortcutsSettingsPane: View {
                     SettingsShortcutRow(action: "Copy and keep panel", keys: "⌥↩")
                     SettingsShortcutRow(action: "Move selection", keys: "↑ ↓")
                     SettingsShortcutRow(action: "Extend selection", keys: "⇧ ↑ ↓")
-                    SettingsShortcutRow(action: "Multi-select", keys: "⌘ click")
+                    SettingsShortcutRow(action: "Multi-select", keys: String(localized: "⌘ click"))
                     SettingsShortcutRow(action: "Copy group", keys: "⌘⇧C")
                     SettingsShortcutRow(action: "Cycle pinned groups", keys: "⇥")
                     SettingsShortcutRow(action: "Close panel", keys: "esc")

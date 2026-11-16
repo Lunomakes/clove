@@ -57,7 +57,7 @@ struct ResourceRow: View {
             parts.append(project)
         }
         if let tokens = resource.tokens {
-            parts.append("\(tokens.formatted()) tokens")
+            parts.append(String(localized: "\(tokens.formatted()) tokens"))
         }
         if let usage = usageText {
             parts.append(usage)
@@ -69,8 +69,8 @@ struct ResourceRow: View {
     private var usageText: String? {
         guard resource.hasObservableUsage, let report = model.cleanup.usage.value else { return nil }
         if let date = report.lastUsed[resource.usageKey] {
-            return "Used " + date.formatted(.relative(presentation: .named))
+            return String(localized: "Used \(date.formatted(.relative(presentation: .named)))")
         }
-        return "Not used yet"
+        return String(localized: "Not used yet")
     }
 }

@@ -50,7 +50,7 @@ enum MCPConfigParser {
             transport = (config["type"] as? String)?.uppercased() == "SSE" ? "SSE" : "HTTP"
             details.append(ResourceDetail(label: "URL", value: SecretRedactor.redact(stripQuery(url)), isCode: true))
         } else {
-            transport = "Local process"
+            transport = String(localized: "Local process")
         }
         details.insert(ResourceDetail(label: "Connects by", value: transport), at: 0)
 
@@ -63,7 +63,7 @@ enum MCPConfigParser {
         let headerKeys = ((config["headers"] as? [String: Any])?.keys).map(Array.init) ?? []
         let hiddenKeys = (envKeys + headerKeys + subtableKeys).sorted()
         if !hiddenKeys.isEmpty {
-            details.append(ResourceDetail(label: "Settings", value: hiddenKeys.joined(separator: ", ") + " (values hidden)"))
+            details.append(ResourceDetail(label: "Settings", value: String(localized: "\(hiddenKeys.joined(separator: ", ")) (values hidden)")))
         }
 
         let isDisabled = config["disabled"] as? Bool == true || config["enabled"] as? Bool == false

@@ -15,8 +15,8 @@ struct DiscoverList: View {
 
             if !skills.isEmpty {
                 ListSection(
-                    title: store.isSearching ? "Results" : store.feed.title,
-                    note: store.isSearching ? skills.count.formatted() : store.feed.subtitle
+                    title: store.isSearching ? "Results" : "\(store.feed.title)",
+                    note: "\(store.isSearching ? skills.count.formatted() : store.feed.subtitle)"
                 ) {
                     if !store.isSearching {
                         Picker("List", selection: $store.feed) {
