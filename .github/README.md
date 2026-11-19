@@ -1,8 +1,8 @@
 <div align="center">
 
-[English](README.md) · 简体中文
+[English](../README.md) · 简体中文
 
-<img src="Clove/Assets.xcassets/AppIcon.appiconset/icon_128x128@2x.png" alt="" width="96" />
+<img src="../Clove/Assets.xcassets/AppIcon.appiconset/icon_128x128@2x.png" alt="" width="96" />
 
 # Clove 中文版
 
@@ -14,7 +14,7 @@ Skill、指令文件、规则、命令、子代理、MCP 服务器、Hook、权�
 
 开源 · MIT · 简体／繁体中文 · 自动更新 · macOS 26
 
-<img src="docs/screenshots/framed/home.png" alt="Clove 首页：需要留意的事项，以及 Skill、运行中的代理、清理和上下文卡片" />
+<img src="../docs/screenshots/framed/home.png" alt="Clove 首页：需要留意的事项，以及 Skill、运行中的代理、清理和上下文卡片" />
 
 </div>
 
@@ -26,7 +26,7 @@ Skill、指令文件、规则、命令、子代理、MCP 服务器、Hook、权�
 
 ## 快捷面板
 
-<img src="docs/product-preview.png" alt="Clove 快捷面板正在搜索代理 Skill" width="420" align="right" />
+<img src="../docs/product-preview.png" alt="Clove 快捷面板正在搜索代理 Skill" width="420" align="right" />
 
 Skill 散落在 `~/.cursor`、`~/.claude`、插件和项目文件夹里。Clove 会找出 Mac 上所有的 `SKILL.md`，包括从 dotfiles 仓库链接进来的 Skill，用一个快捷键就能调出来。
 
@@ -39,7 +39,7 @@ Skill 散落在 `~/.cursor`、`~/.claude`、插件和项目文件夹里。Clove 
 
 ## 发现
 
-<img src="docs/screenshots/framed/discover.png" alt="skills.sh 上的一个 Skill，显示安装量、星标、安全审计、亮点和 SKILL.md" />
+<img src="../docs/screenshots/framed/discover.png" alt="skills.sh 上的一个 Skill，显示安装量、星标、安全审计、亮点和 SKILL.md" />
 
 - 浏览 skills.sh 的排行、趋势和热门榜单，或搜索全部 Skill
 - 安装前先阅读 Skill 的 SKILL.md、亮点和安全审计
@@ -63,7 +63,7 @@ Skill 散落在 `~/.cursor`、`~/.claude`、插件和项目文件夹里。Clove 
 
 ## 运行
 
-<img src="docs/screenshots/framed/running.png" alt="运行中的代理会话和 MCP 服务器，以及各自的文件夹、内存和命令" />
+<img src="../docs/screenshots/framed/running.png" alt="运行中的代理会话和 MCP 服务器，以及各自的文件夹、内存和命令" />
 
 正在运行的代理会话、它们启动的 MCP 服务器，以及它们留下的开发服务器。查看每一项由谁启动、在哪里运行、占用多少内存，用完的可以直接停止。
 
@@ -71,7 +71,7 @@ Docker 容器也列在这里，支持 Docker Desktop、OrbStack、Colima 和 Ran
 
 ## 清理
 
-<img src="docs/screenshots/framed/cleanup.png" alt="清理页列出未使用的 Skill，以及它们每次会话占用的 token" />
+<img src="../docs/screenshots/framed/cleanup.png" alt="清理页列出未使用的 Skill，以及它们每次会话占用的 token" />
 
 - 根据 Mac 上 Claude Code、Codex 和 Cursor 的历史记录，查看哪些 Skill、命令和子代理在 30 天、90 天或 6 个月内没有用过
 - 看清它们的成本：每个已安装 Skill 的描述都会加载进每一次代理会话
@@ -80,7 +80,7 @@ Docker 容器也列在这里，支持 Docker Desktop、OrbStack、Colima 和 Ran
 
 ## 储存空间
 
-<img src="docs/screenshots/framed/storage.png" alt="储存空间：按类型划分的点阵磁盘条，突出显示开发者部分，下方列出最大的文件夹" />
+<img src="../docs/screenshots/framed/storage.png" alt="储存空间：按类型划分的点阵磁盘条，突出显示开发者部分，下方列出最大的文件夹" />
 
 用一条实时的点阵条显示磁盘：应用、代码和工具链、照片、影片、文稿、音乐、系统数据、缓存和废纸篓，各用一种颜色。
 
@@ -127,7 +127,7 @@ xcodebuild -scheme Clove -configuration Release -destination 'platform=macOS' bu
 
 需要 Xcode 26 和 macOS 26 SDK。从源码构建会跳过许可证检查，可以免费使用。
 
-同步上游、翻译和发布中文版的流程见 [docs/fork-maintenance.md](docs/fork-maintenance.md)。
+同步上游、翻译和发布中文版的流程见 [docs/fork-maintenance.md](../docs/fork-maintenance.md)。
 
 ## 隐私
 
@@ -141,8 +141,8 @@ Clove 与 [skills CLI](https://github.com/vercel-labs/skills) 共用 `~/.agents/
 
 2.0 中的多项功能来自 [Ram (@ramxcodes)](https://x.com/ramxcodes/status/2113292890294423802) 的建议：把 Skill 安装到单个项目、Hook 和 AGENTS.md 等指令文件、在多个代理之间共享同一套配置，以及把密钥从 `~/.zshenv` 移进“密钥”。谢谢。
 
-<a href="https://x.com/ramxcodes/status/2113292890294423802"><img src="docs/ram-tweet.png" alt="Ram 的帖子，建议支持项目范围、Hook 和 AGENTS.md、跨代理移植配置，以及按需读取环境变量" width="420" /></a>
+<a href="https://x.com/ramxcodes/status/2113292890294423802"><img src="../docs/ram-tweet.png" alt="Ram 的帖子，建议支持项目范围、Hook 和 AGENTS.md、跨代理移植配置，以及按需读取环境变量" width="420" /></a>
 
 ## 许可证
 
-源码采用 [MIT](LICENSE) 许可证：可以阅读、构建和 fork。Clove 由 [Keshav](https://github.com/keshav-exe) 开发；如果你喜欢它，可以在 [clove.kshv.me](https://clove.kshv.me) 购买官方签名版支持作者。
+源码采用 [MIT](../LICENSE) 许可证：可以阅读、构建和 fork。Clove 由 [Keshav](https://github.com/keshav-exe) 开发；如果你喜欢它，可以在 [clove.kshv.me](https://clove.kshv.me) 购买官方签名版支持作者。

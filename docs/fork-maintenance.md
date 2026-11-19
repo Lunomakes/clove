@@ -25,7 +25,7 @@
 
 Release 构建后运行 `python3 -I tools/check-localization.py`。它检查翻译、占位符、stale 键及编译器提取的缺失键。新增／删除文案后，可用 `xcrun xcstringstool sync` 对 Release 的 app-target `.stringsdata` 同步目录，再翻译新增键、移除 stale 键并重新构建检查。验证器依赖最近一次 Release 提取结果，不能替代构建或逐页视觉检查。
 
-`README.zh-CN.md` 是 `README.md` 的中文版，安装、构建和隐私部分按 fork 实际情况改写（Lunomakes 的 DMG、ad-hoc 签名、无许可证检查、fork 更新源）。合并时如果上游改了 `README.md`，同步更新中文版；`README.md` 顶部的语言切换行要保留。
+`.github/README.md` 是 `README.md` 的中文版（GitHub 优先显示它作为仓库首页，根目录 `README.md` 因此可保持与上游一致；其中相对路径以 `../` 开头），安装、构建和隐私部分按 fork 实际情况改写（Lunomakes 的 DMG、ad-hoc 签名、无许可证检查、fork 更新源）。合并时如果上游改了 `README.md`，同步更新中文版；`README.md` 顶部的语言切换行要保留。
 
 共享 scheme 的测试语言固定为 en／US，因为测试断言英文文案和英文列表格式。仓库位于 `~/Documents` 等受 TCC 保护的目录时，测试宿主可能在启动时等待文件访问授权而报 “test runner hung”；此时在非受保护路径的 worktree 中对同一提交运行测试。
 

@@ -1,6 +1,6 @@
 <div align="center">
 
-English · [简体中文](README.zh-CN.md)
+[简体中文](.github/README.md) · English
 
 <img src="Clove/Assets.xcassets/AppIcon.appiconset/icon_128x128@2x.png" alt="" width="96" />
 
