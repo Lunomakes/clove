@@ -1,5 +1,7 @@
 <div align="center">
 
+English · [简体中文](README.zh-CN.md)
+
 <img src="Clove/Assets.xcassets/AppIcon.appiconset/icon_128x128@2x.png" alt="" width="96" />
 
 # Clove
