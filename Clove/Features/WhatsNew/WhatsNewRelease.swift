@@ -7,15 +7,17 @@ struct WhatsNewRelease: Identifiable, Hashable, Sendable {
     let subtitle: String
     let symbolName: String
     let features: [FeatureHighlight]
+    /// Shown as a short, animated walkthrough instead of a list.
+    let isNotchTutorial: Bool
 
-    init(version: String, title: LocalizedStringResource, subtitle: LocalizedStringResource, symbolName: String, features: [FeatureHighlight]) {
+    init(version: String, title: LocalizedStringResource, subtitle: LocalizedStringResource, symbolName: String, features: [FeatureHighlight], isNotchTutorial: Bool = false) {
         self.version = version
         self.title = String(localized: title)
         self.subtitle = String(localized: subtitle)
         self.symbolName = symbolName
         self.features = features
+        self.isNotchTutorial = isNotchTutorial
     }
-
 }
 
 enum WhatsNewCatalog {
@@ -252,6 +254,42 @@ enum WhatsNewCatalog {
                     symbolName: "checkmark.seal",
                     title: "Signed Updates",
                     detail: "Every update is signed, and Clove won't install one that isn't."
+                ),
+            ]
+        ),
+        WhatsNewRelease(
+            version: "3.3",
+            title: "Clove Moved into the Notch",
+            subtitle: "Your agents at work, a hover away.",
+            symbolName: "rectangle.topthird.inset.filled",
+            features: [],
+            isNotchTutorial: true
+        ),
+        WhatsNewRelease(
+            version: "3.4",
+            title: "What's New in Clove",
+            subtitle: "See what's using your Mac, and what's safe to delete.",
+            symbolName: "waveform.path.ecg",
+            features: [
+                FeatureHighlight(
+                    symbolName: "waveform.path.ecg",
+                    title: "Activity",
+                    detail: "What's running and what it costs, each app counted with its helpers. Quit or stop anything from the list, and see how warm your Mac is."
+                ),
+                FeatureHighlight(
+                    symbolName: "trash",
+                    title: "Safe to Delete",
+                    detail: "Storage lists Xcode build files, old device support, package downloads, and more, with what each is and what happens after. It all goes to the Trash first."
+                ),
+                FeatureHighlight(
+                    symbolName: "leaf",
+                    title: "Lighter",
+                    detail: "Clove reads processes straight from macOS and stops refreshing when its window is closed. Idle, it uses about a quarter of what it did."
+                ),
+                FeatureHighlight(
+                    symbolName: "rectangle.topthird.inset.filled",
+                    title: "A Smarter Notch",
+                    detail: "The app each agent runs in, fanned out. Click one to open its chat, and hear about a task once, when it's actually done."
                 ),
             ]
         ),
