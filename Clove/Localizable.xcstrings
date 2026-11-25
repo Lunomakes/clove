@@ -67,6 +67,28 @@
         }
       }
     },
+    "%@ %@ limit at %lld%%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ %@ limit at %lld%%"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ %@限额已用 %lld%%"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ %@限額已用 %lld%%"
+          }
+        }
+      }
+    },
     "%@ (%@)" : {
       "localizations" : {
         "en" : {
@@ -243,6 +265,28 @@
         }
       }
     },
+    "%@ also use the notch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ also use the notch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 也在使用刘海"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 也在使用瀏海"
+          }
+        }
+      }
+    },
     "%@ also use the notch, so Clove stayed in the menu bar for now." : {
       "localizations" : {
         "en" : {
@@ -265,24 +309,24 @@
         }
       }
     },
-    "%@ also use the notch. If both show up there, pick Menu Bar." : {
+    "%@ also uses the notch" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ also use the notch. If both show up there, pick Menu Bar."
+            "value" : "%@ also uses the notch"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ 也在使用刘海。如果两者同时出现在那里，请选择菜单栏。"
+            "value" : "%@ 也在使用刘海"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ 也在使用瀏海。如果兩者同時出現在那裡，請選擇選單列。"
+            "value" : "%@ 也在使用瀏海"
           }
         }
       }
@@ -305,28 +349,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ 也在使用瀏海，所以 Clove 暫時留在選單列。"
-          }
-        }
-      }
-    },
-    "%@ also uses the notch. If both show up there, pick Menu Bar." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ also uses the notch. If both show up there, pick Menu Bar."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ 也在使用刘海。如果两者同时出现在那里，请选择菜单栏。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ 也在使用瀏海。如果兩者同時出現在那裡，請選擇選單列。"
           }
         }
       }
@@ -661,6 +683,28 @@
         }
       }
     },
+    "%@ keeps this port open for itself" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ keeps this port open for itself"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 为自身保持此端口开启"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 為自身保持此連接埠開啟"
+          }
+        }
+      }
+    },
     "%@ left. See what's taking up the space." : {
       "localizations" : {
         "en" : {
@@ -683,6 +727,50 @@
         }
       }
     },
+    "%@ limit, %lld percent used" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ limit, %lld percent used"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@限额，已用百分之 %lld"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@限額，已用百分之 %lld"
+          }
+        }
+      }
+    },
+    "%@ listening on %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ listening on %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 正在监听 %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 正在監聽 %@"
+          }
+        }
+      }
+    },
     "%@ lists agents, dev servers, and containers." : {
       "localizations" : {
         "en" : {
@@ -701,6 +789,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@列出代理、開發伺服器和容器。"
+          }
+        }
+      }
+    },
+    "%@ may stop working properly until you restart it." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ may stop working properly until you restart it."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你重新启动 %@ 之前，它可能无法正常工作。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你重新啟動 %@ 之前，它可能無法正常運作。"
           }
         }
       }
@@ -1079,6 +1189,50 @@
         }
       }
     },
+    "%@ · resets %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · resets %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@重置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@重置"
+          }
+        }
+      }
+    },
+    "%@ · resets now" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · resets now"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · 即将重置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · 即將重置"
+          }
+        }
+      }
+    },
     "%@, %@" : {
       "localizations" : {
         "en" : {
@@ -1255,28 +1409,6 @@
         }
       }
     },
-    "%@: %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@: %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@: %@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@: %@"
-          }
-        }
-      }
-    },
     "%@: %@." : {
       "localizations" : {
         "en" : {
@@ -1417,6 +1549,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld 個代理已完成"
+          }
+        }
+      }
+    },
+    "%lld agents working" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld agent working"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld agents working"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 个代理正在工作"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 個代理正在工作"
           }
         }
       }
@@ -1811,7 +1977,7 @@
         }
       }
     },
-    "%lld folders always kept, listed in Storage" : {
+    "%lld folders" : {
       "localizations" : {
         "en" : {
           "variations" : {
@@ -1819,13 +1985,13 @@
               "one" : {
                 "stringUnit" : {
                   "state" : "translated",
-                  "value" : "%lld folder always kept"
+                  "value" : "%lld folder"
                 }
               },
               "other" : {
                 "stringUnit" : {
                   "state" : "translated",
-                  "value" : "%lld folders always kept, listed in Storage"
+                  "value" : "%lld folders"
                 }
               }
             }
@@ -1834,13 +2000,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld 个文件夹始终保留，可在“储存空间”中查看"
+            "value" : "%lld 个文件夹"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld 個檔案夾始終保留，可在「儲存空間」中檢視"
+            "value" : "%lld 個檔案夾"
           }
         }
       }
@@ -2501,6 +2667,160 @@
         }
       }
     },
+    "%lld%%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        }
+      }
+    },
+    "%lld%% of %@ used" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% of %@ used"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@已用 %1$lld%%"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@已用 %1$lld%%"
+          }
+        }
+      }
+    },
+    "%lld%% used" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% used"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已用 %lld%%"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已用 %lld%%"
+          }
+        }
+      }
+    },
+    "%lld-day" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-day"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 天"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 天"
+          }
+        }
+      }
+    },
+    "%lld-hour" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-hour"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 小时"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 小時"
+          }
+        }
+      }
+    },
+    "%lldd" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldd"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld天"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld天"
+          }
+        }
+      }
+    },
+    "%lldh" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldh"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld小时"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld小時"
+          }
+        }
+      }
+    },
     "+%lld" : {
       "localizations" : {
         "en" : {
@@ -2519,6 +2839,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+%lld"
+          }
+        }
+      }
+    },
+    "+12" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+12"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+12"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+12"
           }
         }
       }
@@ -2743,6 +3085,28 @@
         }
       }
     },
+    "3 MCP servers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 MCP servers"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 个 MCP 服务器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 個 MCP 伺服器"
+          }
+        }
+      }
+    },
     "30 Days" : {
       "localizations" : {
         "en" : {
@@ -2893,6 +3257,72 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "90 天"
+          }
+        }
+      }
+    },
+    ":7265 is Raycast, :5000 is AirPlay Receiver. Choose which ports show in Settings › Now, or hover one in the notch and click Hide." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ":7265 is Raycast, :5000 is AirPlay Receiver. Choose which ports show in Settings › Now, or hover one in the notch and click Hide."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ":7265 是 Raycast，:5000 是隔空播放接收器。可在“设置 › 当前”中选择显示哪些端口，或在刘海中悬停某个端口并点按“隐藏”。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ":7265 是 Raycast，:5000 是 AirPlay 接收器。可在「設定 › 目前」中選擇顯示哪些連接埠，或在瀏海中懸停某個連接埠並按一下「隱藏」。"
+          }
+        }
+      }
+    },
+    "A Dynamic Island for displays without a notch." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A Dynamic Island for displays without a notch."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为没有刘海的显示器带来灵动岛。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為沒有瀏海的顯示器帶來動態島。"
+          }
+        }
+      }
+    },
+    "A Glassier Notch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A Glassier Notch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更通透的刘海"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更通透的瀏海"
           }
         }
       }
@@ -3095,6 +3525,50 @@
         }
       }
     },
+    "A number you can check at a glance" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A number you can check at a glance"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一眼就能看到的数字"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一眼就能看到的數字"
+          }
+        }
+      }
+    },
+    "A plan limit is nearly used up" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A plan limit is nearly used up"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "套餐限额即将用完"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "方案限額即將用完"
+          }
+        }
+      }
+    },
     "A server named “%@” is already set up there." : {
       "localizations" : {
         "en" : {
@@ -3157,6 +3631,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "~/.agents/skills 中已有名為「%1$@」的 Skill，來源不是 %2$@。它將被移到垃圾桶。"
+          }
+        }
+      }
+    },
+    "A smoother notch, and glass you can tune." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A smoother notch, and glass you can tune."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更流畅的刘海，以及可调节的玻璃效果。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更流暢的瀏海，以及可調整的玻璃效果。"
           }
         }
       }
@@ -3293,6 +3789,28 @@
         }
       }
     },
+    "Across every folder below" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Across every folder below"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "涵盖下方所有文件夹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "涵蓋下方所有檔案夾"
+          }
+        }
+      }
+    },
     "Activate" : {
       "localizations" : {
         "en" : {
@@ -3333,6 +3851,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已啟用"
+          }
+        }
+      }
+    },
+    "Active on this Mac" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active on this Mac"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已在这台 Mac 上激活"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已在這台 Mac 上啟用"
           }
         }
       }
@@ -3381,6 +3921,28 @@
         }
       }
     },
+    "Activity always lists every port. To hide an app's ports here, hover one in the notch and click Hide." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activity always lists every port. To hide an app's ports here, hover one in the notch and click Hide."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“活动”始终会列出所有端口。要在这里隐藏某个应用的端口，请在刘海中悬停该端口并点按“隐藏”。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「活動」始終會列出所有連接埠。要在這裡隱藏某個應用程式的連接埠，請在瀏海中懸停該連接埠並按一下「隱藏」。"
+          }
+        }
+      }
+    },
     "Add" : {
       "localizations" : {
         "en" : {
@@ -3425,6 +3987,28 @@
         }
       }
     },
+    "Add Folder…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Folder…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加文件夹…"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入檔案夾…"
+          }
+        }
+      }
+    },
     "Add Key" : {
       "localizations" : {
         "en" : {
@@ -3443,28 +4027,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新增金鑰"
-          }
-        }
-      }
-    },
-    "Add Project Folder…" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add Project Folder…"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "添加项目文件夹…"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "新增專案檔案夾…"
           }
         }
       }
@@ -3799,24 +4361,24 @@
         }
       }
     },
-    "Agent sessions, the MCP servers they start, and dev servers they leave behind show up here. Clove checks every few seconds." : {
+    "Agent sessions, the MCP servers they start, dev servers, and the ports apps keep open show up here. Clove checks every few seconds." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Agent sessions, the MCP servers they start, and dev servers they leave behind show up here. Clove checks every few seconds."
+            "value" : "Agent sessions, the MCP servers they start, dev servers, and the ports apps keep open show up here. Clove checks every few seconds."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "这里会显示代理会话、它们启动的 MCP 服务器和遗留的开发服务器。Clove 每隔几秒检查一次。"
+            "value" : "代理会话、它们启动的 MCP 服务器、开发服务器以及应用保持开启的端口都会显示在这里。Clove 每隔几秒检查一次。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "這裡會顯示代理會話、它們啟動的 MCP 伺服器和遺留的開發伺服器。Clove 每隔幾秒檢查一次。"
+            "value" : "代理會話、它們啟動的 MCP 伺服器、開發伺服器以及應用程式保持開啟的連接埠都會顯示在這裡。Clove 每隔幾秒檢查一次。"
           }
         }
       }
@@ -3865,46 +4427,68 @@
         }
       }
     },
-    "Agents at work, dev servers, and anything working your Mac hard show up here." : {
+    "Agents at a glance in the notch, and Settings rebuilt from the ground up." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Agents at work, dev servers, and anything working your Mac hard show up here."
+            "value" : "Agents at a glance in the notch, and Settings rebuilt from the ground up."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "工作中的代理、开发服务器，以及让 Mac 高负载的项目都会显示在这里。"
+            "value" : "在刘海中一眼看清代理状态，设置也已全面重做。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "工作中的代理、開發伺服器，以及讓 Mac 高負載的項目都會顯示在這裡。"
+            "value" : "在瀏海中一眼看清代理狀態，設定也已全面重做。"
           }
         }
       }
     },
-    "Agents at work, servers up, and what's busy" : {
+    "Agents at work" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Agents at work, servers up, and what's busy"
+            "value" : "Agents at work"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "工作中的代理、运行中的服务器和忙碌项"
+            "value" : "工作中的代理"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "工作中的代理、執行中的伺服器和忙碌項目"
+            "value" : "工作中的代理"
+          }
+        }
+      }
+    },
+    "Agents at work, servers and the apps holding ports, and anything working your Mac hard show up here." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agents at work, servers and the apps holding ports, and anything working your Mac hard show up here."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作中的代理、服务器、占用端口的应用，以及让 Mac 高负荷运转的任何程序都会显示在这里。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作中的代理、伺服器、佔用連接埠的應用程式，以及讓 Mac 高負荷運作的任何程式都會顯示在這裡。"
           }
         }
       }
@@ -3949,6 +4533,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "代理會立即停止載入。你可以從垃圾桶放回原處。"
+          }
+        }
+      }
+    },
+    "Agents, at a Glance" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agents, at a Glance"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理状态，一目了然"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理狀態，一目了然"
+          }
+        }
+      }
+    },
+    "Ahead of pace: %lld%% used with %lld%% of the window gone" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahead of pace: %lld%% used with %lld%% of the window gone"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用得偏快：已用 %lld%%，时段已过 %lld%%"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用得偏快：已用 %lld%%，時段已過 %lld%%"
           }
         }
       }
@@ -4239,24 +4867,46 @@
         }
       }
     },
-    "An agent finishes its turn" : {
+    "An agent finishes or needs you" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "An agent finishes its turn"
+            "value" : "An agent finishes or needs you"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理完成一轮工作"
+            "value" : "代理完成任务或需要你处理"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理完成一輪工作"
+            "value" : "代理完成任務或需要你處理"
+          }
+        }
+      }
+    },
+    "An agent starts a task" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An agent starts a task"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理开始任务"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理開始任務"
           }
         }
       }
@@ -4305,24 +4955,46 @@
         }
       }
     },
-    "Another app is already using that shortcut." : {
+    "Another app is using that shortcut" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Another app is already using that shortcut."
+            "value" : "Another app is using that shortcut"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "其他应用已在使用此快捷键。"
+            "value" : "其他应用正在使用此快捷键"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "其他應用程式已在使用此快速鍵。"
+            "value" : "其他應用程式正在使用此快速鍵"
+          }
+        }
+      }
+    },
+    "Anthropic didn't answer (%lld). Clove tries again shortly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anthropic didn't answer (%lld). Clove tries again shortly."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anthropic 未响应（%lld）。Clove 稍后会重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anthropic 未回應（%lld）。Clove 稍後會重試。"
           }
         }
       }
@@ -4411,6 +5083,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "應用程式"
+          }
+        }
+      }
+    },
+    "App Ports" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Ports"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用端口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "應用程式連接埠"
           }
         }
       }
@@ -4521,6 +5215,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "應用程式需要時會重新生成這些檔案。%1$@ 佔用最多，為 %2$@。"
+          }
+        }
+      }
+    },
+    "Apps using a lot of CPU right now" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apps using a lot of CPU right now"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前占用大量 CPU 的应用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前佔用大量 CPU 的應用程式"
           }
         }
       }
@@ -4723,24 +5439,46 @@
         }
       }
     },
-    "Beside the icon" : {
+    "Bars" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Beside the icon"
+            "value" : "Bars"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "图标旁显示"
+            "value" : "条形"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "圖示旁顯示"
+            "value" : "條形"
+          }
+        }
+      }
+    },
+    "Belongs to" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belongs to"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所属应用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所屬應用程式"
           }
         }
       }
@@ -4811,6 +5549,28 @@
         }
       }
     },
+    "Breathe" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breathe"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "呼吸"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "呼吸"
+          }
+        }
+      }
+    },
     "Browse skills.sh and install a skill for every project or just one." : {
       "localizations" : {
         "en" : {
@@ -4855,6 +5615,28 @@
         }
       }
     },
+    "Built-in display" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Built-in display"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "内建显示器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "內建顯示器"
+          }
+        }
+      }
+    },
     "Busy" : {
       "localizations" : {
         "en" : {
@@ -4873,6 +5655,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "忙碌"
+          }
+        }
+      }
+    },
+    "Busy apps" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Busy apps"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "忙碌的应用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "忙碌的應用程式"
           }
         }
       }
@@ -5383,6 +6187,28 @@
         }
       }
     },
+    "Choose up to four. Drag to reorder them. ⌘1 to ⌘4 switch tabs in this order." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose up to four. Drag to reorder them. ⌘1 to ⌘4 switch tabs in this order."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最多选择四个，拖移可调整顺序。⌘1 到 ⌘4 按此顺序切换标签页。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最多選擇四個，拖移可調整順序。⌘1 到 ⌘4 依此順序切換標籤頁。"
+          }
+        }
+      }
+    },
     "Choose where this skill goes and which agents get it" : {
       "localizations" : {
         "en" : {
@@ -5401,6 +6227,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇 Skill 的安裝位置和使用它的代理"
+          }
+        }
+      }
+    },
+    "Claude Code is signed in with an API key, which has no plan limits." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude Code is signed in with an API key, which has no plan limits."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude Code 使用 API 密钥登录，没有套餐限额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude Code 使用 API 金鑰登入，沒有方案限額。"
           }
         }
       }
@@ -5493,6 +6341,28 @@
         }
       }
     },
+    "Claude and Codex Limits" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude and Codex Limits"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude 和 Codex 限额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude 和 Codex 限額"
+          }
+        }
+      }
+    },
     "Claude finished in app" : {
       "localizations" : {
         "en" : {
@@ -5511,6 +6381,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Claude 已在 app 中完成"
+          }
+        }
+      }
+    },
+    "Claude · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude · %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude · %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude · %@"
           }
         }
       }
@@ -5669,6 +6561,28 @@
         }
       }
     },
+    "Clear to Tinted" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear to Tinted"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从透明到着色"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從透明到著色"
+          }
+        }
+      }
+    },
     "Cleared caches go to the Trash first, and Recently cleared puts them back. Folders you always keep are never touched." : {
       "localizations" : {
         "en" : {
@@ -5687,6 +6601,72 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "清理快取時先移到垃圾桶，可從「最近清理」放回原處。始終保留的檔案夾不會被改動。"
+          }
+        }
+      }
+    },
+    "Clearer" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clearer"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更透明"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更透明"
+          }
+        }
+      }
+    },
+    "Clearer Settings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clearer Settings"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更清晰的设置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更清晰的設定"
+          }
+        }
+      }
+    },
+    "Clearer glass, and an agent at work breathes a soft glow in the colours of the app it's running in." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clearer glass, and an agent at work breathes a soft glow in the colours of the app it's running in."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "玻璃更通透；代理工作时，会以所在应用的颜色泛起柔和的呼吸光晕。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "玻璃更通透；代理工作時，會以所在應用程式的顏色泛起柔和的呼吸光暈。"
           }
         }
       }
@@ -5713,24 +6693,46 @@
         }
       }
     },
-    "Clearing caches moves them to the Trash first, so Storage can put them back until you empty it. Folders you mark Always Keep are never cleared or suggested." : {
+    "Click" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clearing caches moves them to the Trash first, so Storage can put them back until you empty it. Folders you mark Always Keep are never cleared or suggested."
+            "value" : "Click"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "清理缓存时先移到废纸篓。在清倒废纸篓之前，可从“储存空间”放回原处。标记为“始终保留”的文件夹不会被清理或推荐。"
+            "value" : "点按"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "清理快取時先移到垃圾桶。在清倒垃圾桶之前，可從「儲存空間」放回原處。標記為「始終保留」的檔案夾不會被清理或推薦。"
+            "value" : "按一下"
+          }
+        }
+      }
+    },
+    "Click the icon or press your shortcut to open Clove, and right-click it for everything else. Updates from your agents only show in the notch." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click the icon or press your shortcut to open Clove, and right-click it for everything else. Updates from your agents only show in the notch."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点按图标或按下快捷键即可打开 Clove，右键点按可使用其他所有功能。代理的动态只会显示在刘海中。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按一下圖像或按下快速鍵即可打開 Clove，按右鍵可使用其他所有功能。代理的動態只會顯示在瀏海中。"
           }
         }
       }
@@ -5845,6 +6847,28 @@
         }
       }
     },
+    "Click, then press the keys you want" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click, then press the keys you want"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点按后按下你想用的按键"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按一下後按下你想用的按鍵"
+          }
+        }
+      }
+    },
     "Click, then press the new shortcut. Delete clears it, Esc keeps it." : {
       "localizations" : {
         "en" : {
@@ -5867,46 +6891,24 @@
         }
       }
     },
-    "Close panel" : {
+    "Close" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Close panel"
+            "value" : "Close"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "关闭面板"
+            "value" : "关闭"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "關閉面板"
-          }
-        }
-      }
-    },
-    "Closing the library keeps Clove running. The Dock icon hides only while the library is closed, so Settings and shortcuts stay reachable when it's open." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Closing the library keeps Clove running. The Dock icon hides only while the library is closed, so Settings and shortcuts stay reachable when it's open."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "关闭资源库后 Clove 仍会运行。程序坞图标只在资源库关闭时隐藏，因此资源库打开时仍可使用设置和快捷键。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "關閉資料庫後 Clove 仍會執行。Dock 圖像只在資料庫關閉時隱藏，因此資料庫打開時仍可使用設定和快速鍵。"
+            "value" : "關閉"
           }
         }
       }
@@ -6307,6 +7309,28 @@
         }
       }
     },
+    "Clove reads Claude Code's sign-in the way Claude Code saves it, so macOS stops asking each time it refreshes." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove reads Claude Code's sign-in the way Claude Code saves it, so macOS stops asking each time it refreshes."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 按 Claude Code 保存的方式读取其登录信息，因此 macOS 不会在每次刷新时都询问。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 依 Claude Code 儲存的方式讀取其登入資訊，因此 macOS 不會在每次重新整理時都詢問。"
+          }
+        }
+      }
+    },
     "Clove reads processes straight from macOS and stops refreshing when its window is closed. Idle, it uses about a quarter of what it did." : {
       "localizations" : {
         "en" : {
@@ -6329,24 +7353,68 @@
         }
       }
     },
-    "Clove reads these folders in your home directory. They are never modified." : {
+    "Clove reads these folders in your home directory and never changes them." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clove reads these folders in your home directory. They are never modified."
+            "value" : "Clove reads these folders in your home directory and never changes them."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clove 读取个人文件夹中的这些文件夹，不会修改它们。"
+            "value" : "Clove 读取你个人目录中的这些文件夹，但从不修改它们。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clove 讀取個人檔案夾中的這些檔案夾，不會修改它們。"
+            "value" : "Clove 讀取你個人目錄中的這些檔案夾，但從不修改它們。"
+          }
+        }
+      }
+    },
+    "Clove sleeps more between checks, and the pictures in Settings stay still." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove sleeps more between checks, and the pictures in Settings stay still."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 在两次检查之间休眠更久，设置中的示意图也不再持续动画。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 在兩次檢查之間休眠更久，設定中的示意圖也不再持續動畫。"
+          }
+        }
+      }
+    },
+    "Clove stays in the notch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove stays in the notch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 会留在刘海中"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 會留在瀏海中"
           }
         }
       }
@@ -6373,6 +7441,50 @@
         }
       }
     },
+    "Clove wasn't allowed to read the sign-in." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove wasn't allowed to read the sign-in."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 未获准读取登录信息。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 未獲准讀取登入資訊。"
+          }
+        }
+      }
+    },
+    "Clove won't suggest clearing these" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove won't suggest clearing these"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 不会建议清理这些文件夹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 不會建議清理這些檔案夾"
+          }
+        }
+      }
+    },
     "Clove writes skill files only when you install, edit, or remove one. Anything replaced goes to the Trash." : {
       "localizations" : {
         "en" : {
@@ -6391,6 +7503,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "僅在你安裝、編輯或移除 Skill 時，Clove 才會寫入 Skill 檔案。被替換的內容會移到垃圾桶。"
+          }
+        }
+      }
+    },
+    "Clove's Promise" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove's Promise"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 的承诺"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 的承諾"
           }
         }
       }
@@ -6479,6 +7613,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clove：按一下打開面板，按右鍵查看其他所有內容"
+          }
+        }
+      }
+    },
+    "Codex is signed in with an API key, which has no plan limits." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codex is signed in with an API key, which has no plan limits."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codex 使用 API 密钥登录，没有套餐限额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codex 使用 API 金鑰登入，沒有方案限額。"
           }
         }
       }
@@ -6791,6 +7947,28 @@
         }
       }
     },
+    "Conversations keep their app's icon across restarts, even when two apps work in the same project." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conversations keep their app's icon across restarts, even when two apps work in the same project."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "对话在重新启动后仍保留所在应用的图标，即使两个应用在同一项目中工作也是如此。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "對話在重新啟動後仍保留所在應用程式的圖像，即使兩個應用程式在同一專案中工作也是如此。"
+          }
+        }
+      }
+    },
     "Copied" : {
       "localizations" : {
         "en" : {
@@ -7077,6 +8255,28 @@
         }
       }
     },
+    "Copy a whole group" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy a whole group"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拷贝整个群组"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "複製整個群組"
+          }
+        }
+      }
+    },
     "Copy all skill references in this group" : {
       "localizations" : {
         "en" : {
@@ -7095,28 +8295,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "複製此群組中的所有 Skill 引用"
-          }
-        }
-      }
-    },
-    "Copy and keep panel" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copy and keep panel"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "拷贝并保留面板"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "複製並保留面板"
           }
         }
       }
@@ -7187,24 +8365,24 @@
         }
       }
     },
-    "Copy group" : {
+    "Copy localhost:%lld" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Copy group"
+            "value" : "Copy localhost:%lld"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "拷贝群组"
+            "value" : "拷贝 localhost:%lld"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "複製群組"
+            "value" : "複製 localhost:%lld"
           }
         }
       }
@@ -7271,6 +8449,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "複製「%@」"
+          }
+        }
+      }
+    },
+    "Copy, and keep the panel open" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy, and keep the panel open"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拷贝并保持面板打开"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "複製並保持面板打開"
           }
         }
       }
@@ -7693,6 +8893,72 @@
         }
       }
     },
+    "Couldn't reach Anthropic. Clove tries again shortly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't reach Anthropic. Clove tries again shortly."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法连接 Anthropic。Clove 稍后会重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法連線至 Anthropic。Clove 稍後會重試。"
+          }
+        }
+      }
+    },
+    "Couldn't reach Cursor. Clove tries again shortly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't reach Cursor. Clove tries again shortly."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法连接 Cursor。Clove 稍后会重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法連線至 Cursor。Clove 稍後會重試。"
+          }
+        }
+      }
+    },
+    "Couldn't reach OpenAI. Clove tries again shortly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't reach OpenAI. Clove tries again shortly."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法连接 OpenAI。Clove 稍后会重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法連線至 OpenAI。Clove 稍後會重試。"
+          }
+        }
+      }
+    },
     "Couldn't read %@" : {
       "localizations" : {
         "en" : {
@@ -8045,6 +9311,28 @@
         }
       }
     },
+    "Cursor didn't answer (%lld). Clove tries again shortly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor didn't answer (%lld). Clove tries again shortly."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor 未响应（%lld）。Clove 稍后会重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor 未回應（%lld）。Clove 稍後會重試。"
+          }
+        }
+      }
+    },
     "Cursor plugins" : {
       "localizations" : {
         "en" : {
@@ -8067,6 +9355,28 @@
         }
       }
     },
+    "Cursor sent something Clove couldn't read." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor sent something Clove couldn't read."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor 返回的内容 Clove 无法读取。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor 傳回的內容 Clove 無法讀取。"
+          }
+        }
+      }
+    },
     "Cursor, Windsurf, and Copilot rules" : {
       "localizations" : {
         "en" : {
@@ -8085,6 +9395,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cursor、Windsurf 和 Copilot 規則"
+          }
+        }
+      }
+    },
+    "Customize Now…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customize Now…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义“当前”…"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂「目前」…"
           }
         }
       }
@@ -8353,6 +9685,28 @@
         }
       }
     },
+    "Delete all groups" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete all groups"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除所有群组"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除所有群組"
+          }
+        }
+      }
+    },
     "Delete all local groups?" : {
       "localizations" : {
         "en" : {
@@ -8371,28 +9725,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "刪除所有本地群組？"
-          }
-        }
-      }
-    },
-    "Delete groups" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Delete groups"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "删除群组"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "刪除群組"
           }
         }
       }
@@ -8529,6 +9861,28 @@
         }
       }
     },
+    "Dev servers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dev servers"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开发服务器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開發伺服器"
+          }
+        }
+      }
+    },
     "Dev servers running" : {
       "localizations" : {
         "en" : {
@@ -8639,24 +9993,24 @@
         }
       }
     },
-    "Discover talks to skills.sh and GitHub only while you browse or install. No telemetry, no skill uploads." : {
+    "Discover only talks to skills.sh and GitHub while you browse or install. If you turn on plan limits, Clove asks Anthropic, OpenAI and Cursor how much you've used. Nothing else leaves your Mac." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Discover talks to skills.sh and GitHub only while you browse or install. No telemetry, no skill uploads."
+            "value" : "Discover only talks to skills.sh and GitHub while you browse or install. If you turn on plan limits, Clove asks Anthropic, OpenAI and Cursor how much you've used. Nothing else leaves your Mac."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "仅在你浏览或安装时，“发现”才会连接 skills.sh 和 GitHub。无遥测，不上传 Skill。"
+            "value" : "“发现”只在你浏览或安装时与 skills.sh 和 GitHub 通信。如果你打开套餐限额，Clove 会向 Anthropic、OpenAI 和 Cursor 查询你的用量。除此之外，没有任何数据离开你的 Mac。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "僅在你瀏覽或安裝時，「發現」才會連線 skills.sh 和 GitHub。無遙測，不上傳 Skill。"
+            "value" : "「發現」只在你瀏覽或安裝時與 skills.sh 和 GitHub 通訊。如果你開啟方案限額，Clove 會向 Anthropic、OpenAI 和 Cursor 查詢你的用量。除此之外，沒有任何資料離開你的 Mac。"
           }
         }
       }
@@ -8815,6 +10169,50 @@
         }
       }
     },
+    "Done %lldh" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done %lldh"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 小时前完成"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 小時前完成"
+          }
+        }
+      }
+    },
+    "Done %lldm" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done %lldm"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 分钟前完成"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 分鐘前完成"
+          }
+        }
+      }
+    },
     "Done, and It Tells You" : {
       "localizations" : {
         "en" : {
@@ -8833,6 +10231,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "完成時會通知你"
+          }
+        }
+      }
+    },
+    "Dot" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dot"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圆点"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圓點"
           }
         }
       }
@@ -8903,6 +10323,28 @@
         }
       }
     },
+    "Downloads in the background and installs when you quit. Every update is signed." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloads in the background and installs when you quit. Every update is signed."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在后台下载，并在你退出时安装。每个更新都经过签名。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在背景下載，並在你結束時安裝。每個更新都經過簽署。"
+          }
+        }
+      }
+    },
     "Downloads in the background, installs when Clove quits." : {
       "localizations" : {
         "en" : {
@@ -8969,6 +10411,50 @@
         }
       }
     },
+    "Drag to reorder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drag to reorder"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拖移以调整顺序"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拖移以調整順序"
+          }
+        }
+      }
+    },
+    "Drag to reorder. Empty sections stay hidden. You can also right-click a section in the notch to move or hide it." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drag to reorder. Empty sections stay hidden. You can also right-click a section in the notch to move or hide it."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拖移以调整顺序。没有内容的分区会保持隐藏。你也可以在刘海中右键点按某个分区来移动或隐藏它。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拖移以調整順序。沒有內容的區塊會保持隱藏。你也可以在瀏海中按右鍵點選某個區塊來移動或隱藏它。"
+          }
+        }
+      }
+    },
     "Dragged into a prompt." : {
       "localizations" : {
         "en" : {
@@ -8987,6 +10473,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "拖入提示框。"
+          }
+        }
+      }
+    },
+    "Dynamic Island" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynamic Island"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "灵动岛"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "動態島"
           }
         }
       }
@@ -9277,28 +10785,6 @@
         }
       }
     },
-    "Enabled" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enabled"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已启用"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已啟用"
-          }
-        }
-      }
-    },
     "Enter the key from your purchase email. One key unlocks Clove on one Mac." : {
       "localizations" : {
         "en" : {
@@ -9339,6 +10825,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "條目「%@」"
+          }
+        }
+      }
+    },
+    "Every Port, Named" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every Port, Named"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每个端口都有名字"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每個連接埠都有名字"
           }
         }
       }
@@ -9405,6 +10913,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "所有功能均已解鎖。無需授權金鑰、帳號或購買。"
+          }
+        }
+      }
+    },
+    "Every port named, your plan limits at a glance, and a Now tab laid out your way." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every port named, your plan limits at a glance, and a Now tab laid out your way."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每个端口都标明归属，套餐限额一目了然，“当前”标签页也可按你的方式布局。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每個連接埠都標明歸屬，方案限額一目了然，「目前」標籤頁也可依你的方式佈局。"
           }
         }
       }
@@ -9629,12 +11159,34 @@
         }
       }
     },
-    "Extend selection" : {
+    "Expand the Notch When" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Extend selection"
+            "value" : "Expand the Notch When"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在以下情况展开刘海"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在以下情況展開瀏海"
+          }
+        }
+      }
+    },
+    "Extend the selection" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extend the selection"
           }
         },
         "zh-Hans" : {
@@ -9646,7 +11198,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "擴充套件選擇"
+            "value" : "擴展選取範圍"
           }
         }
       }
@@ -9669,6 +11221,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "代理可呼叫的額外工具"
+          }
+        }
+      }
+    },
+    "Extra usage" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extra usage"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "额外用量"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "額外用量"
           }
         }
       }
@@ -10443,6 +12017,28 @@
         }
       }
     },
+    "Glass tint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glass tint"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "玻璃着色"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "玻璃著色"
+          }
+        }
+      }
+    },
     "Global shortcut" : {
       "localizations" : {
         "en" : {
@@ -10531,28 +12127,6 @@
         }
       }
     },
-    "Group storage" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Group storage"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "群组储存位置"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "群組儲存位置"
-          }
-        }
-      }
-    },
     "Group suggestions" : {
       "localizations" : {
         "en" : {
@@ -10597,28 +12171,6 @@
         }
       }
     },
-    "Groups in use" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Groups in use"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用中的群组"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用中的群組"
-          }
-        }
-      }
-    },
     "Groups, a cleaner panel, and a more native Mac experience." : {
       "localizations" : {
         "en" : {
@@ -10637,28 +12189,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "群組、更簡潔的面板，以及更原生的 Mac 體驗。"
-          }
-        }
-      }
-    },
-    "Grow to tell me when" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grow to tell me when"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在以下情况展开提醒我"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在以下情況展開提醒我"
           }
         }
       }
@@ -10791,6 +12321,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "隱藏"
+          }
+        }
+      }
+    },
+    "Hide %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隱藏%@"
+          }
+        }
+      }
+    },
+    "Hide %@'s Ports" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide %@'s Ports"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏 %@ 的端口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隱藏 %@ 的連接埠"
           }
         }
       }
@@ -10949,24 +12523,24 @@
         }
       }
     },
-    "Hover the notch to peek, click it or press the shortcut to search. Esc, a click elsewhere, or a click on the notch closes it. Right-click it for every section. Macs without a notch get one at the top of the menu bar." : {
+    "Hover the notch to see what's going on. Click it or press your shortcut to search, and right-click it for everything else. On screens without a notch, Clove sits in the menu bar as a small island that appears when something's happening." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hover the notch to peek, click it or press the shortcut to search. Esc, a click elsewhere, or a click on the notch closes it. Right-click it for every section. Macs without a notch get one at the top of the menu bar."
+            "value" : "Hover the notch to see what's going on. Click it or press your shortcut to search, and right-click it for everything else. On screens without a notch, Clove sits in the menu bar as a small island that appears when something's happening."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "悬停在刘海上即可预览，点按或按下快捷键即可搜索。按 Esc、点按其他位置或再次点按刘海即可关闭。右键点按可查看所有分区。没有刘海的 Mac 会在菜单栏顶部显示一个。"
+            "value" : "悬停在刘海上即可查看动态。点按或按下快捷键即可搜索，右键点按可使用其他所有功能。在没有刘海的屏幕上，Clove 会以小岛的形式待在菜单栏中，有动态时才出现。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "懸停在瀏海上即可預覽，按一下或按下快速鍵即可搜尋。按 Esc、按一下其他位置或再次按一下瀏海即可關閉。按右鍵可查看所有區塊。沒有瀏海的 Mac 會在選單列頂部顯示一個。"
+            "value" : "懸停在瀏海上即可查看動態。按一下或按下快速鍵即可搜尋，按右鍵可使用其他所有功能。在沒有瀏海的螢幕上，Clove 會以小島的形式待在選單列中，有動態時才出現。"
           }
         }
       }
@@ -11037,6 +12611,28 @@
         }
       }
     },
+    "How full your disk is and what you can clear" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How full your disk is and what you can clear"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "磁盘用量以及可以清理的内容"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "磁碟用量以及可以清理的內容"
+          }
+        }
+      }
+    },
     "How long a skill can go unused before it's listed" : {
       "localizations" : {
         "en" : {
@@ -11055,6 +12651,94 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skill 閒置多久後列入清單"
+          }
+        }
+      }
+    },
+    "How many MCP servers and containers are running" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How many MCP servers and containers are running"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在运行的 MCP 服务器和容器数量"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在執行的 MCP 伺服器和容器數量"
+          }
+        }
+      }
+    },
+    "How much of each plan's five-hour and weekly windows you've used, when each resets, and whether you're on pace. Off until you turn it on." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How much of each plan's five-hour and weekly windows you've used, when each resets, and whether you're on pace. Off until you turn it on."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各套餐 5 小时和每周时段的用量、各自的重置时间，以及你的使用节奏是否合适。默认关闭，需手动打开。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各方案 5 小時和每週時段的用量、各自的重置時間，以及你的使用節奏是否合適。預設關閉，需手動開啟。"
+          }
+        }
+      }
+    },
+    "How much of your Claude, Codex and Cursor plans you've used" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How much of your Claude, Codex and Cursor plans you've used"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude、Codex 和 Cursor 套餐的用量"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude、Codex 和 Cursor 方案的用量"
+          }
+        }
+      }
+    },
+    "How much of your Claude, Codex and Cursor plans you've used, and when it resets" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How much of your Claude, Codex and Cursor plans you've used, and when it resets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude、Codex 和 Cursor 套餐的用量及重置时间"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude、Codex 和 Cursor 方案的用量及重置時間"
           }
         }
       }
@@ -11165,6 +12849,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "進行中"
+          }
+        }
+      }
+    },
+    "In the Notch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In the Notch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在刘海中"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在瀏海中"
+          }
+        }
+      }
+    },
+    "In the Panel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In the Panel"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在面板中"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在面板中"
           }
         }
       }
@@ -11301,24 +13029,46 @@
         }
       }
     },
-    "Indexed skills" : {
+    "Include" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Indexed skills"
+            "value" : "Include"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "已索引的 Skill"
+            "value" : "包含"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "已索引的 Skill"
+            "value" : "包含"
+          }
+        }
+      }
+    },
+    "Including questions and errors" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Including questions and errors"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "包括提问和错误"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "包括提問和錯誤"
           }
         }
       }
@@ -11363,6 +13113,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "插入提示框"
+          }
+        }
+      }
+    },
+    "Insert into the app you were in" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insert into the app you were in"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "插入到之前使用的应用中"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "插入到之前使用的應用程式中"
           }
         }
       }
@@ -11869,6 +13641,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "代理將失去這些工具，直到重新啟動伺服器。"
+          }
+        }
+      }
+    },
+    "Its app may stop working properly until you restart it." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Its app may stop working properly until you restart it."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你重新启动所属应用之前，它可能无法正常工作。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你重新啟動所屬應用程式之前，它可能無法正常運作。"
           }
         }
       }
@@ -12401,6 +14195,50 @@
         }
       }
     },
+    "Less room beside the notch while agents work, or none: turn them off in Settings › General." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Less room beside the notch while agents work, or none: turn them off in Settings › General."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理工作时，刘海两侧占用更少空间；也可以在“设置 › 通用”中完全关闭。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理工作時，瀏海兩側佔用更少空間；也可以在「設定 › 一般」中完全關閉。"
+          }
+        }
+      }
+    },
+    "Lets Clove paste a skill into the app you were using" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lets Clove paste a skill into the app you were using"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让 Clove 将 Skill 粘贴到你之前使用的应用中"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "讓 Clove 將 Skill 貼到你之前使用的應用程式中"
+          }
+        }
+      }
+    },
     "License" : {
       "localizations" : {
         "en" : {
@@ -12463,6 +14301,72 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "更輕巧"
+          }
+        }
+      }
+    },
+    "Lighter in the Background" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lighter in the Background"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "后台更轻量"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背景更輕量"
+          }
+        }
+      }
+    },
+    "Like AirPlay Receiver and Continuity" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Like AirPlay Receiver and Continuity"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例如隔空播放接收器和连续互通"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例如 AirPlay 接收器和接續互通"
+          }
+        }
+      }
+    },
+    "Like Raycast, Figma and Docker" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Like Raycast, Figma and Docker"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例如 Raycast、Figma 和 Docker"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例如 Raycast、Figma 和 Docker"
           }
         }
       }
@@ -12533,24 +14437,24 @@
         }
       }
     },
-    "Liquid Glass when open" : {
+    "Liquid Glass" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Liquid Glass when open"
+            "value" : "Liquid Glass"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打开时使用液态玻璃"
+            "value" : "液态玻璃"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打開時使用液態玻璃"
+            "value" : "液態玻璃"
           }
         }
       }
@@ -12841,6 +14745,28 @@
         }
       }
     },
+    "MCP servers and containers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MCP servers and containers"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MCP 服务器和容器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MCP 伺服器和容器"
+          }
+        }
+      }
+    },
     "MCP servers and tools started with npx keep a full install each. npx downloads them again the next time they run." : {
       "localizations" : {
         "en" : {
@@ -12947,6 +14873,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "主簽出"
+          }
+        }
+      }
+    },
+    "Match macOS" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Match macOS"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跟随 macOS"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跟隨 macOS"
           }
         }
       }
@@ -13215,6 +15163,28 @@
         }
       }
     },
+    "Monthly" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monthly"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月"
+          }
+        }
+      }
+    },
     "More" : {
       "localizations" : {
         "en" : {
@@ -13259,6 +15229,28 @@
         }
       }
     },
+    "More tinted" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More tinted"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更多着色"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更多著色"
+          }
+        }
+      }
+    },
     "Most installed of all time" : {
       "localizations" : {
         "en" : {
@@ -13281,6 +15273,28 @@
         }
       }
     },
+    "Move %@ Down" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move %@ Down"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下移%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下移%@"
+          }
+        }
+      }
+    },
     "Move %@ Old Sessions to Trash" : {
       "localizations" : {
         "en" : {
@@ -13299,6 +15313,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "將 %@ 箇舊會話移到垃圾桶"
+          }
+        }
+      }
+    },
+    "Move %@ Up" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move %@ Up"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上移%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上移%@"
           }
         }
       }
@@ -13479,24 +15515,24 @@
         }
       }
     },
-    "Move caches to the Trash before clearing" : {
+    "Move caches to the Trash first" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Move caches to the Trash before clearing"
+            "value" : "Move caches to the Trash first"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "清理缓存前先移到废纸篓"
+            "value" : "先将缓存移到废纸篓"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "清理快取前先移到垃圾桶"
+            "value" : "先將快取移到垃圾桶"
           }
         }
       }
@@ -13523,12 +15559,12 @@
         }
       }
     },
-    "Move selection" : {
+    "Move the selection" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Move selection"
+            "value" : "Move the selection"
           }
         },
         "zh-Hans" : {
@@ -13540,7 +15576,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "移動選擇"
+            "value" : "移動選取範圍"
           }
         }
       }
@@ -13761,28 +15797,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "影片"
-          }
-        }
-      }
-    },
-    "Multi-select" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Multi-select"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "多选"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "多選"
           }
         }
       }
@@ -14117,6 +16131,50 @@
         }
       }
     },
+    "Next to the icon" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next to the icon"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标旁显示"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圖像旁顯示"
+          }
+        }
+      }
+    },
+    "Next to the notch while an agent works" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next to the notch while an agent works"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理工作时显示在刘海旁"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理工作時顯示在瀏海旁"
+          }
+        }
+      }
+    },
     "No Agents" : {
       "localizations" : {
         "en" : {
@@ -14135,6 +16193,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "沒有代理"
+          }
+        }
+      }
+    },
+    "No More Password Prompts" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No More Password Prompts"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不再弹出密码提示"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不再跳出密碼提示"
           }
         }
       }
@@ -14337,6 +16417,28 @@
         }
       }
     },
+    "No limits came back for this plan." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No limits came back for this plan."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未获取到此套餐的限额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未取得此方案的限額。"
+          }
+        }
+      }
+    },
     "No mcp servers yet" : {
       "localizations" : {
         "en" : {
@@ -14513,6 +16615,28 @@
         }
       }
     },
+    "No usage came back for this Cursor plan." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No usage came back for this Cursor plan."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未获取到此 Cursor 套餐的用量。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未取得此 Cursor 方案的用量。"
+          }
+        }
+      }
+    },
     "No use in your agent history" : {
       "localizations" : {
         "en" : {
@@ -14579,6 +16703,28 @@
         }
       }
     },
+    "Node, Vite, Rails, Postgres and anything your agents start" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Node, Vite, Rails, Postgres and anything your agents start"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Node、Vite、Rails、Postgres 以及代理启动的任何服务"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Node、Vite、Rails、Postgres 以及代理啟動的任何服務"
+          }
+        }
+      }
+    },
     "None" : {
       "localizations" : {
         "en" : {
@@ -14641,6 +16787,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "你的 %lld 個 worktree 中沒有可以明確安全移除的。"
+          }
+        }
+      }
+    },
+    "Not Now" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not Now"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以后再说"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以後再說"
+          }
+        }
+      }
+    },
+    "Not connected" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not connected"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未连接"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未連線"
           }
         }
       }
@@ -15151,6 +17341,28 @@
         }
       }
     },
+    "Now, Your Way" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now, Your Way"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“当前”，按你的方式"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「目前」，依你的方式"
+          }
+        }
+      }
+    },
     "Numbered steps for a repeatable task." : {
       "localizations" : {
         "en" : {
@@ -15371,6 +17583,116 @@
         }
       }
     },
+    "On This Mac" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On This Mac"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这台 Mac 上"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這台 Mac 上"
+          }
+        }
+      }
+    },
+    "On a display without a notch, Clove floats in the menu bar as a pill, out of sight until an agent is at work." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On a display without a notch, Clove floats in the menu bar as a pill, out of sight until an agent is at work."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在没有刘海的显示器上，Clove 以胶囊形状浮在菜单栏中，只在代理工作时出现。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在沒有瀏海的顯示器上，Clove 以膠囊形狀浮在選單列中，只在代理工作時出現。"
+          }
+        }
+      }
+    },
+    "On pace: %lld%% used with %lld%% of the window gone" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On pace: %lld%% used with %lld%% of the window gone"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节奏正常：已用 %lld%%，时段已过 %lld%%"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節奏正常：已用 %lld%%，時段已過 %lld%%"
+          }
+        }
+      }
+    },
+    "On the Display You're Using" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On the Display You're Using"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示在你正在使用的显示器上"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示在你正在使用的顯示器上"
+          }
+        }
+      }
+    },
+    "Onboarding.swift" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding.swift"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding.swift"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onboarding.swift"
+          }
+        }
+      }
+    },
     "One Page per Section" : {
       "localizations" : {
         "en" : {
@@ -15547,6 +17869,28 @@
         }
       }
     },
+    "Only Anthropic, OpenAI and Cursor know how much you've used, so Clove asks them with the sign-ins your agents already saved. You never type a password. Clove keeps those sign-ins in memory, sends each one only to the company it came from, and never changes them." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only Anthropic, OpenAI and Cursor know how much you've used, so Clove asks them with the sign-ins your agents already saved. You never type a password. Clove keeps those sign-ins in memory, sends each one only to the company it came from, and never changes them."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只有 Anthropic、OpenAI 和 Cursor 知道你的用量，因此 Clove 使用代理已保存的登录信息向它们查询，你无需输入密码。Clove 只在内存中保留这些登录信息，每份只发送给其所属的公司，并且从不修改它们。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只有 Anthropic、OpenAI 和 Cursor 知道你的用量，因此 Clove 使用代理已儲存的登入資訊向它們查詢，你無需輸入密碼。Clove 只在記憶體中保留這些登入資訊，每份只傳送給其所屬的公司，並且從不修改它們。"
+          }
+        }
+      }
+    },
     "Only for" : {
       "localizations" : {
         "en" : {
@@ -15609,6 +17953,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clove 只能安裝託管在 GitHub 上的 Skill"
+          }
+        }
+      }
+    },
+    "Only while the Clove window is closed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only while the Clove window is closed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅在 Clove 窗口关闭时"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "僅在 Clove 視窗關閉時"
           }
         }
       }
@@ -15701,6 +18067,28 @@
         }
       }
     },
+    "Open Clove" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Clove"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开 Clove"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開 Clove"
+          }
+        }
+      }
+    },
     "Open Clove settings (⌘,)" : {
       "localizations" : {
         "en" : {
@@ -15723,24 +18111,24 @@
         }
       }
     },
-    "Open Library…" : {
+    "Open Library" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Open Library…"
+            "value" : "Open Library"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打开资料库…"
+            "value" : "打开资源库"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟資料庫…"
+            "value" : "打開資料庫"
           }
         }
       }
@@ -15965,6 +18353,28 @@
         }
       }
     },
+    "Open on Hover" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open on Hover"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "悬停即打开"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "懸停即打開"
+          }
+        }
+      }
+    },
     "Open on hover" : {
       "localizations" : {
         "en" : {
@@ -16075,6 +18485,28 @@
         }
       }
     },
+    "OpenAI didn't answer (%lld). Clove tries again shortly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenAI didn't answer (%lld). Clove tries again shortly."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenAI 未响应（%lld）。Clove 稍后会重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenAI 未回應（%lld）。Clove 稍後會重試。"
+          }
+        }
+      }
+    },
     "Opening the library puts Clove in the menu bar, with Settings and shortcuts." : {
       "localizations" : {
         "en" : {
@@ -16093,6 +18525,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟資料庫後，Clove 的選單列會顯示設定和快速鍵。"
+          }
+        }
+      }
+    },
+    "Opens Clove from any app" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens Clove from any app"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在任何应用中打开 Clove"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在任何應用程式中打開 Clove"
           }
         }
       }
@@ -16163,6 +18617,28 @@
         }
       }
     },
+    "Opens when your pointer reaches it and closes when you move away" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens when your pointer reaches it and closes when you move away"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指针移到刘海时打开，移开时关闭"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指標移到瀏海時打開，移開時關閉"
+          }
+        }
+      }
+    },
     "Option Return copies" : {
       "localizations" : {
         "en" : {
@@ -16203,6 +18679,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "可選。允許「儲存空間」檢視垃圾桶和資源庫。"
+          }
+        }
+      }
+    },
+    "Orbit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orbit"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "环绕"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "環繞"
           }
         }
       }
@@ -16291,6 +18789,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "超過 %lld 行。請將詳細內容移到 Skill 連結的參考檔案中。"
+          }
+        }
+      }
+    },
+    "Pace yourself" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pace yourself"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请注意用量节奏"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請注意用量節奏"
+          }
+        }
+      }
+    },
+    "Pace yourself · resets %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pace yourself · resets %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请注意用量节奏 · %@重置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請注意用量節奏 · %@重置"
           }
         }
       }
@@ -16401,6 +18943,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "面板快速鍵"
+          }
+        }
+      }
+    },
+    "Part of" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Part of"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "属于"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "屬於"
+          }
+        }
+      }
+    },
+    "Part of macOS" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Part of macOS"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 的一部分"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 的一部分"
           }
         }
       }
@@ -16577,6 +19163,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "照片"
+          }
+        }
+      }
+    },
+    "Pick a different one, or quit the other app" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick a different one, or quit the other app"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请换一个，或退出那个应用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請換一個，或結束那個應用程式"
           }
         }
       }
@@ -16779,6 +19387,28 @@
         }
       }
     },
+    "Pick the mark beside the notch, and open it on hover." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick the mark beside the notch, and open it on hover."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可选择刘海旁的标记，并可悬停打开。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可選擇瀏海旁的標記，並可懸停打開。"
+          }
+        }
+      }
+    },
     "Pick where Clove lives. Settings, General switches it any time." : {
       "localizations" : {
         "en" : {
@@ -16955,6 +19585,50 @@
         }
       }
     },
+    "Plan Limits" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plan Limits"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "套餐限额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "方案限額"
+          }
+        }
+      }
+    },
+    "Plan limits" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plan limits"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "套餐限额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "方案限額"
+          }
+        }
+      }
+    },
     "Playwright, Puppeteer, and Selenium download a fresh “Chrome for Testing” for browser tools, and macOS lists each as an app. Older builds are never used again." : {
       "localizations" : {
         "en" : {
@@ -16995,28 +19669,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "外掛 Skill"
-          }
-        }
-      }
-    },
-    "Plugin skills ship inside Cursor plugins. Project skills live in your repositories." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plugin skills ship inside Cursor plugins. Project skills live in your repositories."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "插件 Skill 随 Cursor 插件提供，项目 Skill 位于你的仓库中。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "外掛 Skill 隨 Cursor 外掛提供，專案 Skill 位於你的儲存庫中。"
           }
         }
       }
@@ -17065,6 +19717,116 @@
         }
       }
     },
+    "Popular skills on skills.sh this week" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popular skills on skills.sh this week"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "skills.sh 本周热门 Skill"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "skills.sh 本週熱門 Skill"
+          }
+        }
+      }
+    },
+    "Ports" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ports"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "端口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連接埠"
+          }
+        }
+      }
+    },
+    "Ports apps keep open" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ports apps keep open"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用保持开启的端口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "應用程式保持開啟的連接埠"
+          }
+        }
+      }
+    },
+    "Ports hidden from Now" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ports hidden from Now"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在“当前”中隐藏的端口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在「目前」中隱藏的連接埠"
+          }
+        }
+      }
+    },
+    "Ports macOS keeps open" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ports macOS keeps open"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 保持开启的端口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 保持開啟的連接埠"
+          }
+        }
+      }
+    },
     "Press shortcut" : {
       "localizations" : {
         "en" : {
@@ -17105,6 +19867,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "預覽"
+          }
+        }
+      }
+    },
+    "Preview: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预览：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "預覽：%@"
+          }
+        }
+      }
+    },
+    "Preview: nothing shown" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview: nothing shown"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预览：不显示任何内容"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "預覽：不顯示任何內容"
           }
         }
       }
@@ -17901,6 +20707,28 @@
         }
       }
     },
+    "Remove" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除"
+          }
+        }
+      }
+    },
     "Remove %@" : {
       "localizations" : {
         "en" : {
@@ -18385,28 +21213,6 @@
         }
       }
     },
-    "Rescan Now" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rescan Now"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "立即重新扫描"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "立即重新掃描"
-          }
-        }
-      }
-    },
     "Rescan to measure." : {
       "localizations" : {
         "en" : {
@@ -18469,6 +21275,116 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "重新掃描 Skill 檔案夾"
+          }
+        }
+      }
+    },
+    "Resets %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resets %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@重置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@重置"
+          }
+        }
+      }
+    },
+    "Resets in %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resets in %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@后重置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@後重置"
+          }
+        }
+      }
+    },
+    "Resets in 2h 10m" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resets in 2h 10m"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2 小时 10 分钟后重置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2 小時 10 分鐘後重置"
+          }
+        }
+      }
+    },
+    "Resets in 4h" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resets in 4h"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4 小时后重置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4 小時後重置"
+          }
+        }
+      }
+    },
+    "Resets now" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resets now"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即将重置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即將重置"
           }
         }
       }
@@ -18623,6 +21539,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "按 Return 輸入提示框。"
+          }
+        }
+      }
+    },
+    "Reveal %@ in Finder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reveal %@ in Finder"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在访达中显示 %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Finder 中顯示 %@"
           }
         }
       }
@@ -18803,6 +21741,28 @@
         }
       }
     },
+    "Ripple" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripple"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "波纹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "波紋"
+          }
+        }
+      }
+    },
     "Rule" : {
       "localizations" : {
         "en" : {
@@ -18953,6 +21913,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "執行涼爽"
+          }
+        }
+      }
+    },
+    "Running dev servers and the apps using ports" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Running dev servers and the apps using ports"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在运行的开发服务器和占用端口的应用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在執行的開發伺服器和佔用連接埠的應用程式"
           }
         }
       }
@@ -19265,24 +22247,46 @@
         }
       }
     },
-    "Saved in one JSON file inside Clove's Application Support folder." : {
+    "Saved in one file on this Mac" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Saved in one JSON file inside Clove's Application Support folder."
+            "value" : "Saved in one file on this Mac"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "保存在 Clove 的 Application Support 文件夹中的一个 JSON 文件内。"
+            "value" : "保存在这台 Mac 上的一个文件中"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "儲存在 Clove 的 Application Support 檔案夾中的一個 JSON 檔案內。"
+            "value" : "儲存在這台 Mac 上的一個檔案中"
+          }
+        }
+      }
+    },
+    "Saved in one file on this Mac." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved in one file on this Mac."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存在这台 Mac 上的一个文件中。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存在這台 Mac 上的一個檔案中。"
           }
         }
       }
@@ -19393,6 +22397,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在後臺輕量掃描，結果保留半小時。介面穩定後，動畫便停止。"
+          }
+        }
+      }
+    },
+    "Screens without a notch show it in the menu bar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Screens without a notch show it in the menu bar"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有刘海的屏幕会在菜单栏中显示"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有瀏海的螢幕會在選單列中顯示"
           }
         }
       }
@@ -19727,6 +22753,28 @@
         }
       }
     },
+    "Sections" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sections"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分区"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "區塊"
+          }
+        }
+      }
+    },
     "Security Audits" : {
       "localizations" : {
         "en" : {
@@ -19903,6 +22951,72 @@
         }
       }
     },
+    "See your desktop through the open notch. Off, it's solid black." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See your desktop through the open notch. Off, it's solid black."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开刘海时透出桌面；关闭此项则为纯黑。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開瀏海時透出桌面；關閉此項則為純黑。"
+          }
+        }
+      }
+    },
+    "See your plan limits" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See your plan limits"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看套餐限额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看方案限額"
+          }
+        }
+      }
+    },
+    "Select several" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select several"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多选"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多選"
+          }
+        }
+      }
+    },
     "Selected" : {
       "localizations" : {
         "en" : {
@@ -19921,6 +23035,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已選擇"
+          }
+        }
+      }
+    },
+    "Servers and ports" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servers and ports"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务器和端口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伺服器和連接埠"
           }
         }
       }
@@ -19965,6 +23101,116 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
+          }
+        }
+      }
+    },
+    "Settings now say what each option does for you, in plain words." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings now say what each option does for you, in plain words."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置现在会用简单的话说明每个选项的作用。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定現在會用簡單的話說明每個選項的作用。"
+          }
+        }
+      }
+    },
+    "Settings › General › Liquid Glass follows your Mac's Clear or Tinted look, or pick your own spot on the slider." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings › General › Liquid Glass follows your Mac's Clear or Tinted look, or pick your own spot on the slider."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“设置 › 通用 › 液态玻璃”会跟随 Mac 的透明或着色外观，你也可以在滑块上自选位置。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「設定 › 一般 › 液態玻璃」會跟隨 Mac 的透明或著色外觀，你也可以在滑桿上自選位置。"
+          }
+        }
+      }
+    },
+    "Settings › General › Show on keeps the island on the built-in display, or on whichever one you're working in." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings › General › Show on keeps the island on the built-in display, or on whichever one you're working in."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“设置 › 通用 › 显示位置”可让小岛固定在内建显示器上，或跟随你正在使用的显示器。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「設定 › 一般 › 顯示位置」可讓小島固定在內建顯示器上，或跟隨你正在使用的顯示器。"
+          }
+        }
+      }
+    },
+    "Settings › General › Working mark: the still Dot, or Breathe, Orbit, Bars or Ripple while an agent works." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings › General › Working mark: the still Dot, or Breathe, Orbit, Bars or Ripple while an agent works."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“设置 › 通用 › 工作标记”：静止的圆点，或代理工作时的呼吸、环绕、条形、波纹动画。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「設定 › 一般 › 工作標記」：靜止的圓點，或代理工作時的呼吸、環繞、條形、波紋動畫。"
+          }
+        }
+      }
+    },
+    "Settings, Rebuilt" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings, Rebuilt"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全新的设置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全新的設定"
           }
         }
       }
@@ -20145,6 +23391,28 @@
         }
       }
     },
+    "Show %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示 %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示 %@"
+          }
+        }
+      }
+    },
     "Show %@ in Finder" : {
       "localizations" : {
         "en" : {
@@ -20163,6 +23431,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在 Finder 中顯示 %@"
+          }
+        }
+      }
+    },
+    "Show Again" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Again"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新显示"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新顯示"
           }
         }
       }
@@ -20255,28 +23545,6 @@
         }
       }
     },
-    "Show Release Notes…" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show Release Notes…"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "显示发行说明…"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "顯示發行說明…"
-          }
-        }
-      }
-    },
     "Show everything running in Activity" : {
       "localizations" : {
         "en" : {
@@ -20339,6 +23607,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "顯示群組"
+          }
+        }
+      }
+    },
+    "Show in Activity" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show in Activity"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在“活动”中显示"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在「活動」中顯示"
           }
         }
       }
@@ -20431,6 +23721,28 @@
         }
       }
     },
+    "Show on" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show on"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示位置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示位置"
+          }
+        }
+      }
+    },
     "Show this worktree in Finder" : {
       "localizations" : {
         "en" : {
@@ -20453,6 +23765,72 @@
         }
       }
     },
+    "Show working agents" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show working agents"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示工作中的代理"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示工作中的代理"
+          }
+        }
+      }
+    },
+    "Show, hide and reorder Now's sections in Settings › Now, or right-click any of them in the notch." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show, hide and reorder Now's sections in Settings › Now, or right-click any of them in the notch."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在“设置 › 当前”中显示、隐藏“当前”的分区并调整顺序，或在刘海中右键点按任一分区。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在「設定 › 目前」中顯示、隱藏「目前」的區塊並調整順序，或在瀏海中按右鍵點選任一區塊。"
+          }
+        }
+      }
+    },
+    "Shows what it's working on for a few seconds" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shows what it's working on for a few seconds"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "短暂显示它正在做什么"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "短暫顯示它正在做什麼"
+          }
+        }
+      }
+    },
     "Sidebars, settings, and sheets now follow the same patterns as Apple’s own Mac apps." : {
       "localizations" : {
         "en" : {
@@ -20471,6 +23849,94 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "側邊欄、設定和表單現在都遵循 Apple Mac 應用程式的互動方式。"
+          }
+        }
+      }
+    },
+    "Sign in to Claude Code with your Claude plan to see its limits." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign in to Claude Code with your Claude plan to see its limits."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 Claude 套餐登录 Claude Code 即可查看限额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 Claude 方案登入 Claude Code 即可查看限額。"
+          }
+        }
+      }
+    },
+    "Sign in to Codex with ChatGPT to see its limits." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign in to Codex with ChatGPT to see its limits."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 ChatGPT 登录 Codex 即可查看限额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 ChatGPT 登入 Codex 即可查看限額。"
+          }
+        }
+      }
+    },
+    "Sign-in expired" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign-in expired"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录已过期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登入已過期"
+          }
+        }
+      }
+    },
+    "Sign-in expired. Open the agent once to refresh it." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign-in expired. Open the agent once to refresh it."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录已过期。打开一次该代理即可刷新。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登入已過期。打開一次該代理即可重新整理。"
           }
         }
       }
@@ -20805,6 +24271,28 @@
         }
       }
     },
+    "Skills inside your repositories" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skills inside your repositories"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仓库中的 Skill"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存庫中的 Skill"
+          }
+        }
+      }
+    },
     "Skills never leave your Mac" : {
       "localizations" : {
         "en" : {
@@ -20849,6 +24337,28 @@
         }
       }
     },
+    "Skills that ship inside Cursor and Claude plugins" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skills that ship inside Cursor and Claude plugins"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor 和 Claude 插件自带的 Skill"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor 和 Claude 外掛內附的 Skill"
+          }
+        }
+      }
+    },
     "Skills you install in Claude Code, Cursor, Codex, or a project show up here on their own. Find some in Discover, or start one with ⌘N." : {
       "localizations" : {
         "en" : {
@@ -20889,6 +24399,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "斜槓命令"
+          }
+        }
+      }
+    },
+    "Slimmer Ears" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slimmer Ears"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更窄的两侧"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更窄的兩側"
+          }
+        }
+      }
+    },
+    "Smoother Opening" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smoother Opening"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更流畅的展开"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更流暢的展開"
           }
         }
       }
@@ -21135,6 +24689,28 @@
         }
       }
     },
+    "Started" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Started"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动时间"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟動時間"
+          }
+        }
+      }
+    },
     "Started by" : {
       "localizations" : {
         "en" : {
@@ -21153,6 +24729,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "啟動來源"
+          }
+        }
+      }
+    },
+    "Startup" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Startup"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟動"
           }
         }
       }
@@ -21329,6 +24927,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "立即停止，不等待清理"
+          }
+        }
+      }
+    },
+    "Stop listing %@'s ports here. Settings brings them back." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop listing %@'s ports here. Settings brings them back."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不再在这里列出 %@ 的端口。可在设置中恢复。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不再在這裡列出 %@ 的連接埠。可在設定中恢復。"
+          }
+        }
+      }
+    },
+    "Stop reading this folder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop reading this folder"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止读取此文件夹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止讀取此檔案夾"
           }
         }
       }
@@ -21531,6 +25173,50 @@
         }
       }
     },
+    "Switch tabs" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switch tabs"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "切换标签页"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "切換標籤頁"
+          }
+        }
+      }
+    },
+    "Switches, icons, and a line on what each option does. Drag sections and tabs into your order, with a live drawing of the notch." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switches, icons, and a line on what each option does. Drag sections and tabs into your order, with a live drawing of the notch."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开关、图标，以及每个选项作用的简短说明。可拖移分区和标签页调整顺序，并实时预览刘海效果。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開關、圖像，以及每個選項作用的簡短說明。可拖移區塊和標籤頁調整順序，並即時預覽瀏海效果。"
+          }
+        }
+      }
+    },
     "System" : {
       "comment" : "Follow the system language in Settings.",
       "localizations" : {
@@ -21660,6 +25346,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "測試瀏覽器"
+          }
+        }
+      }
+    },
+    "The Right App" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Right App"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正确的应用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正確的應用程式"
           }
         }
       }
@@ -21796,24 +25504,24 @@
         }
       }
     },
-    "The disk, live, and what to clear" : {
+    "The display you're using" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The disk, live, and what to clear"
+            "value" : "The display you're using"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "实时磁盘用量与可清理内容"
+            "value" : "正在使用的显示器"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "實時磁碟用量與可清理內容"
+            "value" : "正在使用的顯示器"
           }
         }
       }
@@ -21968,6 +25676,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "名稱與檔案夾「%@」不一致。部分代理會按檔案夾查詢 Skill。"
+          }
+        }
+      }
+    },
+    "The notch grows as one clean shape, and what's inside fades in where it belongs instead of sliding in." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The notch grows as one clean shape, and what's inside fades in where it belongs instead of sliding in."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刘海以完整的形状展开，内容在原位淡入，而不是滑入。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "瀏海以完整的形狀展開，內容在原位淡入，而不是滑入。"
+          }
+        }
+      }
+    },
+    "The notch opens for a moment when an agent starts or finishes a task, glowing in the colours of the app it's in." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The notch opens for a moment when an agent starts or finishes a task, glowing in the colours of the app it's in."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理开始或完成任务时，刘海会短暂展开，并以所在应用的颜色发光。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理開始或完成任務時，瀏海會短暫展開，並以所在應用程式的顏色發光。"
           }
         }
       }
@@ -22144,6 +25896,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在使用的版本"
+          }
+        }
+      }
+    },
+    "Their app's icon sits beside the notch while they work" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Their app's icon sits beside the notch while they work"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理工作时，其所在应用的图标会显示在刘海旁"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理工作時，其所在應用程式的圖像會顯示在瀏海旁"
           }
         }
       }
@@ -22456,6 +26230,72 @@
         }
       }
     },
+    "Tidy the onboarding copy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidy the onboarding copy"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "整理引导页文案"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "整理引導頁文案"
+          }
+        }
+      }
+    },
+    "Tint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tint"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "着色"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "著色"
+          }
+        }
+      }
+    },
+    "Tinted" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tinted"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "着色"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "著色"
+          }
+        }
+      }
+    },
     "Toggles whether this skill is removed" : {
       "localizations" : {
         "en" : {
@@ -22588,28 +26428,6 @@
         }
       }
     },
-    "Top of the Screen" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Top of the Screen"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "屏幕顶部"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "螢幕頂部"
-          }
-        }
-      }
-    },
     "Trash" : {
       "localizations" : {
         "en" : {
@@ -22698,6 +26516,72 @@
         }
       }
     },
+    "Tue 9:41" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tue 9:41"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "周二 9:41"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "週二 9:41"
+          }
+        }
+      }
+    },
+    "Turn On" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn On"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟"
+          }
+        }
+      }
+    },
+    "Turn off AirPlay Receiver in System Settings to free :5000 and :7000" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn off AirPlay Receiver in System Settings to free :5000 and :7000"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在系统设置中关闭隔空播放接收器即可释放 :5000 和 :7000"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在系統設定中關閉 AirPlay 接收器即可釋放 :5000 和 :7000"
+          }
+        }
+      }
+    },
     "Turn on Clove under Full Disk Access." : {
       "localizations" : {
         "en" : {
@@ -22716,6 +26600,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在「完整磁碟存取權」中開啟 Clove。"
+          }
+        }
+      }
+    },
+    "Turn on Plan limits in Now settings first" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn on Plan limits in Now settings first"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请先在“当前”设置中打开套餐限额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請先在「目前」設定中開啟方案限額"
           }
         }
       }
@@ -23116,28 +27022,6 @@
         }
       }
     },
-    "Up to four tabs sit beside the notch. ⌘1 to ⌘4 switch between them while it's open." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Up to four tabs sit beside the notch. ⌘1 to ⌘4 switch between them while it's open."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "刘海旁最多可放四个标签页。打开时可用 ⌘1 到 ⌘4 切换。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "瀏海旁最多可放四個標籤頁。打開時可用 ⌘1 到 ⌘4 切換。"
-          }
-        }
-      }
-    },
     "Update" : {
       "localizations" : {
         "en" : {
@@ -23424,6 +27308,50 @@
         }
       }
     },
+    "Uses Clear or Tinted from Appearance settings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uses Clear or Tinted from Appearance settings"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用“外观”设置中的透明或着色"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用「外觀」設定中的透明或著色"
+          }
+        }
+      }
+    },
+    "Uses the sign-ins Claude Code, Codex and Cursor already saved. No password." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uses the sign-ins Claude Code, Codex and Cursor already saved. No password."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 Claude Code、Codex 和 Cursor 已保存的登录信息，无需密码。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 Claude Code、Codex 和 Cursor 已儲存的登入資訊，無需密碼。"
+          }
+        }
+      }
+    },
     "Using the most" : {
       "localizations" : {
         "en" : {
@@ -23468,24 +27396,24 @@
         }
       }
     },
-    "Version" : {
+    "Version %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Version"
+            "value" : "Version %@"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "版本"
+            "value" : "版本 %@"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "版本"
+            "value" : "版本 %@"
           }
         }
       }
@@ -23622,6 +27550,94 @@
         }
       }
     },
+    "Week" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Week"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "周"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "週"
+          }
+        }
+      }
+    },
+    "Week %lld%%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Week %lld%%"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本周 %lld%%"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本週 %lld%%"
+          }
+        }
+      }
+    },
+    "Weekly" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weekly"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每周"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每週"
+          }
+        }
+      }
+    },
+    "Weekly · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weekly · %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每周 · %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每週 · %@"
+          }
+        }
+      }
+    },
     "Welcome to Clove" : {
       "localizations" : {
         "en" : {
@@ -23662,6 +27678,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clove 目前的佔用。它直接從 macOS 讀取程序，不會啟動其他工具。"
+          }
+        }
+      }
+    },
+    "What changed in this version" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What changed in this version"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此版本的变化"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此版本的變化"
+          }
+        }
+      }
+    },
+    "What each agent is doing, step by step, and which file it's changing" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What each agent is doing, step by step, and which file it's changing"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每个代理正在逐步做什么，以及正在修改哪个文件"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每個代理正在逐步做什麼，以及正在修改哪個檔案"
           }
         }
       }
@@ -23710,28 +27770,6 @@
         }
       }
     },
-    "What's New" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "What's New"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "新功能"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "新功能"
-          }
-        }
-      }
-    },
     "What's New in Clove" : {
       "localizations" : {
         "en" : {
@@ -23754,24 +27792,112 @@
         }
       }
     },
-    "What's climbing on skills.sh" : {
+    "What's New in Clove 3.5" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "What's climbing on skills.sh"
+            "value" : "What's New in Clove 3.5"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "skills.sh 上的上升趋势"
+            "value" : "Clove 3.5 新功能"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "skills.sh 上的上升趨勢"
+            "value" : "Clove 3.5 新功能"
+          }
+        }
+      }
+    },
+    "What's New in Clove 3.6" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's New in Clove 3.6"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 3.6 新功能"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 3.6 新功能"
+          }
+        }
+      }
+    },
+    "What's New in Clove 3.7" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's New in Clove 3.7"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 3.7 新功能"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 3.7 新功能"
+          }
+        }
+      }
+    },
+    "What's New in Clove 3.8" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's New in Clove 3.8"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 3.8 新功能"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 3.8 新功能"
+          }
+        }
+      }
+    },
+    "What's New in Clove 3.9" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's New in Clove 3.9"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 3.9 新功能"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 3.9 新功能"
           }
         }
       }
@@ -23794,6 +27920,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "檢視 Mac 的空間用量，以及可安全清理的內容。"
+          }
+        }
+      }
+    },
+    "What's new" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's new"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新功能"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新功能"
           }
         }
       }
@@ -23908,6 +28056,28 @@
         }
       }
     },
+    "When an agent starts or finishes and the notch grows a little, rest the pointer on it to open the rest." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When an agent starts or finishes and the notch grows a little, rest the pointer on it to open the rest."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理开始或完成任务、刘海稍微展开时，把指针停在上面即可完全打开。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理開始或完成任務、瀏海稍微展開時，把指標停在上面即可完全打開。"
+          }
+        }
+      }
+    },
     "When you or an agent check out a branch in a folder of its own with git worktree, it shows up here as a lane beside its main branch." : {
       "localizations" : {
         "en" : {
@@ -23926,6 +28096,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "當你或代理用 git worktree 把分支簽出到獨立檔案夾時，它會作為一條泳道顯示在主分支旁。"
+          }
+        }
+      }
+    },
+    "Where Clove Lives" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where Clove Lives"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 的位置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clove 的位置"
           }
         }
       }
@@ -24018,6 +28210,28 @@
         }
       }
     },
+    "Without it, Clove copies the skill and you paste it yourself. Everything else works the same." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Without it, Clove copies the skill and you paste it yourself. Everything else works the same."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有此权限时，Clove 会拷贝 Skill，由你自己粘贴。其他功能不受影响。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有此權限時，Clove 會複製 Skill，由你自己貼上。其他功能不受影響。"
+          }
+        }
+      }
+    },
     "Work in progress" : {
       "localizations" : {
         "en" : {
@@ -24080,6 +28294,72 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "工作中"
+          }
+        }
+      }
+    },
+    "Working Mark" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Working Mark"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作标记"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作標記"
+          }
+        }
+      }
+    },
+    "Working agents, running servers and open ports" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Working agents, running servers and open ports"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作中的代理、运行中的服务器和开放的端口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作中的代理、執行中的伺服器和開放的連接埠"
+          }
+        }
+      }
+    },
+    "Working indicator" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Working indicator"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作指示"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作指示"
           }
         }
       }
@@ -24238,6 +28518,28 @@
         }
       }
     },
+    "Xcode 180% · Simulator 64%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode 180% · Simulator 64%"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode 180% · 模拟器 64%"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode 180% · 模擬器 64%"
+          }
+        }
+      }
+    },
     "Xcode build files" : {
       "localizations" : {
         "en" : {
@@ -24282,6 +28584,28 @@
         }
       }
     },
+    "You can restore them until you empty the Trash" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can restore them until you empty the Trash"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清倒废纸篓前都可以恢复"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清倒垃圾桶前都可以恢復"
+          }
+        }
+      }
+    },
     "You can switch any time in Settings, General." : {
       "localizations" : {
         "en" : {
@@ -24300,6 +28624,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "隨時可在「設定 > 一般」中切換。"
+          }
+        }
+      }
+    },
+    "You might see both at once. Choose Menu Bar to stay out of the way." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You might see both at once. Choose Menu Bar to stay out of the way."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你可能会同时看到两者。选择“菜单栏”可避免冲突。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你可能會同時看到兩者。選擇「選單列」可避免衝突。"
           }
         }
       }
@@ -24458,6 +28804,50 @@
         }
       }
     },
+    "Your Cursor plan is unlimited: nothing to count." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Cursor plan is unlimited: nothing to count."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的 Cursor 套餐不限量，无需统计。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的 Cursor 方案不限量，無需統計。"
+          }
+        }
+      }
+    },
+    "Your Data" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Data"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的数据"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的資料"
+          }
+        }
+      }
+    },
     "Your Mac is %lld%% full" : {
       "localizations" : {
         "en" : {
@@ -24568,6 +28958,28 @@
         }
       }
     },
+    "Your SKILL.md files stay as they are" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your SKILL.md files stay as they are"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的 SKILL.md 文件保持原样"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的 SKILL.md 檔案保持原樣"
+          }
+        }
+      }
+    },
     "Your agents at work, a hover away." : {
       "localizations" : {
         "en" : {
@@ -24608,6 +29020,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最近 %2$@ 內，代理使用了全部 %1$lld 個 Skill，以及所有命令和子代理程式。"
+          }
+        }
+      }
+    },
+    "Your agents' skills, and your Mac, in the notch." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your agents' skills, and your Mac, in the notch."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理的 Skill 与你的 Mac，尽在刘海。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理的 Skill 與你的 Mac，盡在瀏海。"
           }
         }
       }
@@ -24674,6 +29108,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "你的檔案夾"
+          }
+        }
+      }
+    },
+    "Your groups" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your groups"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的群组"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的群組"
           }
         }
       }
@@ -25206,28 +29662,6 @@
         }
       }
     },
-    "macOS grants Clove access to a folder only when you pick it here." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "macOS grants Clove access to a folder only when you pick it here."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "仅当你在此选择文件夹时，macOS 才会授予 Clove 访问权限。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "僅當你在此選擇檔案夾時，macOS 才會授予 Clove 訪問權限。"
-          }
-        }
-      }
-    },
     "macOS is slowing things down to cool off. Quitting the busiest app helps most." : {
       "localizations" : {
         "en" : {
@@ -25268,6 +29702,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "macOS 本身，以及未歸入其他類別的應用程式資料。"
+          }
+        }
+      }
+    },
+    "macOS lets Clove into a folder only once you pick it here." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS lets Clove into a folder only once you pick it here."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只有在这里选择文件夹后，macOS 才允许 Clove 访问它。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只有在這裡選擇檔案夾後，macOS 才允許 Clove 存取它。"
+          }
+        }
+      }
+    },
+    "macOS listens here for AirPlay. Turn off AirPlay Receiver in System Settings if a dev server needs :5000 or :7000." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS listens here for AirPlay. Turn off AirPlay Receiver in System Settings if a dev server needs :5000 or :7000."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 在此监听隔空播放。如果开发服务器需要 :5000 或 :7000，请在系统设置中关闭隔空播放接收器。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 在此監聽 AirPlay。如果開發伺服器需要 :5000 或 :7000，請在系統設定中關閉 AirPlay 接收器。"
           }
         }
       }
@@ -25642,6 +30120,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "權限"
+          }
+        }
+      }
+    },
+    "port %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "port %lld"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "端口 %lld"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連接埠 %lld"
           }
         }
       }
@@ -26108,24 +30608,24 @@
         }
       }
     },
-    "⌘ click" : {
+    "−3" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⌘ click"
+            "value" : "−3"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⌘ 点按"
+            "value" : "−3"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⌘ 按一下"
+            "value" : "−3"
           }
         }
       }

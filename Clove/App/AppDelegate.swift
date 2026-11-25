@@ -106,6 +106,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             live?.stop()
         }
+        if !settings.showsUsageLimits {
+            model.limits.reset()
+        }
     }
 
     private func applyActivationPolicy() {
@@ -269,6 +272,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             _ = settings.hasCompletedOnboarding
             _ = settings.accessMode
             _ = settings.menuBarStat
+            _ = settings.islandPlacement
+            _ = settings.showsUsageLimits
         } onChange: { [weak self] in
             Task { @MainActor in
                 self?.applySettings()

@@ -31,7 +31,7 @@ Release 构建后运行 `python3 -I tools/check-localization.py`。它检查翻�
 
 ## 版本与发布
 
-项目版本保留上游值（当前 `3.4`／`15`）。脚本从 app target 读值，并读取本地 tags：`v<上游版本>-zh.<n>` 的最大 n 加 1，无后缀 `v3.2-zh` 算 0。构建时注入 marketing version `<上游版本>-zh.<n>` 和 build `<上游build>*100+n`，不改项目文件。同步到 3.4 后首个版本为 `3.4-zh.1`／`1501`，高于此前的 `3.2-zh.1`／`1301`。发布前同步 origin tags；脚本发现远端缺失于本地的 tag 会拒绝继续。
+项目版本保留上游值（当前 `3.9`／`21`）。脚本从 app target 读值，并读取本地 tags：`v<上游版本>-zh.<n>` 的最大 n 加 1，无后缀 `v3.2-zh` 算 0。构建时注入 marketing version `<上游版本>-zh.<n>` 和 build `<上游build>*100+n`，不改项目文件。同步到 3.9 后首个版本为 `3.9-zh.1`／`2101`，高于此前的 `3.4-zh.1`／`1501`。发布前同步 origin tags；脚本发现远端缺失于本地的 tag 会拒绝继续。
 
 先运行本地检查和 `python3 -I -B -m unittest discover -s tools/tests`，再运行 `tools/release-zh.sh [notes.md] --dry-run`。dry-run 在任意干净分支可用；正式发布必须在干净的 `main` 上，运行 `tools/release-zh.sh [notes.md]`。需要已登录的 gh、Xcode 和 Sparkle 工具。脚本构建无许可证版、strip、重签整个 bundle、扫描本机 home／用户名、生成 DMG、只读挂载验证、生成 EdDSA appcast 和 SHA-256。产物在 `dist/`，`build/` 与 `dist/` 不入库。正式发布会创建 annotated tag，仅 `git push origin main <tag>`，发布 DMG／checksums／appcast，重新下载全部资产核对 SHA-256。发布失败后先检查已有 tag／release，勿盲目重复发布。发布产物没有 Developer ID 公证，仍需单独验证 Gatekeeper 安装体验。
 

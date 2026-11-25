@@ -18,6 +18,13 @@ final class NotchLiveMonitor {
         notch.agents.onFinished = { [weak self] sessions in
             self?.agentsFinished(sessions)
         }
+        notch.agents.onStarted = { [weak self] session in
+            self?.agentStarted(session)
+        }
+        model.limits.onNearlyUsed = { [weak self] agent, window in
+            self?.limitNearlyUsed(agent, window)
+        }
+
     }
 
     func start() {
@@ -26,6 +33,7 @@ final class NotchLiveMonitor {
         tasks = [
             Task { [weak self] in await self?.watchServers() },
             Task { [weak self] in await self?.watchDisk() },
+            Task { [weak self] in await self?.watchLimits() },
         ]
     }
 
@@ -65,13 +73,27 @@ final class NotchLiveMonitor {
         let who = session.agent.title
         let show = NotchMoment.Action(title: String(localized: "Show")) { AgentReveal.show(session) }
         if let failure = session.failure {
-            notch.present(NotchMoment(symbol: "exclamationmark.triangle", tone: .warning, title: String(localized: "\(who) stopped in \(session.project)"), detail: failure, action: show, duration: .seconds(8)))
+            notch.present(NotchMoment(symbol: "exclamationmark.triangle", tone: .warning, title: String(localized: "\(who) stopped in \(session.project)"), detail: failure, action: show, duration: .seconds(8), session: session))
         } else if session.asksQuestion {
-            notch.present(NotchMoment(symbol: "questionmark.bubble", tone: .neutral, title: String(localized: "\(who) has a question in \(session.project)"), detail: session.summary ?? session.title, action: show, duration: .seconds(8)))
+            notch.present(NotchMoment(symbol: "questionmark.bubble", tone: .neutral, title: String(localized: "\(who) has a question in \(session.project)"), detail: session.summary ?? session.title, action: show, duration: .seconds(8), session: session))
         } else {
             let took = session.duration.flatMap(Self.durationText).map { " · \($0)" } ?? ""
-            notch.present(NotchMoment(symbol: "checkmark", tone: .done, title: String(localized: "\(who) finished in \(session.project)") + took, detail: session.summary ?? session.title, action: show, duration: .seconds(6)))
+            notch.present(NotchMoment(symbol: "checkmark", tone: .done, title: String(localized: "\(who) finished in \(session.project)") + took, detail: session.summary ?? session.title, action: show, duration: .seconds(6), session: session))
         }
+    }
+
+    /// A task you just sent is under way: the notch opens a little to say so,
+    /// glowing in the app's colours, then folds back to its ears.
+    private func agentStarted(_ session: AgentSession) {
+        guard model.settings.notchAgentStartMoments else { return }
+        notch.present(NotchMoment(
+            symbol: "sparkles",
+            tone: .neutral,
+            title: session.title ?? session.project,
+            detail: session.currentStep.map { [$0.verb, $0.target].compactMap(\.self).joined(separator: " ") } ?? "Thinking",
+            duration: .seconds(3.5),
+            session: session
+        ))
     }
 
     /// "4 min", "1 hr 5 min": how long the whole task ran, background work included.
@@ -121,6 +143,25 @@ final class NotchLiveMonitor {
                 title: String(localized: "localhost:\(port) stopped"),
                 detail: [server.name, server.folder?.lastPathComponent].compactMap(\.self).joined(separator: " · ")
             ))
+        }
+    }
+
+    // MARK: - Limits
+
+    private func limitNearlyUsed(_ agent: LimitsAgent, _ window: UsageWindow) {
+        guard model.settings.notchLimitMoments, model.settings.showsUsageLimits else { return }
+        notch.present(NotchMoment(
+            symbol: "gauge.with.dots.needle.100percent",
+            tone: .warning,
+            title: String(localized: "\(agent.title) \(LimitStyle.title(window.title).localizedLowercase) limit at \(Int(window.usedPercent.rounded()))%"),
+            detail: window.resetsAt.map { String(localized: "Pace yourself · resets \($0.formatted(.relative(presentation: .named)))") } ?? String(localized: "Pace yourself"),
+            duration: .seconds(7)
+        ))
+    }
+
+    private func watchLimits() async {
+        await model.limits.watch { [weak self] in
+            self?.model.settings.showsUsageLimits == true
         }
     }
 

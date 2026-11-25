@@ -22,6 +22,8 @@ final class NotchController {
     private var keyRouter: PanelKeyRouter?
     private var monitors: [Any] = []
     private var screenObserver: (any NSObjectProtocol)?
+    private var activeObservers: [any NSObjectProtocol] = []
+    private var activeTimer: Timer?
 
     private var hoverTask: Task<Void, Never>?
     private var collapseTask: Task<Void, Never>?
@@ -66,9 +68,13 @@ final class NotchController {
             object: nil,
             queue: .main
         ) { [weak self] _ in
-            MainActor.assumeIsolated { self?.reposition() }
+            MainActor.assumeIsolated {
+                self?.reposition()
+                self?.updateActiveTimer()
+            }
         }
         installMouseMonitors()
+        followActiveDisplay()
         listenForPartners()
         observeOpenState()
     }
@@ -138,6 +144,7 @@ final class NotchController {
     /// you haven't met yet.
     func setVisible(_ visible: Bool) {
         isVisible = visible
+        updateActiveTimer()
         if visible {
             WindowBridge.shared.panelWindow = window
             reposition()
@@ -155,10 +162,49 @@ final class NotchController {
     }
 
     private func reposition() {
-        guard let geometry = NotchGeometry.current() else { return }
+        guard let geometry = NotchGeometry.current(placement: model.settings.islandPlacement) else { return }
+        guard geometry != notch.geometry else { return }
         notch.geometry = geometry
         window.setFrame(geometry.windowFrame, display: true)
-        window.appearance = geometry.isHardware ? NSAppearance(named: .darkAqua) : nil
+        window.appearance = NSAppearance(named: .darkAqua)
+    }
+
+    /// With the island on the display you're using, it moves when you switch
+    /// apps or windows to another one. Only while it's closed: an open island
+    /// never jumps out from under the pointer.
+    private func followActiveDisplay() {
+        let workspace = NSWorkspace.shared.notificationCenter
+        activeObservers = [
+            workspace.addObserver(forName: NSWorkspace.didActivateApplicationNotification, object: nil, queue: .main) { [weak self] _ in
+                MainActor.assumeIsolated { self?.moveToActiveDisplay() }
+            },
+            NotificationCenter.default.addObserver(forName: NSWindow.didBecomeKeyNotification, object: nil, queue: .main) { [weak self] _ in
+                MainActor.assumeIsolated { self?.moveToActiveDisplay() }
+            },
+        ]
+    }
+
+    /// Other apps' windows moving between displays don't notify, so following
+    /// the active display means looking now and then. Only then: with the
+    /// island on one display, Clove sleeps instead of waking every 1.5s.
+    private func updateActiveTimer() {
+        let needed = isVisible && model.settings.islandPlacement == .active && NSScreen.screens.count > 1
+        if needed, activeTimer == nil {
+            let timer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { [weak self] _ in
+                MainActor.assumeIsolated { self?.moveToActiveDisplay() }
+            }
+            timer.tolerance = 0.5
+            activeTimer = timer
+        } else if !needed {
+            activeTimer?.invalidate()
+            activeTimer = nil
+        }
+    }
+
+    private func moveToActiveDisplay() {
+        guard isVisible, model.settings.islandPlacement == .active,
+              notch.phase == .collapsed, notch.moment == nil else { return }
+        reposition()
     }
 
     func toggle() {
@@ -330,7 +376,26 @@ final class NotchController {
                     if self.notch.phase == .open, !self.notch.isFocused { self.close() }
                 }
             }
-        case .open, .moment:
+        case .moment:
+            // A half-open moment is already in reach: resting on it opens the
+            // rest, the same as a click. One with its own button waits for
+            // the click, so the button isn't whisked away.
+            let buttons = NSEvent.pressedMouseButtons
+            if overIsland, buttons == 0, notch.moment?.action == nil, model.settings.notchOpensOnHover {
+                guard hoverTask == nil else { return }
+                hoverTask = Task { [weak self] in
+                    try? await Task.sleep(for: .milliseconds(220))
+                    guard let self, !Task.isCancelled else { return }
+                    self.hoverTask = nil
+                    if self.islandRect.contains(NSEvent.mouseLocation), self.notch.phase == .moment, self.notch.moment?.action == nil {
+                        self.open(.now, focused: false)
+                    }
+                }
+            } else {
+                hoverTask?.cancel()
+                hoverTask = nil
+            }
+        case .open:
             break
         }
     }
@@ -340,8 +405,14 @@ final class NotchController {
 final class NotchHostingView<Content: View>: NSHostingView<Content> {
     var onRightClick: () -> Void = {}
 
+    /// A view with its own context menu (a port, a widget, a section) gets
+    /// that menu; anywhere else, Clove's menu.
     override func rightMouseDown(with event: NSEvent) {
-        onRightClick()
+        if menu(for: event) != nil {
+            super.rightMouseDown(with: event)
+        } else {
+            onRightClick()
+        }
     }
 
     /// The island takes the first click even while another app is active, so

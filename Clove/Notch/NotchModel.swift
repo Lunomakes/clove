@@ -25,6 +25,8 @@ struct NotchMoment: Identifiable, Equatable {
     let detail: String?
     var action: Action?
     var duration: Duration = .seconds(5)
+    /// An agent's task starting or ending: shown as its card, glowing in its app's colours.
+    var session: AgentSession? = nil
 }
 
 /// The island's state: how open it is and what it's showing.
@@ -107,12 +109,22 @@ final class NotchModel {
 
     /// Something is going on: the island shows it beside the notch. Otherwise
     /// it stays hidden inside the notch.
-    var isLive: Bool { !isYielding && !agents.working.isEmpty }
+    var isLive: Bool { !isYielding && settings.notchShowsAgents && !agents.working.isEmpty }
+
+    /// A Dynamic Island floating in the menu bar, on a screen without a notch.
+    var isFloating: Bool { geometry?.style == .island }
+
+    /// The floating island has nothing to blend into, so it's out of sight
+    /// until something's live, like a Live Activity. Hovering still opens it.
+    var isHiddenAtRest: Bool { isFloating && phase == .collapsed && !isLive }
+
+    /// Room for what an agent is working on, between the floating island's ears.
+    static let islandLabelWidth: CGFloat = 150
 
     /// Each ear holds one app icon, with room to breathe on both sides, and
     /// widens for a fanned stack when agents work in several apps.
-    static let earWidth: CGFloat = 34
-    static let earIconSize: CGFloat = 18
+    static let earWidth: CGFloat = 30
+    static let earIconSize: CGFloat = 16
 
     var earWidth: CGFloat {
         let apps = min(AgentIcons.distinct(agents.working).count, 3)
@@ -129,14 +141,18 @@ final class NotchModel {
             // it; it's only where the island grows from. The stand-in on
             // screens without a notch is the notch's own size, since it's all there is.
             if isLive {
-                body = CGSize(width: notch.width + earWidth * 2, height: notch.height)
+                // The pill has no camera to step around, so its middle says what's being worked on.
+                let middle = isFloating ? Self.islandLabelWidth : notch.width
+                body = CGSize(width: middle + earWidth * 2, height: notch.height)
             } else if isHardware {
                 return CGSize(width: notch.width - 4, height: notch.height - 2)
             } else {
                 body = notch
             }
         case .moment:
-            body = CGSize(width: max(Self.momentWidth, notch.width + 120), height: notch.height + 58)
+            // An agent's card is a touch taller, so its glow has room to breathe.
+            let tall = moment?.session != nil
+            body = CGSize(width: max(Self.momentWidth, notch.width + 120), height: notch.height + (tall ? 62 : 58))
         case .open:
             let content = tab.fitsContent ? min(max(measuredHeights[tab] ?? 160, 72), Self.contentHeight) : Self.contentHeight
             body = CGSize(width: Self.panelWidth, height: notch.height + content)
@@ -145,6 +161,8 @@ final class NotchModel {
     }
 
     var shoulderRadius: CGFloat {
+        // The floating island is rounded all round: no shoulders to flare.
+        if isFloating { return 0 }
         guard phase == .collapsed else { return Self.shoulder }
         return isHardware && !isLive ? 0 : 6
     }
@@ -153,6 +171,7 @@ final class NotchModel {
         switch phase {
         // Rounder than the notch's own corners, so it stays inside them.
         case .collapsed: isHardware ? 12 : notchSize.height / 2
+        case .moment where isFloating: min(22, size.height / 2)
         case .moment: 22
         default: 26
         }

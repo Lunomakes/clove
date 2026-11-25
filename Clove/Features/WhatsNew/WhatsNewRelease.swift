@@ -293,6 +293,131 @@ enum WhatsNewCatalog {
                 ),
             ]
         ),
+        WhatsNewRelease(
+            version: "3.5",
+            title: "What's New in Clove 3.5",
+            subtitle: "Every port named, your plan limits at a glance, and a Now tab laid out your way.",
+            symbolName: "network",
+            features: [
+                FeatureHighlight(
+                    symbolName: "network",
+                    title: "Every Port, Named",
+                    detail: ":7265 is Raycast, :5000 is AirPlay Receiver. Choose which ports show in Settings › Now, or hover one in the notch and click Hide."
+                ),
+                FeatureHighlight(
+                    symbolName: "gauge.with.dots.needle.67percent",
+                    title: "Claude and Codex Limits",
+                    detail: "How much of each plan's five-hour and weekly windows you've used, when each resets, and whether you're on pace. Off until you turn it on."
+                ),
+                FeatureHighlight(
+                    symbolName: "slider.horizontal.3",
+                    title: "Now, Your Way",
+                    detail: "Show, hide and reorder Now's sections in Settings › Now, or right-click any of them in the notch."
+                ),
+                FeatureHighlight(
+                    symbolName: "sparkles",
+                    title: "A Glassier Notch",
+                    detail: "Clearer glass, and an agent at work breathes a soft glow in the colours of the app it's running in."
+                ),
+            ]
+        ),
+        WhatsNewRelease(
+            version: "3.6",
+            title: "What's New in Clove 3.6",
+            subtitle: "Agents at a glance in the notch, and Settings rebuilt from the ground up.",
+            symbolName: "sparkles",
+            features: [
+                FeatureHighlight(
+                    symbolName: "sparkles",
+                    title: "Agents, at a Glance",
+                    detail: "The notch opens for a moment when an agent starts or finishes a task, glowing in the colours of the app it's in."
+                ),
+                FeatureHighlight(
+                    symbolName: "gearshape",
+                    title: "Settings, Rebuilt",
+                    detail: "Switches, icons, and a line on what each option does. Drag sections and tabs into your order, with a live drawing of the notch."
+                ),
+                FeatureHighlight(
+                    symbolName: "key",
+                    title: "No More Password Prompts",
+                    detail: "Clove reads Claude Code's sign-in the way Claude Code saves it, so macOS stops asking each time it refreshes."
+                ),
+                FeatureHighlight(
+                    symbolName: "app.badge.checkmark",
+                    title: "The Right App",
+                    detail: "Conversations keep their app's icon across restarts, even when two apps work in the same project."
+                ),
+            ]
+        ),
+        WhatsNewRelease(
+            version: "3.7",
+            title: "What's New in Clove 3.7",
+            subtitle: "A Dynamic Island for displays without a notch.",
+            symbolName: "capsule.fill",
+            features: [
+                FeatureHighlight(
+                    symbolName: "capsule.fill",
+                    title: "Dynamic Island",
+                    detail: "On a display without a notch, Clove floats in the menu bar as a pill, out of sight until an agent is at work."
+                ),
+                FeatureHighlight(
+                    symbolName: "display.2",
+                    title: "On the Display You're Using",
+                    detail: "Settings › General › Show on keeps the island on the built-in display, or on whichever one you're working in."
+                ),
+                FeatureHighlight(
+                    symbolName: "rectangle.topthird.inset.filled",
+                    title: "Slimmer Ears",
+                    detail: "Less room beside the notch while agents work, or none: turn them off in Settings › General."
+                ),
+            ]
+        ),
+        WhatsNewRelease(
+            version: "3.8",
+            title: "What's New in Clove 3.8",
+            subtitle: "Pick the mark beside the notch, and open it on hover.",
+            symbolName: "circle.dotted.circle",
+            features: [
+                FeatureHighlight(
+                    symbolName: "circle.dotted.circle",
+                    title: "Working Mark",
+                    detail: "Settings › General › Working mark: the still Dot, or Breathe, Orbit, Bars or Ripple while an agent works."
+                ),
+                FeatureHighlight(
+                    symbolName: "cursorarrow.rays",
+                    title: "Open on Hover",
+                    detail: "When an agent starts or finishes and the notch grows a little, rest the pointer on it to open the rest."
+                ),
+                FeatureHighlight(
+                    symbolName: "leaf",
+                    title: "Lighter in the Background",
+                    detail: "Clove sleeps more between checks, and the pictures in Settings stay still."
+                ),
+            ]
+        ),
+        WhatsNewRelease(
+            version: "3.9",
+            title: "What's New in Clove 3.9",
+            subtitle: "A smoother notch, and glass you can tune.",
+            symbolName: "drop.halffull",
+            features: [
+                FeatureHighlight(
+                    symbolName: "rectangle.expand.vertical",
+                    title: "Smoother Opening",
+                    detail: "The notch grows as one clean shape, and what's inside fades in where it belongs instead of sliding in."
+                ),
+                FeatureHighlight(
+                    symbolName: "drop.halffull",
+                    title: "Clear to Tinted",
+                    detail: "Settings › General › Liquid Glass follows your Mac's Clear or Tinted look, or pick your own spot on the slider."
+                ),
+                FeatureHighlight(
+                    symbolName: "text.bubble",
+                    title: "Clearer Settings",
+                    detail: "Settings now say what each option does for you, in plain words."
+                ),
+            ]
+        ),
     ]
 
     static var latest: WhatsNewRelease? {

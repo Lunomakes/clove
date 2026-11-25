@@ -42,7 +42,7 @@ enum MenuBarStat: String, CaseIterable, Identifiable, Sendable {
             return (free, String(localized: "\(free) free"))
         case .devServers, .servers:
             let kinds = await RunningScanner.kinds(known: known)
-            let count = kinds.filter { self == .devServers ? $0 == .devServer : $0 != .agent }.count
+            let count = kinds.filter { self == .devServers ? $0 == .devServer : ($0 == .devServer || $0 == .mcpServer) }.count
             let spoken: String
             if self == .devServers {
                 spoken = count == 0 ? String(localized: "no dev servers running") : String(localized: "\(count) dev servers running")

@@ -38,11 +38,31 @@ struct AgentIconStack: View {
         HStack(spacing: -Self.overlap(for: size)) {
             ForEach(Array(shown.enumerated()), id: \.element.id) { index, session in
                 AgentAppIcon(session: session, size: size)
+                    .modifier(StackedIconEdge(size: size))
                     .zIndex(Double(shown.count - index))
                     .transition(.scale(scale: 0.6).combined(with: .opacity))
             }
         }
         .animation(.spring(duration: 0.36, bounce: 0.2), value: shown.map(\.id))
+    }
+}
+
+/// A hairline around an icon's tile and a soft shadow under it, so icons
+/// fanned over each other stay apart, and a dark icon still reads on black.
+private struct StackedIconEdge: ViewModifier {
+    let size: CGFloat
+
+    func body(content: Content) -> some View {
+        // macOS icons sit inside their canvas with a margin; the tile is about
+        // 80% of it, with corners about a quarter of its width.
+        let tile = size * 0.8
+        content
+            .overlay {
+                RoundedRectangle(cornerRadius: tile * 0.225, style: .continuous)
+                    .strokeBorder(.white.opacity(0.22), lineWidth: 0.5)
+                    .frame(width: tile, height: tile)
+            }
+            .shadow(color: .black.opacity(0.6), radius: 1.5, x: 0.5, y: 0)
     }
 }
 
@@ -64,6 +84,9 @@ enum AgentIcons {
         var seen: Set<String> = []
         return sessions.filter { seen.insert($0.host?.bundlePath ?? "agent:\($0.agent.rawValue)").inserted }
     }
+
+    /// The agent maker's own app icon, for places without a session.
+    static func icon(for agent: AgentSession.Agent) -> NSImage { fallback(for: agent) }
 
     /// Before the host is known: the agent maker's own app if it's installed,
     /// else Terminal, where CLI agents live.

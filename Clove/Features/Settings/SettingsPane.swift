@@ -2,6 +2,7 @@ import SwiftUI
 
 enum SettingsPane: String, CaseIterable, Identifiable {
     case general
+    case now
     case sources
     case shortcuts
     case privacy
@@ -14,6 +15,7 @@ enum SettingsPane: String, CaseIterable, Identifiable {
     var title: String {
         switch self {
         case .general: String(localized: "General")
+        case .now: String(localized: "Now")
         case .sources: String(localized: "Folders")
         case .shortcuts: String(localized: "Shortcuts")
         case .privacy: String(localized: "Privacy")
@@ -24,6 +26,7 @@ enum SettingsPane: String, CaseIterable, Identifiable {
     var symbolName: String {
         switch self {
         case .general: "gearshape"
+        case .now: "dot.radiowaves.left.and.right"
         case .sources: "folder"
         case .shortcuts: "keyboard"
         case .privacy: "lock.shield"
